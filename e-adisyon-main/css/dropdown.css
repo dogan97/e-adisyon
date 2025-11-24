@@ -1,0 +1,243 @@
+/* Dropdown Menu Styles */
+/* Dropdown Menu Indicator */
+.nav-item.dropdown .dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+    overflow: hidden;
+    color: inherit; /* Menü rengini parent elementten al */
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-item.dropdown .dropdown-toggle::after {
+    display: none; /* Removing default Bootstrap arrow */
+}
+
+/* Altındaki çizgi - hover veya aktif olduğunda */
+.nav-item.dropdown .dropdown-toggle::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
+/* Hover durumunda çizgi (sadece masaüstünde) */
+@media (min-width: 992px) {
+    .nav-item.dropdown:hover .dropdown-toggle::before {
+        width: 80%;
+        opacity: 1;
+    }
+}
+
+/* Açık dropdown için çizgi - hover çizgisini devre dışı bırak */
+.dropdown-toggle.dropdown-open::before {
+    display: none; /* Hover çizgisini gizle */
+}
+
+/* Açık dropdown için alt çizgi ve renk */
+.dropdown-toggle.dropdown-open {
+    border-bottom: 2px solid #507b41;
+    color: #507b41 !important;
+}
+
+/* Kapalı dropdown için stil */
+.dropdown-toggle:not(.dropdown-open) {
+    border-bottom: none;
+    color: inherit !important;
+}
+
+.nav-item.dropdown .dropdown-toggle span.dropdown-indicator {
+    font-size: 12px;
+    transition: all 0.2s ease;
+    position: relative;
+    top: 1px;
+}
+
+.nav-item.dropdown:hover .dropdown-toggle span.dropdown-indicator i {
+    transform: rotate(180deg);
+}
+/* Hover dropdown */
+.nav-item.dropdown:hover .dropdown-menu-large {
+    display: block;
+}
+
+/* Geniş (3 kolon) dropdown menü */
+.dropdown-menu-large {
+    width: 600px;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(80, 123, 65, 0.1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    margin-top: 0; /* Menü ile buton arasında boşluk olmasın */
+    animation: fadeInDown 0.3s ease;
+    top: 95%; /* Menü başlangıç pozisyonu */
+}
+
+/* Tek kolonlu menüler için daha dar dropdown menü */
+.dropdown-menu:not(.dropdown-menu-large),
+.dropdown-menu-narrow {
+    width: 280px !important;
+    padding: 15px;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Business grid inside dropdown */
+.business-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+/* Genel dropdown içi item stilleri - hem business hem about için */
+.business-item, .about-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: var(--text-dark);
+}
+
+/* Tek kolonlu dropdown için özel stil */
+.business-grid:not(.grid-2-cols):not(.grid-3-cols) .business-item,
+.business-grid:not(.grid-2-cols):not(.grid-3-cols) .about-item {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    justify-content: flex-start;
+    padding: 12px 5px; /* Daraltılmış padding */
+}
+
+/* Mobil görünümde tek kolonlu dropdown içindeki içerik için özel stil */
+@media (max-width: 767.98px) {
+    .dropdown-menu-narrow .business-item,
+    .dropdown-menu-narrow .about-item {
+        justify-content: center; /* Mobilde içerik merkeze */
+        flex-direction: column; /* Mobilde içerik alt alta */
+        text-align: center; /* Metin merkeze */
+    }
+    
+    .dropdown-menu-narrow .business-icon,
+    .dropdown-menu-narrow .about-icon {
+        margin-right: 0;
+        margin-bottom: 8px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .dropdown-menu-narrow .business-info h5,
+    .dropdown-menu-narrow .about-links h5 {
+        margin-top: 5px;
+    }
+}
+
+.business-item:hover, .about-item:hover {
+    background-color: rgba(80, 123, 65, 0.1);
+}
+
+.business-icon, .about-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #507b41;
+    margin-right: 10px;
+}
+
+.business-info h5, .about-links h5 {
+    margin-bottom: 4px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Hakkımızda dropdown menüsü için özel stiller */
+.about-links {
+    min-width: 250px;
+}
+
+.about-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(240, 184, 43, 0.15);
+    border-radius: 50%;
+    color: var(--primary);
+}
+
+.about-item {
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.about-item:hover {
+    background-color: rgba(80, 123, 65, 0.1);
+}
+
+/* Az öğeli dropdown'lar için tek kolon, çok öğeli dropdown'lar için çift kolon */
+.business-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Varsayılan olarak tek kolon */
+    gap: 15px;
+    max-width: 280px; /* Tek kolonlu menüler için maksimum genişlik */
+    margin: 0 auto; /* Ortalama */
+}
+
+/* Öğe sayısı fazla olan özel dropdown'lar için çift kolon */
+.grid-2-cols {
+    grid-template-columns: 1fr 1fr; /* İki kolon */
+    max-width: 100%; /* Tam genişlik */
+    margin: 0; /* Kenar boşluğu sıfırla */
+}
+
+/* Öğe sayısı çok fazla olan dropdown'lar için üç kolon */
+.grid-3-cols {
+    grid-template-columns: repeat(3, 1fr); /* Üç kolon */
+    max-width: 100%; /* Tam genişlik */
+    margin: 0; /* Kenar boşluğu sıfırla */
+}
+
+@media (max-width: 767.98px) {
+    .dropdown-menu-large {
+        width: 100%;
+        margin-left: 0;
+        padding: 15px;
+    }
+    
+    /* Mobil görünümde tek kolonlu dropdown'lar için özel stil */
+    .dropdown-menu-narrow {
+        width: 90% !important;
+        max-width: 260px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        left: 0 !important;
+        right: 0 !important;
+    }
+    
+    .business-grid {
+        grid-template-columns: 1fr;
+    }
+}

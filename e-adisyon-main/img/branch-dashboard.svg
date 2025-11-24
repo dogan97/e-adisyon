@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg-rect { fill: #f8f9fa; stroke: #dee2e6; stroke-width: 2; }
+    .panel { fill: white; stroke: #dee2e6; stroke-width: 1; }
+    .header { font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; fill: #212529; }
+    .subheader { font-family: Arial, sans-serif; font-size: 14px; fill: #6c757d; }
+    .chart-bar { fill: #0d6efd; opacity: 0.8; }
+    .chart-bar-2 { fill: #20c997; opacity: 0.8; }
+    .chart-bar-3 { fill: #fd7e14; opacity: 0.8; }
+    .chart-line { fill: none; stroke: #0d6efd; stroke-width: 2; }
+    .axis { stroke: #dee2e6; stroke-width: 1; }
+    .label { font-family: Arial, sans-serif; font-size: 12px; fill: #6c757d; }
+    .value { font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; fill: #212529; }
+    .menu-item { font-family: Arial, sans-serif; font-size: 14px; fill: #495057; }
+    .nav-icon { fill: #6c757d; }
+    .branch-icon { fill: #0d6efd; }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="500" class="bg-rect" rx="8" />
+
+  <!-- Side Navigation -->
+  <rect x="20" y="20" width="160" height="460" class="panel" rx="6" />
+  <text x="40" y="60" class="header">E-Adisyon</text>
+  <text x="40" y="80" class="subheader">Şube Yönetimi</text>
+  
+  <g transform="translate(40, 120)">
+    <rect width="20" height="20" class="nav-icon" rx="4" />
+    <text x="30" y="15" class="menu-item">Dashboard</text>
+  </g>
+  
+  <g transform="translate(40, 160)">
+    <rect width="20" height="20" class="nav-icon" rx="4" />
+    <text x="30" y="15" class="menu-item">Şubeler</text>
+  </g>
+  
+  <g transform="translate(40, 200)">
+    <rect width="20" height="20" class="nav-icon" rx="4" />
+    <text x="30" y="15" class="menu-item">Satışlar</text>
+  </g>
+  
+  <g transform="translate(40, 240)">
+    <rect width="20" height="20" class="nav-icon" rx="4" />
+    <text x="30" y="15" class="menu-item">Stok</text>
+  </g>
+  
+  <g transform="translate(40, 280)">
+    <rect width="20" height="20" class="nav-icon" rx="4" />
+    <text x="30" y="15" class="menu-item">Personel</text>
+  </g>
+  
+  <g transform="translate(40, 320)">
+    <rect width="20" height="20" class="nav-icon" rx="4" />
+    <text x="30" y="15" class="menu-item">Raporlar</text>
+  </g>
+
+  <!-- Main Content Area -->
+  <!-- Top Stats -->
+  <rect x="200" y="20" width="180" height="100" class="panel" rx="6" />
+  <text x="220" y="50" class="header">Toplam Şube</text>
+  <text x="220" y="85" class="value">12</text>
+  <circle cx="340" cy="60" r="20" class="branch-icon" />
+
+  <rect x="400" y="20" width="180" height="100" class="panel" rx="6" />
+  <text x="420" y="50" class="header">Toplam Satış</text>
+  <text x="420" y="85" class="value">₺243.5K</text>
+  <circle cx="540" cy="60" r="20" class="chart-bar-2" />
+
+  <rect x="600" y="20" width="180" height="100" class="panel" rx="6" />
+  <text x="620" y="50" class="header">Ortalama Performans</text>
+  <text x="620" y="85" class="value">%89</text>
+  <circle cx="740" cy="60" r="20" class="chart-bar-3" />
+
+  <!-- Branch Chart -->
+  <rect x="200" y="140" width="580" height="200" class="panel" rx="6" />
+  <text x="220" y="170" class="header">Şubeler Performans Karşılaştırması</text>
+  
+  <!-- Chart Lines -->
+  <line x1="220" y1="290" x2="760" y2="290" class="axis" />
+  
+  <!-- Chart Bars -->
+  <rect x="250" y="210" width="40" height="80" class="chart-bar" />
+  <rect x="300" y="190" width="40" height="100" class="chart-bar" />
+  <rect x="350" y="230" width="40" height="60" class="chart-bar" />
+  <rect x="400" y="180" width="40" height="110" class="chart-bar" />
+  <rect x="450" y="220" width="40" height="70" class="chart-bar" />
+  <rect x="500" y="240" width="40" height="50" class="chart-bar" />
+  <rect x="550" y="200" width="40" height="90" class="chart-bar" />
+  <rect x="600" y="250" width="40" height="40" class="chart-bar" />
+  <rect x="650" y="220" width="40" height="70" class="chart-bar" />
+  <rect x="700" y="190" width="40" height="100" class="chart-bar" />
+  
+  <!-- Chart Labels -->
+  <text x="250" y="310" class="label" text-anchor="middle">Kadıköy</text>
+  <text x="300" y="310" class="label" text-anchor="middle">Beşiktaş</text>
+  <text x="350" y="310" class="label" text-anchor="middle">Şişli</text>
+  <text x="400" y="310" class="label" text-anchor="middle">Ataşehir</text>
+  <text x="450" y="310" class="label" text-anchor="middle">Levent</text>
+  <text x="500" y="310" class="label" text-anchor="middle">Üsküdar</text>
+  <text x="550" y="310" class="label" text-anchor="middle">Bakırköy</text>
+  <text x="600" y="310" class="label" text-anchor="middle">Mecidiyeköy</text>
+  <text x="650" y="310" class="label" text-anchor="middle">Maltepe</text>
+  <text x="700" y="310" class="label" text-anchor="middle">Beylikdüzü</text>
+
+  <!-- Recent Activity -->
+  <rect x="200" y="360" width="580" height="120" class="panel" rx="6" />
+  <text x="220" y="390" class="header">Son Aktiviteler</text>
+  
+  <line x1="220" y1="410" x2="760" y2="410" stroke="#eee" stroke-width="1" />
+  
+  <text x="220" y="430" class="menu-item">Beşiktaş şubesinde yeni menü aktifleştirildi</text>
+  <text x="660" y="430" class="label" text-anchor="end">20 dk önce</text>
+  
+  <line x1="220" y1="440" x2="760" y2="440" stroke="#eee" stroke-width="1" />
+  
+  <text x="220" y="460" class="menu-item">Kadıköy şubesinden stok transferi talep edildi</text>
+  <text x="660" y="460" class="label" text-anchor="end">1 saat önce</text>
+</svg>

@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Cafe & Restaurant Yönetim Sistemi | E-Adisyon</title>
+    <meta
+      name="description"
+      content="E-Adisyon Hotel Cafe & Restaurant yönetim sistemi ile otel işletmelerinizde sipariş takibi, stok kontrolü ve oda servis yönetimini kolayca gerçekleştirin."
+    />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dropdown.css" />
+    <link rel="stylesheet" href="css/hangi-isletmeler.css" />
+    <link rel="stylesheet" href="css/mobile-menu.css" />
+    <!-- Custom Styles for This Page -->
+    <style>
+      .hero-section {
+        background: #507b41 !important;
+        padding: 80px 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-bg-shape {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("img/pattern-bg.svg");
+        background-size: cover;
+        opacity: 0.1;
+        z-index: 0;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .feature-section {
+        padding: 70px 0;
+      }
+
+      .feature-card {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 25px;
+        height: 100%;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        border-top: 4px solid #507b41;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        /* border-color: var(--primary-color-light); */
+      }
+
+      .feature-icon {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #507b41 !important;
+        color: white !important;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        font-size: 24px;
+      }
+
+      .hotel-advantage-section {
+        background-color: #f9f9f9;
+        padding: 70px 0;
+      }
+
+      .hotel-advantage-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 25px;
+      }
+
+      .hotel-advantage-icon {
+        min-width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--primary-color-light);
+        color: var(--primary-color);
+        border-radius: 50%;
+        margin-right: 15px;
+        font-size: 18px;
+      }
+
+      /* Demo Talep Bölümü Stilleri */
+      .cta-section {
+            position: relative;
+            background: linear-gradient(to bottom, rgba(var(--primary-rgb), 0.03), rgba(var(--accent-rgb), 0.03));
+            padding: 80px 0;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(var(--accent-rgb), 0.1) 0%, rgba(var(--accent-rgb), 0) 70%);
+            z-index: 0;
+        }
+        
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -100px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(var(--primary-rgb), 0.1) 0%, rgba(var(--primary-rgb), 0) 70%);
+            z-index: 0;
+        }
+        
+        .demo-form-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+        
+        .demo-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .demo-features li {
+            color: gray;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .demo-features li i {
+            color: #507b41 !important;
+            margin-right: 10px;
+        }
+        
+        .text-white-75 {
+            color: gray;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar / Header -->
+    <header class="header fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="assets/eadisyonlogo.png"
+              alt="E-Adisyon Logo"
+              class="brand-logo"
+            />
+          </a>
+          <button class="hamburger-button d-lg-none" type="button" aria-label="Menüyü aç">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+           
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="businessDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Hangi İşletmeler
+                  <span class="dropdown-indicator"
+                    ><i class="fas fa-chevron-down"></i
+                  ></span>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-large"
+                  aria-labelledby="businessDropdown"
+                >
+                  <div class="business-grid grid-3-cols">
+                    <a href="restaurant-cafe.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-utensils"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Restaurant & Cafe</h5>
+                      </div>
+                    </a>
+                    <a href="subeli-restaurant-cafe.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-building"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Şubeli Restaurant & Cafe</h5>
+                      </div>
+                    </a>
+                    <a href="bulut-mutfak.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-cloud"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Bulut Mutfak</h5>
+                      </div>
+                    </a>
+                    <a href="fast-food.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-hamburger"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Fast Food</h5>
+                      </div>
+                    </a>
+                    <a href="pizza-restaurant.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-pizza-slice"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Pizza Restaurant</h5>
+                      </div>
+                    </a>
+                    <a href="burger-cafe-restaurant.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-burger"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Burger Cafe & Restaurant</h5>
+                      </div>
+                    </a>
+                    <a
+                      href="hotel-cafe-restaurant.html"
+                      class="business-item active"
+                      aria-current="page"
+                    >
+                      <div class="business-icon">
+                        <i class="fas fa-hotel"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Hotel Cafe & Restaurant</h5>
+                      </div>
+                    </a>
+                    <a href="sezonluk-isletmeler.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-umbrella-beach"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Sezonluk İşletmeler</h5>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="featuresDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Özellikler
+                  <span class="dropdown-indicator"
+                    ><i class="fas fa-chevron-down"></i
+                  ></span>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-large"
+                  aria-labelledby="featuresDropdown"
+                >
+                  <div class="business-grid grid-3-cols">
+                    <a href="dijital-menu.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-qrcode"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Dijital Menü</h5>
+                      </div>
+                    </a>
+                    <a
+                      href="stok-ve-maliyet-yonetimi.html"
+                      class="business-item"
+                    >
+                      <div class="business-icon">
+                        <i class="fas fa-box"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Stok ve Maliyet Yönetimi</h5>
+                      </div>
+                    </a>
+                    <a href="mutfak-yonetimi.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-book"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Mutfak Yönetimi</h5>
+                      </div>
+                    </a>
+                    <a
+                      href="gelismis-entegrasyonlar.html"
+                      class="business-item"
+                    >
+                      <div class="business-icon">
+                        <i class="fas fa-plug"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Gelişmiş Entegrasyonlar</h5>
+                      </div>
+                    </a>
+                    <a href="e-donusum-entegrasyonu.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-file-invoice"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>E-Dönüşüm Entegrasyonu</h5>
+                      </div>
+                    </a>
+                    <!-- <a href="zincir-isletme-yonetimi.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-store"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Zincir İşletme Yönetimi</h5>
+                      </div>
+                    </a> -->
+                    <a href="kurtye-takip.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-motorcycle"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Kurye Takip</h5>
+                      </div>
+                    </a>
+                    <a href="cari-musteri-yonetimi.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-users"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Cari Müşteri Yönetimi</h5>
+                      </div>
+                    </a>
+                    <a href="raporlama-analiz.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-chart-bar"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Raporlama ve Analiz</h5>
+                      </div>
+                    </a>
+                    <!-- <a href="donanım.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-desktop"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Donanım</h5>
+                      </div>
+                    </a> -->
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="aboutDropdown"
+                  role="button"
+                  aria-expanded="false"
+                >
+                  Hakkımızda
+                  <span class="dropdown-indicator"
+                    ><i class="fas fa-chevron-down"></i
+                  ></span>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-large dropdown-menu-narrow"
+                  aria-labelledby="aboutDropdown"
+                >
+                  <div class="business-grid">
+                    <a href="hakkimizda.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-building"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Şirketimiz</h5>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="fiyatlar.html#fiyatlar">Fiyatlar</a>
+              </li>
+              <!-- <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="partnershipDropdown"
+                  role="button"
+                  aria-expanded="false"
+                >
+                  İş Ortaklığı
+                  <span class="dropdown-indicator"
+                    ><i class="fas fa-chevron-down"></i
+                  ></span>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-large dropdown-menu-narrow"
+                  aria-labelledby="partnershipDropdown"
+                >
+                  <div class="business-grid">
+                    <a href="#" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-cog"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Bayilik</h5>
+                      </div>
+                    </a>
+                    <a href="#" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-bullhorn"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Kampanyalar</h5>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </li> -->
+              <!-- <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="resourcesDropdown"
+                  role="button"
+                  aria-expanded="false"
+                >
+                  Kaynaklar
+                  <span class="dropdown-indicator"
+                    ><i class="fas fa-chevron-down"></i
+                  ></span>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-large dropdown-menu-narrow"
+                  aria-labelledby="resourcesDropdown"
+                >
+                  <div class="business-grid">
+                    <a href="#" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-book"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Blog</h5>
+                      </div>
+                    </a>
+                    <a href="#" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-comment-dots"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Bilgi Merkezi</h5>
+                      </div>
+                    </a>
+                    <a href="#" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-cogs"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>API</h5>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </li> -->
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="#musteri-hikayeleri"
+                  >Müşteri Hikayeleri</a
+                >
+              </li> -->
+              <li class="nav-item ms-lg-2">
+                <a href="#demo" class="btn btn-accent rounded-pill"
+                  >Bizimle İletişime Geçin</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-white">
+      <div class="hero-bg-shape"></div>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 hero-content">
+            <h1
+              class="display-4 fw-bold mb-4 text-white animate__animated animate__fadeInUp"
+            >
+              Hotel Cafe & Restaurant Yönetim Sistemi
+            </h1>
+            <p
+              class="lead animate__animated animate__fadeInUp animate__delay-1s"
+              style="
+                color: #ffffff;
+                margin-bottom: 15px;
+                font-weight: 500;
+                text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+              "
+            >
+              Dijitalleşen dünyada otel hizmetlerinizi mükemmelleştirin
+            </p>
+            <p
+              class="lead mb-5 animate__animated animate__fadeInUp animate__delay-1s"
+              style="color: #f0f0f0; line-height: 1.6"
+            >
+              E-Adisyon ile otel içi restoran ve kafelerinizi verimli yönetin.
+              Oda servisi, masa rezervasyonları ve konaklama entegrasyonuyla
+              mükemmel bir misafir deneyimi sunun.
+            </p>
+            <div
+            class="d-flex flex-wrap gap-3 animate__animated animate__fadeInUp animate__delay-2s"
+          >
+            <a
+              href="#demo"
+              class="btn btn-light rounded-pill px-4 py-3 fw-medium"
+              >Bizimle İletişime Geçin</a
+            >
+            <a
+              href="#ozellikler"
+              class="btn btn-outline-light rounded-pill px-4 py-3 fw-medium"
+              >Özellikler</a
+            >
+          </div>
+          </div>
+          <div class="col-lg-6 d-none d-lg-block">
+            <img
+              src="img/stock/hotel-cafe.jpg"
+              alt="Hotel Cafe & Restaurant İllüstrasyon"
+              class="img-fluid rounded-3"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="ozellikler" class="feature-section">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title">Otel İşletmeleri için Özel Çözümler</h2>
+          <p class="section-subtitle" style="text-align: center; margin-left: auto; margin-right: auto;">
+            Konaklama ve yiyecek-içecek hizmetlerinizi birleştiren entegre
+            yönetim sistemi
+          </p>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-concierge-bell"></i>
+              </div>
+              <h3>Oda Servisi Yönetimi</h3>
+              <p>
+                Odalara hızlı servis, sipariş takibi ve oda numarası ile
+                otomatik fatura entegrasyonu.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-bed"></i>
+              </div>
+              <h3>Oda - Restoran Entegrasyonu</h3>
+              <p>
+                Konaklama sistemiyle tam entegrasyon, oda faturalarına yeme-içme
+                ücretlerini ekleme imkanı.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-calendar-check"></i>
+              </div>
+              <h3>Rezervasyon Yönetimi</h3>
+              <p>
+                Masa rezervasyonları, özel etkinlikler ve organizasyonlar için
+                entegre rezervasyon sistemi.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <h3>Grup Organizasyonları</h3>
+              <p>
+                Konferans, düğün ve özel etkinlikler için menü planlama, maliyet
+                hesaplama ve servis takibi.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-utensils"></i>
+              </div>
+              <h3>Açık Büfe Yönetimi</h3>
+              <p>
+                Açık büfe servisler için tüketim takibi, maliyet analizi ve stok
+                yönetimi.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h3>Departman Bazlı Raporlama</h3>
+              <p>
+                Kahvaltı, öğle yemeği, akşam yemeği ve bar hizmetleri için ayrı
+                raporlama ve analiz.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section class="hotel-advantage-section">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title">Otel İşletmelerine Özel Avantajlar</h2>
+          <p class="section-subtitle" style="text-align: center; margin-left: auto; margin-right: auto;">
+            E-Adisyon ile otel içi yiyecek-içecek operasyonlarınızı daha verimli
+            hale getirin
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="hotel-advantage-item">
+              <div class="hotel-advantage-icon">
+                <i class="fas fa-sync-alt"></i>
+              </div>
+              <div>
+                <h4>Konaklama Entegrasyonu</h4>
+                <p>
+                  Otel yönetim sistemleriyle tam entegrasyon, konaklama ve
+                  yeme-içme hizmetlerinin tek platformdan yönetimi.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="hotel-advantage-item">
+              <div class="hotel-advantage-icon">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <div>
+                <h4>Oda Servis İnovasyonu</h4>
+                <p>
+                  Dijital menü ve mobil sipariş sistemiyle misafirleriniz
+                  odalarından kolaylıkla sipariş verebilir.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="hotel-advantage-item">
+              <div class="hotel-advantage-icon">
+                <i class="fas fa-chart-pie"></i>
+              </div>
+              <div>
+                <h4>Maliyet Optimizasyonu</h4>
+                <p>
+                  Açık büfe ve toplu organizasyonlar için maliyet analizi ve
+                  optimizasyon araçları.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="hotel-advantage-item">
+              <div class="hotel-advantage-icon">
+                <i class="fas fa-globe"></i>
+              </div>
+              <div>
+                <h4>Çoklu Dil Desteği</h4>
+                <p>
+                  Yabancı misafirleriniz için çok dilli menüler ve sipariş
+                  ekranları ile uluslararası misafir memnuniyeti.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section (Demo) -->
+    <section class="cta-section" id="demo">
+      <div class="cta-overlay"></div>
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-lg-7 text-center text-lg-start mb-4 mb-lg-0">
+            <h2 class="text-black fw-bold mb-4 display-5">
+              E-Adisyon'u Hotel İşletmenizde Deneyimleyin
+            </h2>
+            <p class="text-black-75 lead">
+              Hızlı, verimli ve müşteri odaklı bir yönetim sisteminin
+              işletmenize katacağı değeri görmek için bizimle iletişime geçin.
+            </p>
+            <ul class="demo-features ps-0 mb-4">
+              <!-- <li>
+                <i class="fas fa-check-circle me-2" style="color: #ffffff"></i> 14 gün ücretsiz deneme
+              </li> -->
+              <li><i class="fas fa-check-circle me-2" style="color: #ffffff"></i> Kurulum desteği</li>
+              <li>
+                <i class="fas fa-check-circle me-2" style="color: #ffffff"></i> Canlı ürün tanıtımı
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-5">
+            <div class="demo-form-card">
+              <h4 class="fw-bold mb-3">Bizimle İletişime Geçin</h4>
+              <p class="text-muted mb-4">
+                Sizinle 24 saat içinde iletişime geçeceğiz
+              </p>
+              <form>
+                <div class="mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="İşletme Adı"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Adınız Soyadınız"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="E-posta Adresiniz"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="tel"
+                    class="form-control"
+                    placeholder="Telefon Numaranız"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <select class="form-select" required>
+                    <option value="" selected disabled>
+                      Otel İşletme Türünüz
+                    </option>
+                    <option value="sehir-oteli">Şehir Oteli</option>
+                    <option value="resort-otel">Resort Otel</option>
+                    <option value="butik-otel">Butik Otel</option>
+                    <option value="apart-otel">Apart Otel</option>
+                    <option value="diger">Diğer</option>
+                  </select>
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-primary w-100 rounded-pill py-3 fw-medium"
+                >
+                  Bizimle İletişime Geçin
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer pt-5">
+      <div class="container">
+        <div class="row pb-4">
+          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <div class="footer-logo mb-4">
+              <img
+                src="assets/eadisyonlogo.png"
+                alt="E-Adisyon Logo"
+                class="footer-brand-logo"
+              />
+            </div>
+            <p>
+              Yeni nesil bulut tabanlı restoran ve cafe yönetim sistemi ile
+              işletmenizi dijitalleştirin.
+            </p>
+            <div class="social-icons mt-4">
+              <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="me-2"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <h5 class="footer-title">Hızlı Linkler</h5>
+            <ul class="footer-links">
+              <li><a href="index.html">Ana Sayfa</a></li>
+              <li><a href="index.html#ozellikler">Özellikler</a></li>
+              <li><a href="index.html#fiyatlandirma">Fiyatlandırma</a></li>
+              <li><a href="hakkimizda.html">Hakkımızda</a></li>
+              <li><a href="index.html#iletisim">İletişim</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <h5 class="footer-title">Ürünlerimiz</h5>
+            <ul class="footer-links">
+              <li><a href="#">Adisyon Sistemi</a></li>
+              <li><a href="dijital-menu.html">Dijital Menü</a></li>
+              <li><a href="stok-ve-maliyet-yonetimi.html">Stok Takibi</a></li>
+              <li><a href="mutfak-yonetimi.html">Mutfak Yönetimi</a></li>
+              <li>
+                <a href="gelismis-entegrasyonlar.html"
+                  >Gelişmiş Entegrasyonlar</a
+                >
+              </li>
+              <li><a href="#">Müşteri Yönetimi</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <h5 class="footer-title">İletişim</h5>
+            <ul class="footer-contact">
+              <li>
+                <i class="fas fa-map-marker-alt"></i> İhsaniye Mahallesi İzmir Yolu Caddesi No 110/A<br />Ali
+                Bostancı İş Merkezi Kat 2 Daire 3<br />Nilüfer,
+                Bursa/Türkiye
+              </li>
+              <li><i class="fas fa-phone"></i> 0850 466 1001</li>
+              <li><i class="fas fa-envelope"></i> info@e-adisyon.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom py-3 border-top">
+          <div class="row">
+            <div class="col-md-6">
+              <p class="mb-0">&copy; 2025 E-Adisyon. Tüm hakları saklıdır.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+              <a href="#" class="me-3">Gizlilik Politikası</a>
+              <a href="#">Kullanım Koşulları</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Mobile Menu Container -->
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu-container">
+      <div class="mobile-menu-header">
+        <div class="mobile-menu-logo">
+          <!-- <img src="assets/eadisyonlogo.png" alt="E-Adisyon Logo"> -->
+        </div>
+        <button class="mobile-menu-close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <ul class="mobile-menu-nav">
+        <li>
+          <a href="index.html" class="mobile-menu-link">Ana Sayfa</a>
+        </li>
+        <li>
+          <div class="mobile-menu-item">
+            <a href="#" class="mobile-menu-link">İşletme Türleri</a>
+            <button class="mobile-menu-toggle"><i class="fas fa-chevron-down"></i></button>
+          </div>
+          <ul class="mobile-submenu">
+            <li><h6 class="submenu-title">İŞLETMELER</h6></li>
+            <li><a href="restaurant-cafe.html">Restaurant & Cafe</a></li>
+            <li><a href="bulut-mutfak.html">Bulut Mutfak</a></li>
+            <li><a href="fast-food.html">Fast Food</a></li>
+            <li><a href="pizza-restaurant.html">Pizza Restaurant</a></li>
+            <li><a href="burger-cafe-restaurant.html">Burger Cafe & Restaurant</a></li>
+            <li><a href="hotel-cafe-restaurant.html">Hotel Cafe & Restaurant</a></li>
+            <li><a href="sezonluk-isletmeler.html">Sezonluk İşletmeler</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="mobile-menu-item">
+            <a href="#" class="mobile-menu-link">Özellikler</a>
+            <button class="mobile-menu-toggle"><i class="fas fa-chevron-down"></i></button>
+          </div>
+          <ul class="mobile-submenu">
+            <li><h6 class="submenu-title">MODÜLLER</h6></li>
+            <li><a href="dijital-menu.html">Dijital Menü</a></li>
+            <li><a href="stok-ve-maliyet-yonetimi.html">Stok ve Maliyet Yönetimi</a></li>
+            <li><a href="mutfak-yonetimi.html">Mutfak Yönetimi</a></li>
+            <li><a href="gelismis-entegrasyonlar.html">Gelişmiş Entegrasyonlar</a></li>
+            <li><a href="e-donusum-entegrasyonu.html">E-Dönüşüm Entegrasyonu</a></li>
+            <!-- <li><a href="zincir-isletme-yonetimi.html">Zincir İşletme Yönetimi</a></li> -->
+            <li><a href="kurtye-takip.html">Kurye Takip</a></li>
+            <li><a href="cari-musteri-yonetimi.html">Cari Müşteri Yönetimi</a></li>
+            <li><a href="raporlama-analiz.html">Raporlama ve Analiz</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="fiyatlar.html" class="mobile-menu-link">Fiyatlar</a>
+        </li>
+        <li>
+          <div class="mobile-menu-item">
+            <a href="#" class="mobile-menu-link">Hakkımızda</a>
+            <button class="mobile-menu-toggle"><i class="fas fa-chevron-down"></i></button>
+          </div>
+          <ul class="mobile-submenu">
+            <li><a href="hakkimizda.html">Şirketimiz</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="mobile-menu-bottom">
+        <a href="#demo" class="btn btn-primary rounded-pill">Bizimle İletişime Geçin</a>
+      </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

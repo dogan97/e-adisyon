@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Filtreler -->
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#65a154"/>
+      <stop offset="100%" stop-color="#3c5d31"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8ed4cd"/>
+      <stop offset="100%" stop-color="#5bc0b5"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff7c7c"/>
+      <stop offset="100%" stop-color="#e74c3c"/>
+    </linearGradient>
+    <linearGradient id="yellowGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffd95a"/>
+      <stop offset="100%" stop-color="#f9a825"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Dashboard Ana Çerçevesi -->
+  <rect x="50" y="50" width="700" height="400" rx="10" ry="10" fill="#f8f9fa" filter="url(#shadow)"/>
+  
+  <!-- Dashboard Üst Panel -->
+  <rect x="50" y="50" width="700" height="60" rx="10" ry="10" fill="url(#greenGrad)"/>
+  
+  <!-- Dashboard İkonları Üst Panel -->
+  <circle cx="700" cy="80" r="15" fill="#ffffff" opacity="0.8"/>
+  <circle cx="660" cy="80" r="15" fill="#ffffff" opacity="0.8"/>
+  <circle cx="620" cy="80" r="15" fill="#ffffff" opacity="0.8"/>
+  
+  <!-- Sol Menü -->
+  <rect x="50" y="110" width="180" height="340" fill="#f0f0f0" rx="0" ry="0"/>
+  
+  <!-- Menü İkonları -->
+  <g>
+    <rect x="70" y="130" width="140" height="50" rx="5" ry="5" fill="url(#greenGrad)" opacity="0.9"/>
+    <circle cx="100" cy="155" r="15" fill="#ffffff" opacity="0.9"/>
+    <path d="M92,155 L98,161 L108,151" stroke="#507b41" stroke-width="3" fill="none"/>
+  </g>
+  
+  <g>
+    <rect x="70" y="190" width="140" height="50" rx="5" ry="5" fill="#ffffff" stroke="#dddddd" stroke-width="1"/>
+    <circle cx="100" cy="215" r="15" fill="#f0f0f0" stroke="#dddddd" stroke-width="1"/>
+    <!-- Mutfak ikonu -->
+    <path d="M95,215 L105,215 M92,210 L108,210 M95,220 L105,220" stroke="#555" stroke-width="2"/>
+  </g>
+  
+  <g>
+    <rect x="70" y="250" width="140" height="50" rx="5" ry="5" fill="#ffffff" stroke="#dddddd" stroke-width="1"/>
+    <circle cx="100" cy="275" r="15" fill="#f0f0f0" stroke="#dddddd" stroke-width="1"/>
+    <!-- Motokurye ikonu -->
+    <path d="M90,275 L110,275 M95,270 L105,270 M92,280 L108,280" stroke="#555" stroke-width="2"/>
+  </g>
+  
+  <g>
+    <rect x="70" y="310" width="140" height="50" rx="5" ry="5" fill="#ffffff" stroke="#dddddd" stroke-width="1"/>
+    <circle cx="100" cy="335" r="15" fill="#f0f0f0" stroke="#dddddd" stroke-width="1"/>
+    <!-- Ödeme ikonu -->
+    <path d="M95,335 L105,335 M92,330 L108,330 M95,340 L105,340" stroke="#555" stroke-width="2"/>
+  </g>
+  
+  <g>
+    <rect x="70" y="370" width="140" height="50" rx="5" ry="5" fill="#ffffff" stroke="#dddddd" stroke-width="1"/>
+    <circle cx="100" cy="395" r="15" fill="#f0f0f0" stroke="#dddddd" stroke-width="1"/>
+    <!-- Grafik ikonu -->
+    <path d="M92,400 L92,390 L98,385 L104,395 L108,385" stroke="#555" stroke-width="2" fill="none"/>
+  </g>
+  
+  <!-- Sipariş Kartları -->
+  <!-- Kart 1 -->
+  <g transform="translate(0,0)">
+    <rect x="250" y="130" width="230" height="130" rx="8" ry="8" fill="#ffffff" filter="url(#shadow)"/>
+    <rect x="250" y="130" width="230" height="30" rx="8" ry="8" fill="url(#redGrad)" opacity="0.8"/>
+    
+    <!-- Sipariş İçeriği -->
+    <g transform="translate(270, 170)">
+      <!-- Hamburger görseli -->
+      <g transform="scale(0.5)">
+        <path d="M-30,-10 L30,-10 C35,-10 35,-5 30,0 L-30,0 C-35,-5 -35,-10 -30,-10 Z" fill="#f9a825" filter="url(#shadow)"/>
+        <path d="M-30,0 L30,0 C35,0 35,5 30,10 L-30,10 C-35,5 -35,0 -30,0 Z" fill="#8BC34A"/>
+        <path d="M-30,10 L30,10 C35,10 35,15 30,20 L-30,20 C-35,15 -35,10 -30,10 Z" fill="#e74c3c"/>
+        <path d="M-30,20 L30,20 C35,20 35,25 30,30 L-30,30 C-35,25 -35,20 -30,20 Z" fill="#f9a825"/>
+      </g>
+      <text x="40" y="5" font-family="Arial" font-size="16" fill="#333">2x</text>
+    </g>
+    
+    <g transform="translate(270, 210)">
+      <!-- Soğan Halkası -->
+      <circle cx="0" cy="0" r="12" fill="#daa520" stroke="#b8860b" stroke-width="4"/>
+      <circle cx="0" cy="0" r="6" fill="#ffffff"/>
+      <text x="40" y="5" font-family="Arial" font-size="16" fill="#333">1x</text>
+    </g>
+    
+    <g transform="translate(380, 180)">
+      <!-- Durum göstergesi -->
+      <circle cx="0" cy="0" r="30" fill="#f0f0f0" stroke="#dddddd" stroke-width="1"/>
+      <path d="M-15,-15 L15,15 M-15,15 L15,-15" stroke="#e74c3c" stroke-width="4"/>
+    </g>
+  </g>
+  
+  <!-- Kart 2 -->
+  <g transform="translate(240,0)">
+    <rect x="250" y="130" width="230" height="130" rx="8" ry="8" fill="#ffffff" filter="url(#shadow)"/>
+    <rect x="250" y="130" width="230" height="30" rx="8" ry="8" fill="url(#yellowGrad)" opacity="0.8"/>
+    
+    <!-- Sipariş İçeriği -->
+    <g transform="translate(270, 170)">
+      <!-- Tavuk parçaları -->
+      <g transform="scale(0.5)">
+        <path d="M-15,-15 C-25,-5 -25,15 -15,25 C0,30 15,25 25,15 C30,0 25,-15 15,-25 C0,-30 -15,-25 -15,-15 Z" fill="#f9a825"/>
+      </g>
+      <text x="40" y="5" font-family="Arial" font-size="16" fill="#333">1x</text>
+    </g>
+    
+    <g transform="translate(270, 210)">
+      <!-- Patates -->
+      <g transform="scale(0.4)">
+        <path d="M-30,-20 L30,-20 L20,30 L-20,30 Z" fill="#f9a825"/>
+        <path d="M-15,-15 L-5,15" stroke="#f5f5dc" stroke-width="5" stroke-linecap="round"/>
+        <path d="M5,-15 L0,15" stroke="#f5f5dc" stroke-width="5" stroke-linecap="round"/>
+        <path d="M15,-10 L5,15" stroke="#f5f5dc" stroke-width="5" stroke-linecap="round"/>
+      </g>
+      <text x="40" y="5" font-family="Arial" font-size="16" fill="#333">1x</text>
+    </g>
+    
+    <g transform="translate(380, 180)">
+      <!-- Durum göstergesi -->
+      <circle cx="0" cy="0" r="30" fill="#f0f0f0" stroke="#dddddd" stroke-width="1"/>
+      <path d="M-20,0 L-7,13 L20,-14" stroke="#f9a825" stroke-width="4" fill="none"/>
+    </g>
+  </g>
+  
+  <!-- Kart 3 -->
+  <g transform="translate(0,140)">
+    <rect x="250" y="130" width="230" height="130" rx="8" ry="8" fill="#ffffff" filter="url(#shadow)"/>
+    <rect x="250" y="130" width="230" height="30" rx="8" ry="8" fill="url(#greenGrad)" opacity="0.8"/>
+    
+    <!-- Sipariş İçeriği -->
+    <g transform="translate(270, 170)">
+      <!-- Vegan Burger -->
+      <g transform="scale(0.5)">
+        <path d="M-30,-10 L30,-10 C35,-10 35,-5 30,0 L-30,0 C-35,-5 -35,-10 -30,-10 Z" fill="#f9a825"/>
+        <path d="M-30,0 L30,0 C35,0 35,5 30,10 L-30,10 C-35,5 -35,0 -30,0 Z" fill="#4CAF50"/>
+        <path d="M-30,10 L30,10 C35,10 35,15 30,20 L-30,20 C-35,15 -35,10 -30,10 Z" fill="#4CAF50"/>
+        <path d="M-30,20 L30,20 C35,20 35,25 30,30 L-30,30 C-35,25 -35,20 -30,20 Z" fill="#f9a825"/>
+      </g>
+      <text x="40" y="5" font-family="Arial" font-size="16" fill="#333">1x</text>
+    </g>
+    
+    <g transform="translate(270, 210)">
+      <!-- Salata -->
+      <path d="M-15,-5 C-10,-10 10,-10 15,-5 C20,0 15,10 0,15 C-15,10 -20,0 -15,-5 Z" fill="#8BC34A"/>
+      <text x="40" y="5" font-family="Arial" font-size="16" fill="#333">1x</text>
+    </g>
+    
+    <g transform="translate(380, 180)">
+      <!-- Durum göstergesi -->
+      <circle cx="0" cy="0" r="30" fill="#f0f0f0" stroke="#dddddd" stroke-width="1"/>
+      <path d="M-20,0 L-7,13 L20,-14" stroke="#507b41" stroke-width="4" fill="none"/>
+    </g>
+  </g>
+  
+  <!-- Kart 4 -->
+  <g transform="translate(240,140)">
+    <rect x="250" y="130" width="230" height="130" rx="8" ry="8" fill="#ffffff" filter="url(#shadow)"/>
+    <rect x="250" y="130" width="230" height="30" rx="8" ry="8" fill="#333333"/>
+    
+    <!-- Sipariş İçeriği -->
+    <g transform="translate(270, 170)">
+      <!-- Cheeseburger -->
+      <g transform="scale(0.5)">
+        <path d="M-30,-10 L30,-10 C35,-10 35,-5 30,0 L-30,0 C-35,-5 -35,-10 -30,-10 Z" fill="#f9a825"/>
+        <path d="M-30,0 L30,0 C35,0 35,5 30,10 L-30,10 C-35,5 -35,0 -30,0 Z" fill="#f9a825" opacity="0.7"/>
+        <path d="M-30,10 L30,10 C35,10 35,15 30,20 L-30,20 C-35,15 -35,10 -30,10 Z" fill="#e74c3c"/>
+        <path d="M-30,20 L30,20 C35,20 35,25 30,30 L-30,30 C-35,25 -35,20 -30,20 Z" fill="#f9a825"/>
+      </g>
+      <text x="40" y="5" font-family="Arial" font-size="16" fill="#333">2x</text>
+    </g>
+    
+    <g transform="translate(270, 210)">
+      <!-- İçecek -->
+      <g transform="scale(0.6)">
+        <path d="M-10,-15 L10,-15 L12,15 L-12,15 Z" fill="url(#blueGrad)" opacity="0.8"/>
+        <ellipse cx="0" cy="-15" rx="10" ry="3" fill="#5bc0b5"/>
+        <ellipse cx="0" cy="15" rx="12" ry="3" fill="#5bc0b5"/>
+      </g>
+      <text x="40" y="5" font-family="Arial" font-size="16" fill="#333">2x</text>
+    </g>
+    
+    <g transform="translate(380, 180)">
+      <!-- Durum göstergesi -->
+      <circle cx="0" cy="0" r="30" fill="#f0f0f0" stroke="#dddddd" stroke-width="1"/>
+      <path d="M-10,0 C-10,-10 10,-10 10,0 C10,10 -10,10 -10,0 Z" stroke="#333333" stroke-width="4" fill="none"/>
+      <circle cx="0" cy="0" r="5" fill="#333333"/>
+    </g>
+  </g>
+  
+  <!-- Alt Özet Grafik -->
+  <g transform="translate(400, 410)">
+    <rect x="-150" y="-10" width="300" height="30" rx="15" ry="15" fill="#f0f0f0" stroke="#dddddd" stroke-width="1"/>
+    
+    <rect x="-140" y="-5" width="60" height="20" rx="10" ry="10" fill="url(#redGrad)" opacity="0.8"/>
+    <rect x="-70" y="-5" width="40" height="20" rx="10" ry="10" fill="url(#yellowGrad)" opacity="0.8"/>
+    <rect x="-20" y="-5" width="80" height="20" rx="10" ry="10" fill="url(#greenGrad)" opacity="0.8"/>
+    <rect x="70" y="-5" width="60" height="20" rx="10" ry="10" fill="#333333"/>
+  </g>
+</svg>

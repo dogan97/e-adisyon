@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Filtreler -->
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-opacity="0.2"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    
+    <!-- Gradientler -->
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#65a154"/>
+      <stop offset="100%" stop-color="#3c5d31"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8ed4cd"/>
+      <stop offset="100%" stop-color="#5bc0b5"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff7c7c"/>
+      <stop offset="100%" stop-color="#e74c3c"/>
+    </linearGradient>
+    <linearGradient id="yellowGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffd95a"/>
+      <stop offset="100%" stop-color="#f9a825"/>
+    </linearGradient>
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8f9fa"/>
+      <stop offset="100%" stop-color="#e9ecef"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Ana Restoranın Gösterimi -->
+  <g transform="translate(400, 300)">
+    <!-- Arka Plan Şekilleri -->
+    <path d="M-350,-150 L350,-150 C380,-150 400,-130 400,-100 L400,150 C400,180 380,200 350,200 L-350,200 C-380,200 -400,180 -400,150 L-400,-100 C-400,-130 -380,-150 -350,-150 Z" fill="#f8f9fa" opacity="0.3" filter="url(#shadow)"/>
+    
+    <!-- POS Terminali -->
+    <g transform="translate(-280, 20)">
+      <!-- POS Ekranı -->
+      <rect x="-65" y="-100" width="130" height="100" rx="10" ry="10" fill="#333" filter="url(#shadow)"/>
+      <rect x="-60" y="-95" width="120" height="90" rx="5" ry="5" fill="url(#screenGrad)"/>
+      
+      <!-- Ekran İçeriği -->
+      <rect x="-50" y="-85" width="100" height="15" rx="2" ry="2" fill="#507b41" opacity="0.9"/>
+      
+      <!-- Menü Öğeleri -->
+      <g transform="translate(-35, -60)">
+        <rect x="-10" y="-5" width="90" height="10" rx="2" ry="2" fill="#ddd"/>
+        <circle cx="-15" cy="0" r="4" fill="url(#redGrad)"/>
+      </g>
+      
+      <g transform="translate(-35, -45)">
+        <rect x="-10" y="-5" width="90" height="10" rx="2" ry="2" fill="#ddd"/>
+        <circle cx="-15" cy="0" r="4" fill="url(#yellowGrad)"/>
+      </g>
+      
+      <g transform="translate(-35, -30)">
+        <rect x="-10" y="-5" width="90" height="10" rx="2" ry="2" fill="#ddd"/>
+        <circle cx="-15" cy="0" r="4" fill="url(#blueGrad)"/>
+      </g>
+      
+      <!-- POS Tabanı -->
+      <path d="M-50,0 L50,0 L40,40 L-40,40 Z" fill="#444" filter="url(#shadow)"/>
+      <rect x="-30" y="15" width="60" height="10" rx="5" ry="5" fill="#333"/>
+    </g>
+    
+    <!-- Sipariş Akış Şeması -->
+    <g transform="translate(20, -50)">
+      <!-- Bulut Sunucu -->
+      <path d="M-40,-50 C-60,-50 -70,-35 -70,-20 C-70,-5 -60,10 -40,10 L40,10 C60,10 70,-5 70,-20 C70,-35 60,-50 40,-50 Z" fill="url(#blueGrad)" filter="url(#shadow)"/>
+      <circle cx="-25" cy="-30" r="8" fill="#fff" opacity="0.6"/>
+      <circle cx="15" cy="-30" r="5" fill="#fff" opacity="0.4"/>
+      
+      <!-- Veri Bağlantıları -->
+      <path d="M-70,0 L-150,100" stroke="#8ed4cd" stroke-width="3" stroke-dasharray="5,5" fill="none"/>
+      <path d="M0,10 L0,100" stroke="#8ed4cd" stroke-width="3" stroke-dasharray="5,5" fill="none"/>
+      <path d="M70,0 L200,100" stroke="#8ed4cd" stroke-width="3" stroke-dasharray="5,5" fill="none"/>
+      
+      <!-- Mobil Cihazlar -->
+      <g transform="translate(-150, 140) rotate(-15)">
+        <rect x="-30" y="-50" width="60" height="100" rx="10" ry="10" fill="#333" filter="url(#shadow)"/>
+        <rect x="-25" y="-45" width="50" height="90" rx="5" ry="5" fill="url(#screenGrad)"/>
+        <circle cx="0" cy="55" r="8" fill="#ddd" stroke="#333" stroke-width="1"/>
+        
+        <!-- Hamburger ve Sipariş -->
+        <g transform="scale(0.6)">
+          <path d="M-25,-20 L25,-20 C30,-20 30,-15 25,-10 L-25,-10 C-30,-15 -30,-20 -25,-20 Z" fill="#f9a825"/>
+          <path d="M-25,-10 L25,-10 C30,-10 30,-5 25,0 L-25,0 C-30,-5 -30,-10 -25,-10 Z" fill="#8BC34A"/>
+          <path d="M-25,0 L25,0 C30,0 30,5 25,10 L-25,10 C-30,5 -30,0 -25,0 Z" fill="#e74c3c"/>
+          <path d="M-25,10 L25,10 C30,10 30,15 25,20 L-25,20 C-30,15 -30,10 -25,10 Z" fill="#f9a825"/>
+        </g>
+        
+        <rect x="-15" y="15" width="30" height="5" rx="2" ry="2" fill="#507b41"/>
+        <rect x="-15" y="25" width="20" height="5" rx="2" ry="2" fill="#555"/>
+      </g>
+      
+      <!-- Merkezi İşlem Tablosu -->
+      <g transform="translate(0, 140)">
+        <rect x="-50" y="-40" width="100" height="80" rx="5" ry="5" fill="#fff" stroke="#ddd" stroke-width="2" filter="url(#shadow)"/>
+        <rect x="-40" y="-30" width="80" height="10" rx="2" ry="2" fill="url(#greenGrad)" opacity="0.8"/>
+        
+        <g transform="translate(0, -10)">
+          <rect x="-40" y="-5" width="15" height="10" rx="2" ry="2" fill="#f0f0f0"/>
+          <rect x="-20" y="-5" width="15" height="10" rx="2" ry="2" fill="#f0f0f0"/>
+          <rect x="0" y="-5" width="15" height="10" rx="2" ry="2" fill="#f0f0f0"/>
+          <rect x="20" y="-5" width="15" height="10" rx="2" ry="2" fill="#f0f0f0"/>
+        </g>
+        
+        <g transform="translate(0, 5)">
+          <rect x="-40" y="-5" width="15" height="10" rx="2" ry="2" fill="#f0f0f0"/>
+          <rect x="-20" y="-5" width="15" height="10" rx="2" ry="2" fill="#f0f0f0"/>
+          <rect x="0" y="-5" width="15" height="10" rx="2" ry="2" fill="#f0f0f0"/>
+          <rect x="20" y="-5" width="15" height="10" rx="2" ry="2" fill="url(#redGrad)" opacity="0.5"/>
+        </g>
+        
+        <g transform="translate(0, 20)">
+          <rect x="-40" y="-5" width="15" height="10" rx="2" ry="2" fill="#f0f0f0"/>
+          <rect x="-20" y="-5" width="15" height="10" rx="2" ry="2" fill="#f0f0f0"/>
+          <rect x="0" y="-5" width="15" height="10" rx="2" ry="2" fill="url(#yellowGrad)" opacity="0.5"/>
+          <rect x="20" y="-5" width="15" height="10" rx="2" ry="2" fill="#f0f0f0"/>
+        </g>
+      </g>
+      
+      <!-- Sipariş Takip Ekranı -->
+      <g transform="translate(200, 150) rotate(15)">
+        <rect x="-75" y="-40" width="150" height="80" rx="5" ry="5" fill="#333" filter="url(#shadow)"/>
+        <rect x="-70" y="-35" width="140" height="70" rx="3" ry="3" fill="url(#screenGrad)"/>
+        
+        <!-- Sipariş Öğeleri -->
+        <rect x="-60" y="-25" width="120" height="15" rx="2" ry="2" fill="#507b41" opacity="0.8"/>
+        <text x="-55" y="-15" font-family="Arial" font-size="9" fill="white">SİPARİŞ HAZIR</text>
+        <circle cx="50" cy="-17" r="4" fill="url(#greenGrad)"/>
+        
+        <g transform="translate(0, 5)">
+          <rect x="-60" y="-5" width="120" height="10" rx="2" ry="2" fill="#eee"/>
+          <rect x="-55" y="-3" width="30" height="6" rx="1" ry="1" fill="#555"/>
+          <circle cx="50" cy="0" r="3" fill="url(#yellowGrad)"/>
+        </g>
+        
+        <g transform="translate(0, 20)">
+          <rect x="-60" y="-5" width="120" height="10" rx="2" ry="2" fill="#eee"/>
+          <rect x="-55" y="-3" width="40" height="6" rx="1" ry="1" fill="#555"/>
+          <circle cx="50" cy="0" r="3" fill="url(#redGrad)"/>
+        </g>
+      </g>
+    </g>
+    
+    <!-- Fast Food Ürünleri -->
+    <g transform="translate(280, 30)">
+      <!-- Hamburger -->
+      <g transform="translate(-50, -60) scale(1.2)">
+        <path d="M-30,-10 L30,-10 C35,-10 35,-5 30,0 L-30,0 C-35,-5 -35,-10 -30,-10 Z" fill="#f9a825" filter="url(#shadow)"/>
+        <path d="M-30,0 L30,0 C35,0 35,5 30,10 L-30,10 C-35,5 -35,0 -30,0 Z" fill="#8BC34A"/>
+        <path d="M-30,10 L30,10 C35,10 35,15 30,20 L-30,20 C-35,15 -35,10 -30,10 Z" fill="#e74c3c"/>
+        <path d="M-30,20 L30,20 C35,20 35,25 30,30 L-30,30 C-35,25 -35,20 -30,20 Z" fill="#f9a825"/>
+        
+        <ellipse cx="10" cy="5" rx="10" ry="5" fill="#ffeb3b" opacity="0.7"/>
+      </g>
+      
+      <!-- Patates -->
+      <g transform="translate(10, 0)">
+        <path d="M-30,-35 L30,-35 L20,20 L-20,20 Z" fill="url(#yellowGrad)" filter="url(#shadow)"/>
+        <path d="M-15,-30 L-5,-5" stroke="#f9a825" stroke-width="5" stroke-linecap="round"/>
+        <path d="M5,-30 L0,-5" stroke="#f9a825" stroke-width="5" stroke-linecap="round"/>
+        <path d="M15,-25 L5,-5" stroke="#f9a825" stroke-width="5" stroke-linecap="round"/>
+        
+        <rect x="-25" y="20" width="50" height="10" rx="5" ry="5" fill="#e74c3c"/>
+      </g>
+      
+      <!-- İçecek -->
+      <g transform="translate(50, -20)">
+        <path d="M-15,-30 L15,-30 L20,30 L-20,30 Z" fill="url(#blueGrad)" filter="url(#shadow)" opacity="0.8"/>
+        <ellipse cx="0" cy="-30" rx="15" ry="5" fill="#5bc0b5"/>
+        <ellipse cx="0" cy="30" rx="20" ry="5" fill="#5bc0b5"/>
+        
+        <path d="M-10,-25 C-5,-15 5,-15 10,-25" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+        
+        <rect x="-2" y="-40" width="4" height="15" rx="2" ry="2" fill="#f0f0f0"/>
+      </g>
+    </g>
+    
+    <!-- Nakit Çekmecesi -->
+    <g transform="translate(-280, 120)">
+      <rect x="-70" y="-25" width="140" height="50" rx="5" ry="5" fill="#444" filter="url(#shadow)"/>
+      <rect x="-65" y="-20" width="130" height="40" rx="3" ry="3" fill="#333"/>
+      
+      <!-- Para Bölmeleri -->
+      <g transform="translate(-45, 0)">
+        <rect x="-15" y="-15" width="30" height="30" rx="2" ry="2" fill="#555"/>
+        <rect x="-10" y="-10" width="20" height="20" rx="2" ry="2" fill="#507b41" opacity="0.5"/>
+      </g>
+      
+      <g transform="translate(-5, 0)">
+        <rect x="-15" y="-15" width="30" height="30" rx="2" ry="2" fill="#555"/>
+        <rect x="-10" y="-10" width="20" height="20" rx="2" ry="2" fill="#f9a825" opacity="0.5"/>
+      </g>
+      
+      <g transform="translate(35, 0)">
+        <rect x="-15" y="-15" width="30" height="30" rx="2" ry="2" fill="#555"/>
+        <circle cx="0" cy="0" r="8" fill="#8ed4cd" opacity="0.6"/>
+      </g>
+    </g>
+    
+    <!-- Dijital Menü Ekranı kaldırıldı -->
+    
+    <!-- E-Adisyon Logosu tamamen kaldırıldı -->
+  </g>
+</svg>

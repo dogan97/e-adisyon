@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#65a154"/>
+      <stop offset="100%" stop-color="#3c5d31"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8ed4cd"/>
+      <stop offset="100%" stop-color="#5bc0b5"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Otel Binası -->
+  <g transform="translate(400, 300)">
+    <!-- Ana Bina -->
+    <rect x="-200" y="-180" width="400" height="320" rx="5" ry="5" fill="#f5f5f5" filter="url(#shadow)"/>
+    
+    <!-- Çatı -->
+    <path d="M-210,-180 L-200,-200 L200,-200 L210,-180 Z" fill="url(#blueGrad)" filter="url(#shadow)"/>
+    
+    <!-- Giriş -->
+    <rect x="-50" y="70" width="100" height="70" rx="5" ry="5" fill="#e0e0e0"/>
+    <rect x="-40" y="80" width="80" height="60" rx="3" ry="3" fill="#424242"/>
+    <rect x="-30" y="100" width="60" height="40" fill="transparent" stroke="#f5f5f5" stroke-width="2"/>
+    
+    <!-- Pencereler (Üst Kat) -->
+    <g transform="translate(0, -130)">
+      <rect x="-180" y="0" width="40" height="60" rx="2" ry="2" fill="#424242"/>
+      <rect x="-120" y="0" width="40" height="60" rx="2" ry="2" fill="#424242"/>
+      <rect x="-60" y="0" width="40" height="60" rx="2" ry="2" fill="#424242"/>
+      <rect x="20" y="0" width="40" height="60" rx="2" ry="2" fill="#424242"/>
+      <rect x="80" y="0" width="40" height="60" rx="2" ry="2" fill="#424242"/>
+      <rect x="140" y="0" width="40" height="60" rx="2" ry="2" fill="#424242"/>
+      
+      <!-- Pencere Detayları -->
+      <rect x="-175" y="5" width="30" height="50" rx="1" ry="1" fill="#8ed4cd" opacity="0.3"/>
+      <rect x="-115" y="5" width="30" height="50" rx="1" ry="1" fill="#8ed4cd" opacity="0.3"/>
+      <rect x="-55" y="5" width="30" height="50" rx="1" ry="1" fill="#8ed4cd" opacity="0.3"/>
+      <rect x="25" y="5" width="30" height="50" rx="1" ry="1" fill="#8ed4cd" opacity="0.3"/>
+      <rect x="85" y="5" width="30" height="50" rx="1" ry="1" fill="#8ed4cd" opacity="0.3"/>
+      <rect x="145" y="5" width="30" height="50" rx="1" ry="1" fill="#8ed4cd" opacity="0.3"/>
+    </g>
+    
+    <!-- Pencereler (Orta Kat) -->
+    <g transform="translate(0, -50)">
+      <rect x="-180" y="0" width="40" height="60" rx="2" ry="2" fill="#424242"/>
+      <rect x="-120" y="0" width="40" height="60" rx="2" ry="2" fill="#424242"/>
+      <rect x="-60" y="0" width="40" height="60" rx="2" ry="2" fill="#424242"/>
+      <rect x="20" y="0" width="40" height="60" rx="2" ry="2" fill="#424242"/>
+      <rect x="80" y="0" width="40" height="60" rx="2" ry="2" fill="#424242"/>
+      <rect x="140" y="0" width="40" height="60" rx="2" ry="2" fill="#424242"/>
+      
+      <!-- Pencere Detayları -->
+      <rect x="-175" y="5" width="30" height="50" rx="1" ry="1" fill="#8ed4cd" opacity="0.3"/>
+      <rect x="-115" y="5" width="30" height="50" rx="1" ry="1" fill="#8ed4cd" opacity="0.3"/>
+      <rect x="-55" y="5" width="30" height="50" rx="1" ry="1" fill="#8ed4cd" opacity="0.3"/>
+      <rect x="25" y="5" width="30" height="50" rx="1" ry="1" fill="#8ed4cd" opacity="0.3"/>
+      <rect x="85" y="5" width="30" height="50" rx="1" ry="1" fill="#8ed4cd" opacity="0.3"/>
+      <rect x="145" y="5" width="30" height="50" rx="1" ry="1" fill="#8ed4cd" opacity="0.3"/>
+    </g>
+    
+    <!-- Pencereler (Alt Kat) -->
+    <g transform="translate(0, 30)">
+      <rect x="-180" y="0" width="40" height="60" rx="2" ry="2" fill="#424242"/>
+      <rect x="-120" y="0" width="40" height="60" rx="2" ry="2" fill="#424242"/>
+      <rect x="80" y="0" width="40" height="60" rx="2" ry="2" fill="#424242"/>
+      <rect x="140" y="0" width="40" height="60" rx="2" ry="2" fill="#424242"/>
+      
+      <!-- Pencere Detayları -->
+      <rect x="-175" y="5" width="30" height="50" rx="1" ry="1" fill="#8ed4cd" opacity="0.3"/>
+      <rect x="-115" y="5" width="30" height="50" rx="1" ry="1" fill="#8ed4cd" opacity="0.3"/>
+      <rect x="85" y="5" width="30" height="50" rx="1" ry="1" fill="#8ed4cd" opacity="0.3"/>
+      <rect x="145" y="5" width="30" height="50" rx="1" ry="1" fill="#8ed4cd" opacity="0.3"/>
+    </g>
+    
+    <!-- Teras/Restoran Bölümü -->
+    <g transform="translate(-250, 80)">
+      <rect x="0" y="0" width="150" height="60" rx="5" ry="5" fill="#f5f5f5" filter="url(#shadow)"/>
+      
+      <!-- Şemsiyeler -->
+      <g transform="translate(30, 30)">
+        <path d="M-15,-15 Q0,-25 15,-15 L0,0 Z" fill="url(#blueGrad)"/>
+        <rect x="-1" y="0" width="2" height="15" fill="#555"/>
+      </g>
+      
+      <g transform="translate(75, 30)">
+        <path d="M-15,-15 Q0,-25 15,-15 L0,0 Z" fill="url(#greenGrad)"/>
+        <rect x="-1" y="0" width="2" height="15" fill="#555"/>
+      </g>
+      
+      <g transform="translate(120, 30)">
+        <path d="M-15,-15 Q0,-25 15,-15 L0,0 Z" fill="url(#blueGrad)"/>
+        <rect x="-1" y="0" width="2" height="15" fill="#555"/>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Tablet Rezervasyon Sistemi -->
+  <g transform="translate(150, 180)">
+    <!-- Tablet -->
+    <rect x="-60" y="-80" width="120" height="160" rx="8" ry="8" fill="#333" filter="url(#shadow)"/>
+    <rect x="-55" y="-75" width="110" height="150" rx="5" ry="5" fill="#212121"/>
+    
+    <!-- Ekran İçeriği -->
+    <rect x="-45" y="-65" width="90" height="15" rx="3" ry="3" fill="url(#blueGrad)"/>
+    
+    <!-- Masa Düzeni -->
+    <rect x="-45" y="-40" width="90" height="105" rx="3" ry="3" fill="#2c2c2c"/>
+    
+    <!-- Masalar -->
+    <circle cx="-25" cy="-20" r="10" fill="transparent" stroke="url(#greenGrad)" stroke-width="2"/>
+    <circle cx="0" cy="-20" r="10" fill="transparent" stroke="url(#greenGrad)" stroke-width="2"/>
+    <circle cx="25" cy="-20" r="10" fill="transparent" stroke="#555" stroke-width="2"/>
+    
+    <circle cx="-25" cy="10" r="10" fill="url(#greenGrad)" opacity="0.7"/>
+    <circle cx="0" cy="10" r="10" fill="transparent" stroke="url(#blueGrad)" stroke-width="2"/>
+    <circle cx="25" cy="10" r="10" fill="transparent" stroke="#555" stroke-width="2"/>
+    
+    <circle cx="-25" cy="40" r="10" fill="transparent" stroke="url(#blueGrad)" stroke-width="2"/>
+    <circle cx="0" cy="40" r="10" fill="transparent" stroke="#555" stroke-width="2"/>
+    <circle cx="25" cy="40" r="10" fill="transparent" stroke="#555" stroke-width="2"/>
+  </g>
+  
+  <!-- Oda Servisi / Mobil Sipariş -->
+  <g transform="translate(650, 180)">
+    <!-- Mobil Cihaz -->
+    <rect x="-40" y="-70" width="80" height="140" rx="10" ry="10" fill="#333" filter="url(#shadow)"/>
+    <rect x="-35" y="-65" width="70" height="130" rx="5" ry="5" fill="#212121"/>
+    
+    <!-- Ekran İçeriği -->
+    <rect x="-25" y="-55" width="50" height="10" rx="2" ry="2" fill="url(#blueGrad)"/>
+    
+    <!-- Yiyecek Menüsü -->
+    <g transform="translate(0, -30)">
+      <rect x="-25" y="0" width="50" height="15" rx="3" ry="3" fill="#2c2c2c"/>
+      <circle cx="-15" cy="7" r="5" fill="url(#greenGrad)"/>
+      <rect x="-5" y="4" width="25" height="3" rx="1" ry="1" fill="#aaa"/>
+      <rect x="-5" y="10" width="15" height="3" rx="1" ry="1" fill="#aaa"/>
+    </g>
+    
+    <g transform="translate(0, -5)">
+      <rect x="-25" y="0" width="50" height="15" rx="3" ry="3" fill="#2c2c2c"/>
+      <circle cx="-15" cy="7" r="5" fill="url(#blueGrad)"/>
+      <rect x="-5" y="4" width="25" height="3" rx="1" ry="1" fill="#aaa"/>
+      <rect x="-5" y="10" width="15" height="3" rx="1" ry="1" fill="#aaa"/>
+    </g>
+    
+    <g transform="translate(0, 20)">
+      <rect x="-25" y="0" width="50" height="15" rx="3" ry="3" fill="#2c2c2c"/>
+      <circle cx="-15" cy="7" r="5" fill="url(#greenGrad)"/>
+      <rect x="-5" y="4" width="25" height="3" rx="1" ry="1" fill="#aaa"/>
+      <rect x="-5" y="10" width="15" height="3" rx="1" ry="1" fill="#aaa"/>
+    </g>
+    
+    <!-- Sipariş Butonu -->
+    <rect x="-25" y="45" width="50" height="15" rx="7" ry="7" fill="url(#greenGrad)"/>
+  </g>
+  
+  <!-- Oda Servisi / Yemek Arabası -->
+  <g transform="translate(650, 400)">
+    <!-- Araba -->
+    <rect x="-50" y="-30" width="100" height="60" rx="5" ry="5" fill="#f5f5f5" filter="url(#shadow)"/>
+    
+    <!-- Üst Tabla -->
+    <rect x="-45" y="-25" width="90" height="5" fill="url(#blueGrad)"/>
+    
+    <!-- Tabaklar -->
+    <circle cx="-25" cy="0" r="15" fill="#fff" filter="url(#shadow)"/>
+    <circle cx="-25" cy="0" r="12" fill="#eee"/>
+    
+    <circle cx="10" cy="0" r="15" fill="#fff" filter="url(#shadow)"/>
+    <circle cx="10" cy="0" r="12" fill="#eee"/>
+    
+    <!-- Servis Kapağı -->
+    <g transform="translate(-25, 0)">
+      <rect x="-10" y="-7" width="20" height="14" rx="7" ry="7" fill="url(#greenGrad)" opacity="0.7"/>
+    </g>
+    
+    <!-- Araba Tekerlekleri -->
+    <circle cx="-40" cy="35" r="5" fill="#555"/>
+    <circle cx="-10" cy="35" r="5" fill="#555"/>
+    <circle cx="40" cy="35" r="5" fill="#555"/>
+    <circle cx="10" cy="35" r="5" fill="#555"/>
+  </g>
+  
+  <!-- Oda Anahtarı/Kart -->
+  <g transform="translate(150, 400)">
+    <!-- Kart -->
+    <rect x="-60" y="-30" width="120" height="70" rx="5" ry="5" fill="url(#blueGrad)" filter="url(#shadow)"/>
+    <rect x="-55" y="-25" width="110" height="60" rx="3" ry="3" fill="#fff" opacity="0.1"/>
+    
+    <!-- Logo İşareti -->
+    <circle cx="0" cy="0" r="20" fill="url(#greenGrad)" opacity="0.8"/>
+    <path d="M-10,-10 L10,10 M-10,10 L10,-10" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+    
+    <!-- Manyetik Şerit -->
+    <rect x="-60" y="15" width="120" height="10" fill="#333"/>
+  </g>
+  
+  <!-- Bağlantı Çizgileri -->
+  <g>
+    <!-- Tablet - Otel -->
+    <path d="M180,180 C250,200 300,220 340,220" stroke="url(#blueGrad)" stroke-width="2" fill="none" stroke-dasharray="5,3"/>
+    
+    <!-- Mobil - Otel -->
+    <path d="M620,180 C550,200 500,220 460,220" stroke="url(#blueGrad)" stroke-width="2" fill="none" stroke-dasharray="5,3"/>
+    
+    <!-- Kart - Otel -->
+    <path d="M180,380 C250,360 300,340 340,340" stroke="url(#greenGrad)" stroke-width="2" fill="none" stroke-dasharray="5,3"/>
+    
+    <!-- Servis Arabası - Otel -->
+    <path d="M620,380 C550,360 500,340 460,340" stroke="url(#greenGrad)" stroke-width="2" fill="none" stroke-dasharray="5,3"/>
+  </g>
+</svg>

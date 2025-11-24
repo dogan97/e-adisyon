@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <!-- Background with subtle pattern -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8f9fa" />
+      <stop offset="100%" stop-color="#e9ecef" />
+    </linearGradient>
+    
+    <!-- Corporate colors -->
+    <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#507b41" />
+      <stop offset="100%" stop-color="#3e5f32" />
+    </linearGradient>
+    <linearGradient id="turquoiseGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8ed4cd" />
+      <stop offset="100%" stop-color="#6baea8" />
+    </linearGradient>
+    
+    <!-- Screen gradients -->
+    <linearGradient id="screenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8f9fa" />
+      <stop offset="100%" stop-color="#e9ecef" />
+    </linearGradient>
+    <linearGradient id="chartGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#507b41" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#507b41" stop-opacity="0.8" />
+    </linearGradient>
+    
+    <!-- Connection animation -->
+    <linearGradient id="connectionGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8ed4cd" stop-opacity="0" />
+      <stop offset="50%" stop-color="#8ed4cd" stop-opacity="1" />
+      <stop offset="100%" stop-color="#8ed4cd" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGradient)" />
+  
+  <!-- Main Dashboard -->
+  <g id="dashboard" transform="translate(400, 250)">
+    <!-- Dashboard frame -->
+    <rect x="-220" y="-150" width="440" height="300" rx="15" ry="15" fill="white" stroke="#dee2e6" stroke-width="2" />
+    
+    <!-- Header -->
+    <rect x="-220" y="-150" width="440" height="50" rx="15" ry="15" fill="url(#greenGradient)" />
+    <rect x="-220" y="-100" width="440" height="2" fill="#dee2e6" />
+    
+    <!-- Dashboard Title -->
+    <text x="-200" y="-120" font-family="Arial" font-size="16" fill="white">Müşteri Yönetim Paneli</text>
+    
+    <!-- Customer Profiles Section -->
+    <g id="customerProfiles" transform="translate(-160, 0)">
+      <!-- Section title -->
+      <text x="0" y="-80" font-family="Arial" font-size="12" fill="#495057" text-anchor="middle">Müşteri Profilleri</text>
+      
+      <!-- Customer cards -->
+      <g transform="translate(0, -50)">
+        <rect x="-40" y="0" width="80" height="100" rx="5" ry="5" fill="url(#screenGradient)" stroke="#dee2e6" stroke-width="1" />
+        <circle cx="0" cy="20" r="15" fill="url(#turquoiseGradient)" />
+        <rect x="-25" y="50" width="50" height="5" rx="2" ry="2" fill="#ced4da" />
+        <rect x="-25" y="60" width="50" height="5" rx="2" ry="2" fill="#ced4da" />
+        <rect x="-25" y="70" width="30" height="5" rx="2" ry="2" fill="#ced4da" />
+        <rect x="-25" y="85" width="50" height="8" rx="4" ry="4" fill="url(#turquoiseGradient)" />
+      </g>
+      
+      <g transform="translate(0, 70)">
+        <rect x="-40" y="0" width="80" height="100" rx="5" ry="5" fill="url(#screenGradient)" stroke="#dee2e6" stroke-width="1" />
+        <circle cx="0" cy="20" r="15" fill="url(#greenGradient)" />
+        <rect x="-25" y="50" width="50" height="5" rx="2" ry="2" fill="#ced4da" />
+        <rect x="-25" y="60" width="50" height="5" rx="2" ry="2" fill="#ced4da" />
+        <rect x="-25" y="70" width="30" height="5" rx="2" ry="2" fill="#ced4da" />
+        <rect x="-25" y="85" width="50" height="8" rx="4" ry="4" fill="url(#greenGradient)" />
+      </g>
+    </g>
+    
+    <!-- Analytics Section -->
+    <g id="analytics" transform="translate(0, 0)">
+      <!-- Section title -->
+      <text x="0" y="-80" font-family="Arial" font-size="12" fill="#495057" text-anchor="middle">Müşteri Analitiği</text>
+      
+      <!-- Chart -->
+      <rect x="-70" y="-50" width="140" height="120" rx="5" ry="5" fill="url(#screenGradient)" stroke="#dee2e6" stroke-width="1" />
+      
+      <!-- Bar chart -->
+      <rect x="-60" y="40" width="20" height="20" fill="url(#chartGradient)" />
+      <rect x="-30" y="30" width="20" height="30" fill="url(#chartGradient)" />
+      <rect x="0" y="10" width="20" height="50" fill="url(#chartGradient)" />
+      <rect x="30" y="0" width="20" height="60" fill="url(#chartGradient)" />
+      
+      <!-- Chart labels -->
+      <line x1="-60" y1="65" x2="50" y2="65" stroke="#ced4da" stroke-width="1" />
+      <line x1="-60" y1="65" x2="-60" y2="-50" stroke="#ced4da" stroke-width="1" />
+      
+      <!-- Donut chart -->
+      <g transform="translate(0, 20)">
+        <path d="M-40,-20 A40,40 0 0,1 20,30 L0,0 Z" fill="url(#greenGradient)" />
+        <path d="M20,30 A40,40 0 0,1 -40,-20 L0,0 Z" fill="url(#turquoiseGradient)" />
+      </g>
+    </g>
+    
+    <!-- Campaign Management -->
+    <g id="campaigns" transform="translate(160, 0)">
+      <!-- Section title -->
+      <text x="0" y="-80" font-family="Arial" font-size="12" fill="#495057" text-anchor="middle">Kampanya Yönetimi</text>
+      
+      <!-- Campaign cards -->
+      <g transform="translate(0, -35)">
+        <rect x="-40" y="0" width="80" height="35" rx="5" ry="5" fill="url(#turquoiseGradient)" stroke="#dee2e6" stroke-width="1" />
+        <rect x="-30" y="10" width="20" height="5" rx="2" ry="2" fill="white" />
+        <rect x="-30" y="20" width="60" height="5" rx="2" ry="2" fill="white" />
+      </g>
+      
+      <g transform="translate(0, 10)">
+        <rect x="-40" y="0" width="80" height="35" rx="5" ry="5" fill="url(#greenGradient)" stroke="#dee2e6" stroke-width="1" />
+        <rect x="-30" y="10" width="20" height="5" rx="2" ry="2" fill="white" />
+        <rect x="-30" y="20" width="60" height="5" rx="2" ry="2" fill="white" />
+      </g>
+      
+      <g transform="translate(0, 55)">
+        <rect x="-40" y="0" width="80" height="35" rx="5" ry="5" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1" />
+        <rect x="-30" y="10" width="20" height="5" rx="2" ry="2" fill="#ced4da" />
+        <rect x="-30" y="20" width="60" height="5" rx="2" ry="2" fill="#ced4da" />
+        <rect x="20" y="10" width="10" height="10" rx="5" ry="5" fill="url(#greenGradient)" />
+      </g>
+      
+      <g transform="translate(0, 100)">
+        <rect x="-40" y="0" width="80" height="35" rx="5" ry="5" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1" />
+        <rect x="-30" y="10" width="20" height="5" rx="2" ry="2" fill="#ced4da" />
+        <rect x="-30" y="20" width="60" height="5" rx="2" ry="2" fill="#ced4da" />
+        <rect x="20" y="10" width="10" height="10" rx="5" ry="5" fill="url(#turquoiseGradient)" />
+      </g>
+    </g>
+  </g>
+  
+  <!-- Mobile Device -->
+  <g id="mobileDevice" transform="translate(180, 450)">
+    <rect x="-25" y="-40" width="50" height="80" rx="8" ry="8" fill="#343a40" />
+    <rect x="-20" y="-35" width="40" height="70" rx="3" ry="3" fill="url(#screenGradient)" />
+    
+    <!-- Phone screen content -->
+    <rect x="-15" y="-30" width="30" height="8" rx="2" ry="2" fill="url(#greenGradient)" />
+    <circle cx="10" cy="-26" r="3" fill="url(#turquoiseGradient)" />
+    
+    <!-- Customer profile on phone -->
+    <rect x="-15" y="-15" width="30" height="40" rx="2" ry="2" fill="#ffffff" stroke="#dee2e6" stroke-width="0.5" />
+    <circle cx="0" cy="-5" r="5" fill="url(#turquoiseGradient)" />
+    <rect x="-10" y="5" width="20" height="2" rx="1" ry="1" fill="#ced4da" />
+    <rect x="-10" y="10" width="20" height="2" rx="1" ry="1" fill="#ced4da" />
+    <rect x="-10" y="15" width="20" height="2" rx="1" ry="1" fill="#ced4da" />
+    
+    <!-- Connection to main system -->
+    <path d="M25,0 C60,0 100,-50 170,-50" stroke="#8ed4cd" stroke-width="1.5" stroke-dasharray="5,5" fill="none" />
+    <circle cx="0" cy="0" r="2" fill="url(#turquoiseGradient)">
+      <animateMotion dur="3s" repeatCount="indefinite" path="M25,0 C60,0 100,-50 170,-50" />
+    </circle>
+  </g>
+  
+  <!-- Tablet Device -->
+  <g id="tabletDevice" transform="translate(620, 450)">
+    <rect x="-40" y="-60" width="80" height="120" rx="8" ry="8" fill="#343a40" />
+    <rect x="-35" y="-55" width="70" height="110" rx="3" ry="3" fill="url(#screenGradient)" />
+    
+    <!-- Tablet screen content -->
+    <rect x="-30" y="-50" width="60" height="10" rx="2" ry="2" fill="url(#greenGradient)" />
+    
+    <!-- Mini customer list -->
+    <rect x="-30" y="-35" width="60" height="80" rx="2" ry="2" fill="#ffffff" stroke="#dee2e6" stroke-width="0.5" />
+    
+    <!-- Customer rows -->
+    <g transform="translate(0, -25)">
+      <circle cx="-20" cy="0" r="4" fill="url(#turquoiseGradient)" />
+      <rect x="-10" y="-3" width="35" height="2" rx="1" ry="1" fill="#ced4da" />
+      <rect x="-10" y="2" width="20" height="2" rx="1" ry="1" fill="#ced4da" />
+    </g>
+    
+    <g transform="translate(0, -10)">
+      <circle cx="-20" cy="0" r="4" fill="url(#greenGradient)" />
+      <rect x="-10" y="-3" width="35" height="2" rx="1" ry="1" fill="#ced4da" />
+      <rect x="-10" y="2" width="20" height="2" rx="1" ry="1" fill="#ced4da" />
+    </g>
+    
+    <g transform="translate(0, 5)">
+      <circle cx="-20" cy="0" r="4" fill="url(#turquoiseGradient)" />
+      <rect x="-10" y="-3" width="35" height="2" rx="1" ry="1" fill="#ced4da" />
+      <rect x="-10" y="2" width="20" height="2" rx="1" ry="1" fill="#ced4da" />
+    </g>
+    
+    <g transform="translate(0, 20)">
+      <circle cx="-20" cy="0" r="4" fill="url(#greenGradient)" />
+      <rect x="-10" y="-3" width="35" height="2" rx="1" ry="1" fill="#ced4da" />
+      <rect x="-10" y="2" width="20" height="2" rx="1" ry="1" fill="#ced4da" />
+    </g>
+    
+    <g transform="translate(0, 35)">
+      <circle cx="-20" cy="0" r="4" fill="url(#turquoiseGradient)" />
+      <rect x="-10" y="-3" width="35" height="2" rx="1" ry="1" fill="#ced4da" />
+      <rect x="-10" y="2" width="20" height="2" rx="1" ry="1" fill="#ced4da" />
+    </g>
+    
+    <!-- Connection to main system -->
+    <path d="M-40,-10 C-100,-10 -150,-100 -220,-100" stroke="#8ed4cd" stroke-width="1.5" stroke-dasharray="5,5" fill="none" />
+    <circle cx="0" cy="0" r="2" fill="url(#turquoiseGradient)">
+      <animateMotion dur="4s" repeatCount="indefinite" path="M-40,-10 C-100,-10 -150,-100 -220,-100" />
+    </circle>
+  </g>
+  
+  <!-- Customer Feedback Elements -->
+  <g id="feedback" transform="translate(400, 100)">
+    <!-- Star ratings -->
+    <g transform="translate(-80, 0)">
+      <polygon points="0,-10 2,-4 9,-4 4,0 6,6 0,2 -6,6 -4,0 -9,-4 -2,-4" fill="url(#greenGradient)" />
+    </g>
+    <g transform="translate(-40, 0)">
+      <polygon points="0,-10 2,-4 9,-4 4,0 6,6 0,2 -6,6 -4,0 -9,-4 -2,-4" fill="url(#greenGradient)" />
+    </g>
+    <g transform="translate(0, 0)">
+      <polygon points="0,-10 2,-4 9,-4 4,0 6,6 0,2 -6,6 -4,0 -9,-4 -2,-4" fill="url(#greenGradient)" />
+    </g>
+    <g transform="translate(40, 0)">
+      <polygon points="0,-10 2,-4 9,-4 4,0 6,6 0,2 -6,6 -4,0 -9,-4 -2,-4" fill="url(#greenGradient)" />
+    </g>
+    <g transform="translate(80, 0)">
+      <polygon points="0,-10 2,-4 9,-4 4,0 6,6 0,2 -6,6 -4,0 -9,-4 -2,-4" fill="url(#turquoiseGradient)" />
+    </g>
+    
+    <!-- Connection to main dashboard -->
+    <path d="M0,15 L0,80" stroke="#8ed4cd" stroke-width="1.5" stroke-dasharray="5,5" fill="none" />
+  </g>
+  
+  <!-- Data flow animations -->
+  <g id="dataFlows">
+    <circle cx="0" cy="0" r="3" fill="url(#turquoiseGradient)">
+      <animateMotion dur="5s" repeatCount="indefinite" path="M180,450 C220,350 300,300 400,250" />
+    </circle>
+    <circle cx="0" cy="0" r="3" fill="url(#greenGradient)">
+      <animateMotion dur="6s" repeatCount="indefinite" path="M620,450 C580,350 500,300 400,250" />
+    </circle>
+  </g>
+</svg>

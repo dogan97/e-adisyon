@@ -1,0 +1,211 @@
+/* Hangi İşletmeler Sayfaları için Ortak Stiller */
+
+/* Renk Değişkenleri */
+:root {
+    --isletme-primary: #507b41;
+    --isletme-primary-dark: var(--accent);
+    --isletme-primary-light: #4db6ac;
+    --isletme-gradient: linear-gradient(135deg, #00897b 0%, #005b4f 100%);
+}
+
+/* Başlıklar ve Metin Renkleri */
+.section-title, .hero-title, h1, h2, h3, h4 {
+    color: var(--isletme-primary) !important;
+}
+
+.section-subtitle {
+    color: #666;
+}
+
+/* Hero Bölümü */
+.hero-section {
+    background: #507b41;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg-shape {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/pattern-bg.svg');
+    background-size: cover;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Özellik Kartları */
+.feature-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    height: 100%;
+    transition: all 0.3s ease;
+    border-top: 4px solid #507b41;
+}
+
+.feature-card:hover, .seasonal-feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* İkon Stilleri */
+.feature-icon, .seasonal-feature-icon, .pizza-advantage-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #507b41;
+    border-radius: 50%;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.feature-icon, .seasonal-feature-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 26px;
+}
+
+.pizza-advantage-icon {
+    min-width: 45px;
+    height: 45px;
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+/* Avantaj Kartları */
+.seasonal-advantage-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    transition: all 0.3s ease;
+    border-left: 4px solid #00897b;
+}
+
+/* Timeline Bölümü */
+.timeline::after {
+    background-color: var(--isletme-primary) !important;
+}
+
+.timeline-step {
+    background: var(--isletme-gradient) !important;
+}
+
+.timeline-content h3 {
+    color: var(--isletme-primary) !important;
+}
+
+/* CTA Bölümleri */
+/* .bg-primary, .cta-section {
+    background: var(--isletme-gradient) !important;
+} */
+
+/* Listelerde ikonlar */
+.list-icon i, .check-list i, .advantage-icon i {
+    color: var(--isletme-primary);
+}
+
+/* Butonlar */
+.btn-primary {
+    background-color: var(--isletme-primary) !important;
+    border-color: var(--isletme-primary) !important;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--isletme-primary-dark) !important;
+    border-color: var(--isletme-primary-dark) !important;
+}
+
+.btn-outline-primary {
+    border-color: var(--isletme-primary) !important;
+    color: var(--isletme-primary) !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--isletme-primary) !important;
+    color: #fff !important;
+}
+
+/* Hero içindeki butonlar */
+.hero-section .btn-light:hover {
+    background-color: var(--isletme-primary-dark) !important;
+    color: #fff !important;
+}
+.seasonal-hero .btn-light:hover {
+    background-color: var(--isletme-primary-dark) !important;
+    color: #fff !important;
+}
+
+/* Linkler */
+a:not(.footer a):not(.navbar a):not(.btn):not(.social-icons a) {
+    color: var(--isletme-primary);
+}
+
+a:hover:not(.footer a):not(.navbar a):not(.btn):not(.social-icons a) {
+    color: var(--isletme-primary-dark);
+}
+
+/* SSS Bölümü Renk Düzenlemeleri */
+.faq-tabs .tab.active, .faq-item.active {
+    background: var(--isletme-gradient) !important;
+    color: #fff !important;
+}
+
+.faq-tabs .tab:hover:not(.active) {
+    color: var(--isletme-primary) !important;
+}
+
+.faq-item.active .faq-dot {
+    background-color: var(--isletme-primary-light) !important;
+}
+
+.faq-item:not(.active):hover .faq-question {
+    color: var(--isletme-primary) !important;
+}
+
+.faq-item:not(.active) {
+    border-left-color: var(--isletme-primary) !important;
+}
+
+/* Nasıl Çalışır Bölümü */
+.how-it-works h2 {
+    color: var(--isletme-primary) !important;
+}
+
+.timeline-container .timeline-content {
+    border-color: var(--isletme-primary) !important;
+}
+
+.left::before, .right::before {
+    border-color: transparent var(--isletme-primary-light) transparent transparent !important;
+}
+
+.right::before {
+    border-color: transparent transparent transparent var(--isletme-primary-light) !important;
+}
+
+/* Avantaj bölümleri */
+.advantage-section, .pizza-advantage-section, .seasonal-advantage-section {
+    background-color: #f8f9fa !important;
+}
+
+/* Diğer elementlerdeki renk düzenlemeleri */
+.card-header, .accordion-button:not(.collapsed) {
+    background-color: var(--isletme-primary) !important;
+    color: #fff !important;
+}
+
+.badge-primary, .bg-accent {
+    background-color: var(--isletme-primary) !important;
+}

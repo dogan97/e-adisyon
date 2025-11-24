@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="E-Adisyon Şubeli Restaurant & Cafe Çözümleri – Çoklu şube yönetimi için tam kapsamlı dijital yönetim sistemi"
+    />
+    <title>Şubeli Restaurant & Cafe | E-Adisyon</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dropdown.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/hangi-isletmeler.css" />
+    <link rel="stylesheet" href="css/mobile-menu.css" />
+
+    <!-- Custom Styles for This Page -->
+    <style>
+      .hero-section {
+        background: #507b41 !important;
+        padding: 80px 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-bg-shape {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("img/pattern-bg.svg");
+        background-size: cover;
+        opacity: 0.1;
+        z-index: 0;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .feature-section {
+        padding: 70px 0;
+      }
+      
+      /* Özelleştirilmiş İkon Stilleri */
+      .feature-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #507b41 !important; /* Turkuaz arka plan */
+        border-radius: 50%;
+        color: #ffffff !important; /* Beyaz ikon */
+        margin-bottom: 20px;
+        width: 70px;
+        height: 70px;
+        font-size: 26px;
+      }
+
+      /* Demo CTA Styles */
+      .cta-section {
+            position: relative;
+            background: linear-gradient(to bottom, rgba(var(--primary-rgb), 0.03), rgba(var(--accent-rgb), 0.03));
+            padding: 80px 0;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(var(--accent-rgb), 0.1) 0%, rgba(var(--accent-rgb), 0) 70%);
+            z-index: 0;
+        }
+        
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -100px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(var(--primary-rgb), 0.1) 0%, rgba(var(--primary-rgb), 0) 70%);
+            z-index: 0;
+        }
+        
+        .demo-form-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+        
+        .demo-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .demo-features li {
+            color: gray;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .demo-features li i {
+            color: #507b41 !important;
+            margin-right: 10px;
+        }
+        
+        .text-white-75 {
+            color: gray;
+        }
+
+      .feature-card {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 25px;
+        height: 100%;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        border-top: 4px solid #507b41;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        border-color: var(--primary-color-light);
+      }
+
+      .feature-icon {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--primary-color-light);
+        color: var(--primary-color);
+        border-radius: 50%;
+        margin-bottom: 20px;
+        font-size: 24px;
+      }
+
+      .benefit-section {
+        background-color: #f9f9f9;
+        padding: 70px 0;
+      }
+
+      .benefit-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 25px;
+      }
+
+      .benefit-icon {
+        min-width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--primary-color-light);
+        color: var(--primary-color);
+        border-radius: 50%;
+        margin-right: 15px;
+        font-size: 18px;
+      }
+
+      .case-study-section {
+        padding: 70px 0;
+      }
+
+      .case-study-card {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        height: 100%;
+      }
+
+      .case-study-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .case-study-image {
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .case-study-content {
+        padding: 20px;
+        background-color: #fff;
+      }
+
+      .case-study-tag {
+        display: inline-block;
+        padding: 5px 10px;
+        background-color: var(--primary-color-light);
+        color: var(--primary-color);
+        border-radius: 20px;
+        font-size: 12px;
+        margin-bottom: 10px;
+      }
+
+      .branch-management-section {
+        background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+        padding: 70px 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .branch-management-item {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 25px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        margin-bottom: 30px;
+        border-left: 4px solid var(--primary-color);
+        transition: all 0.3s ease;
+      }
+
+      .branch-management-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar / Header -->
+    <header class="header fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="assets/eadisyonlogo.png"
+              alt="E-Adisyon Logo"
+              class="brand-logo"
+            />
+          </a>
+          <button class="hamburger-button d-lg-none" type="button" aria-label="Menüyü aç">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+           
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="businessDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Hangi İşletmeler
+                  <span class="dropdown-indicator"
+                    ><i class="fas fa-chevron-down"></i
+                  ></span>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-large"
+                  aria-labelledby="businessDropdown"
+                >
+                  <div class="business-grid grid-3-cols">
+                    <a href="restaurant-cafe.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-utensils"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Restaurant & Cafe</h5>
+                      </div>
+                    </a>
+                    <a href="subeli-restaurant-cafe.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-building"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Şubeli Restaurant & Cafe</h5>
+                      </div>
+                    </a>
+                    <a href="bulut-mutfak.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-cloud"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Bulut Mutfak</h5>
+                      </div>
+                    </a>
+                    <a href="fast-food.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-hamburger"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Fast Food</h5>
+                      </div>
+                    </a>
+                    <a href="pizza-restaurant.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-pizza-slice"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Pizza Restaurant</h5>
+                      </div>
+                    </a>
+                    <a href="burger-cafe-restaurant.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-burger"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Burger Cafe & Restaurant</h5>
+                      </div>
+                    </a>
+                    <a href="hotel-cafe-restaurant.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-hotel"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Hotel Cafe & Restaurant</h5>
+                      </div>
+                    </a>
+                    <a href="sezonluk-isletmeler.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-umbrella-beach"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Sezonluk İşletmeler</h5>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="featuresDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Özellikler
+                  <span class="dropdown-indicator"
+                    ><i class="fas fa-chevron-down"></i
+                  ></span>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-large"
+                  aria-labelledby="featuresDropdown"
+                >
+                  <div class="business-grid grid-3-cols">
+                    <a href="dijital-menu.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-qrcode"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Dijital Menü</h5>
+                      </div>
+                    </a>
+                    <a
+                      href="stok-ve-maliyet-yonetimi.html"
+                      class="business-item"
+                    >
+                      <div class="business-icon">
+                        <i class="fas fa-box"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Stok ve Maliyet Yönetimi</h5>
+                      </div>
+                    </a>
+                    <a href="mutfak-yonetimi.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-book"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Mutfak Yönetimi</h5>
+                      </div>
+                    </a>
+                    <a
+                      href="gelismis-entegrasyonlar.html"
+                      class="business-item"
+                    >
+                      <div class="business-icon">
+                        <i class="fas fa-plug"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Gelişmiş Entegrasyonlar</h5>
+                      </div>
+                    </a>
+                    <a href="e-donusum-entegrasyonu.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-file-invoice"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>E-Dönüşüm Entegrasyonu</h5>
+                      </div>
+                    </a>
+                    <!-- <a href="zincir-isletme-yonetimi.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-store"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Zincir İşletme Yönetimi</h5>
+                      </div>
+                    </a> -->
+                    <a href="kurtye-takip.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-motorcycle"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Kurye Takip</h5>
+                      </div>
+                    </a>
+                    <a href="cari-musteri-yonetimi.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-users"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Cari Müşteri Yönetimi</h5>
+                      </div>
+                    </a>
+                    <a href="raporlama-analiz.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-chart-bar"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Raporlama ve Analiz</h5>
+                      </div>
+                    </a>
+                    <!-- <a href="donanım.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-desktop"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Donanım</h5>
+                      </div>
+                    </a> -->
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="aboutDropdown"
+                  role="button"
+                  aria-expanded="false"
+                >
+                  Hakkımızda
+                  <span class="dropdown-indicator"
+                    ><i class="fas fa-chevron-down"></i
+                  ></span>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-large dropdown-menu-narrow"
+                  aria-labelledby="aboutDropdown"
+                >
+                  <div class="business-grid">
+                    <a href="hakkimizda.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-building"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Şirketimiz</h5>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="fiyatlar.html#fiyatlar">Fiyatlar</a>
+              </li>
+              <!-- <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="partnershipDropdown"
+                  role="button"
+                  aria-expanded="false"
+                >
+                  İş Ortaklığı
+                  <span class="dropdown-indicator"
+                    ><i class="fas fa-chevron-down"></i
+                  ></span>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-large dropdown-menu-narrow"
+                  aria-labelledby="partnershipDropdown"
+                >
+                  <div class="business-grid">
+                    <a href="#" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-cog"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Bayilik</h5>
+                      </div>
+                    </a>
+                    <a href="#" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-bullhorn"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Kampanyalar</h5>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </li> -->
+              <!-- <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="resourcesDropdown"
+                  role="button"
+                  aria-expanded="false"
+                >
+                  Kaynaklar
+                  <span class="dropdown-indicator"
+                    ><i class="fas fa-chevron-down"></i
+                  ></span>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-large dropdown-menu-narrow"
+                  aria-labelledby="resourcesDropdown"
+                >
+                  <div class="business-grid">
+                    <a href="#" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-book"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Blog</h5>
+                      </div>
+                    </a>
+                    <a href="#" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-comment-dots"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Bilgi Merkezi</h5>
+                      </div>
+                    </a>
+                    <a href="#" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-cogs"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>API</h5>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </li> -->
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="#musteri-hikayeleri"
+                  >Müşteri Hikayeleri</a
+                >
+              </li> -->
+              <li class="nav-item ms-lg-2">
+                <a href="#demo" class="btn btn-accent rounded-pill"
+                  >Bizimle İletişime Geçin</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="hero-bg-shape"></div>
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+              <div class="hero-content text-center text-lg-start">
+                <h1
+                  class="display-4 fw-bold mb-4 text-white animate__animated animate__fadeInUp"
+                >
+                  Çok Şubeli Restaurant ve Cafe Yönetim Çözümü
+                </h1>
+                <p
+                  class="lead animate__animated animate__fadeInUp animate__delay-1s"
+                  style="
+                    color: #ffffff;
+                    margin-bottom: 15px;
+                    font-weight: 500;
+                    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+                  "
+                >
+                  Dijitalleşen dünyada tüm şubelerinizi kontrol altında tutun
+                </p>
+                <p
+                  class="lead mb-5 animate__animated animate__fadeInUp animate__delay-1s"
+                  style="color: #f0f0f0; line-height: 1.6"
+                >
+                  Tüm şubelerinizi tek bir merkezden yönetin. Menü, stok, satış
+                  ve personel yönetimini birleştiren özel çözüm.
+                </p>
+                <div
+                class="d-flex flex-wrap gap-3 animate__animated animate__fadeInUp animate__delay-2s"
+              >
+                <a
+                  href="#demo"
+                  class="btn btn-light rounded-pill px-4 py-3 fw-medium"
+                  >Bizimle İletişime Geçin</a
+                >
+                <a
+                  href="#ozellikler"
+                  class="btn btn-outline-light rounded-pill px-4 py-3 fw-medium"
+                  >Özellikler</a
+                >
+              </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-6 animate__animated animate__fadeIn animate__delay-3s"
+            >
+              <img
+                src="img/stock/restaurant-cafe-img.jpg"
+                alt="Çok Şubeli Yönetim"
+                class="img-fluid rounded-3"
+                
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section id="features" class="feature-section">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="fw-bold">Çok Şubeli İşletmeler İçin Özel Çözümler</h2>
+            <p class="lead text-muted">
+              Tüm şubelerinizi tek noktadan kontrol edin, verilerinizi entegre
+              edin.
+            </p>
+          </div>
+          <div class="row g-4">
+            <!-- Feature 1 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="fas fa-sync"></i>
+                </div>
+                <h4 class="mb-3">Merkezi Menü Yönetimi</h4>
+                <p>
+                  Tüm şubelerinizin menülerini tek bir yerden kontrol edin,
+                  lokasyona özel ayarlamalar yaparak her şube için özelleştirin.
+                </p>
+              </div>
+            </div>
+            <!-- Feature 2 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="fas fa-chart-pie"></i>
+                </div>
+                <h4 class="mb-3">Konsolide Raporlama</h4>
+                <p>
+                  Tüm şubelerinizin performansını karşılaştırmalı görüntüleyin,
+                  merkezi karar alma süreçlerini veriyle destekleyin.
+                </p>
+              </div>
+            </div>
+            <!-- Feature 3 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="fas fa-users-cog"></i>
+                </div>
+                <h4 class="mb-3">Personel Yönetimi</h4>
+                <p>
+                  Şube personellerinizin yetki seviyelerini ve çalışma
+                  saatlerini merkezi sistemden yönetin, verimliliği artırın.
+                </p>
+              </div>
+            </div>
+            <!-- Feature 4 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="fas fa-warehouse"></i>
+                </div>
+                <h4 class="mb-3">Merkezi Stok Yönetimi</h4>
+                <p>
+                  Ana depo ve şubeler arası transferleri takip edin, optimum
+                  stok seviyeleri ile maliyetleri düşürün.
+                </p>
+              </div>
+            </div>
+            <!-- Feature 5 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="fas fa-tag"></i>
+                </div>
+                <h4 class="mb-3">Merkezi Kampanya Yönetimi</h4>
+                <p>
+                  Tüm şubelerinizde eşzamanlı veya bölgesel kampanyalar
+                  düzenleyin, özel günleri merkezi olarak yönetin.
+                </p>
+              </div>
+            </div>
+            <!-- Feature 6 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="fas fa-shield-alt"></i>
+                </div>
+                <h4 class="mb-3">Güvenlik ve Yetkilendirme</h4>
+                <p>
+                  Şube yöneticilerine özel yetki seviyeleri tanımlayın, merkezi
+                  denetim ve kontrol mekanizmaları kurun.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Branch Management Section -->
+      <section class="branch-management-section py-5">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="fw-bold">Şube Yönetimi Sistemi</h2>
+            <p class="lead text-muted">
+              Merkez ve şubeler arası koordinasyonu kusursuz hale getirin
+            </p>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="branch-management-item">
+                <h5>
+                  <i
+                    class="fas fa-check-circle me-2"
+                    style="color: #ffffff"
+                  ></i>
+                  Merkez ve Şube Hiyerarşisi
+                </h5>
+                <p>
+                  Organizasyon yapınızı dijital olarak eşleştirin. Bölge
+                  yöneticisi, şube yöneticisi gibi roller tanımlayın, yetki
+                  seviyelerini ayarlayın.
+                </p>
+              </div>
+              <div class="branch-management-item">
+                <h5>
+                  <i
+                    class="fas fa-check-circle me-2"
+                    style="color: #ffffff"
+                  ></i>
+                  Şubeler Arası Ürün Transferi
+                </h5>
+                <p>
+                  Bir şubede stokta kalmayan ürünlerin başka şubelerde
+                  bulunabilirliğini kontrol edin. Transfer talebi oluşturun,
+                  süreci takip edin.
+                </p>
+              </div>
+              <div class="branch-management-item">
+                <h5>
+                  <i
+                    class="fas fa-check-circle me-2"
+                    style="color: #ffffff"
+                  ></i>
+                  Merkezi Fiyatlandırma Stratejisi
+                </h5>
+                <p>
+                  Tüm şubelerdeki ürün fiyatlarını tek bir noktadan kontrol edin
+                  veya bölgesel farklılıklara göre özelleştirin.
+                </p>
+              </div>
+              <div class="branch-management-item">
+                <h5>
+                  <i
+                    class="fas fa-check-circle me-2"
+                    style="color: #ffffff"
+                  ></i>
+                  Şube Performans Karnesi
+                </h5>
+                <p>
+                  Şubelerinizin performansını belirli metrikler üzerinden takip
+                  edin, karşılaştırmalı analizler yapın ve iyileştirme
+                  alanlarını belirleyin.
+                </p>
+              </div>
+              <div class="branch-management-item">
+                <h5>
+                  <i
+                    class="fas fa-check-circle me-2"
+                    style="color: #ffffff"
+                  ></i>
+                  Tek Noktadan Müşteri Yönetimi
+                </h5>
+                <p>
+                  Müşterileriniz hangi şubeyi ziyaret ederse etsin, merkezi
+                  müşteri veritabanı sayesinde sipariş geçmişini ve tercihlerini
+                  görün.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-4">
+            <a href="#" class="btn btn-primary rounded-pill px-4 py-3 fw-medium"
+              >Bizimle İletişime Geçin</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefits Section -->
+      <section class="benefit-section">
+        <div class="container py-5">
+          <div class="row align-items-center">
+            <div class="col-lg-5 mb-5 mb-lg-0">
+              <h2 class="fw-bold mb-4">
+                Çok Şubeli İşletmelere Özel Avantajlar
+              </h2>
+              <p class="mb-4">
+                E-Adisyon ile çok şubeli işletmelerinizin yönetim süreçlerini
+                optimize edin, verimliliği artırın.
+              </p>
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <i class="fas fa-tachometer-alt"></i>
+                </div>
+                <div class="benefit-content">
+                  <h5>%30 Daha Hızlı Operasyon</h5>
+                  <p>Merkezi yönetim ile şube operasyonlarını hızlandırın.</p>
+                </div>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="benefit-content">
+                  <h5>%25 Daha Yüksek Verimlilik</h5>
+                  <p>
+                    Tekrarlı işlemlerin otomatikleştirilmesiyle işgücünü
+                    optimize edin.
+                  </p>
+                </div>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <i class="fas fa-money-bill-wave"></i>
+                </div>
+                <div class="benefit-content">
+                  <h5>%20 Daha Düşük Maliyet</h5>
+                  <p>
+                    Toplu satın alma ve merkezi stok yönetimiyle tasarruf
+                    sağlayın.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <img
+                src="img/branch-dashboard.svg"
+                alt="Şube Yönetim Dashboard"
+                class="img-fluid rounded shadow"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action / Demo Talep -->
+      <section class="cta-section" id="demo">
+        <div class="cta-overlay"></div>
+        <div class="container py-5">
+          <div class="row align-items-center">
+            <div class="col-lg-7 text-center text-lg-start mb-4 mb-lg-0">
+              <h2
+                class="text-dark fw-bold mb-4 display-5 animate__animated animate__fadeIn"
+              >
+                E-Adisyon'u Şubeli İşletmenizde Deneyimleyin
+              </h2>
+              <p
+                class="text-white-75 lead animate__animated animate__fadeIn animate__delay-1s"
+              >
+                Hızlı, verimli ve müşteri odaklı bir yönetim sistemiyle tüm
+                şubelerinizi tek noktadan kontrol edin.
+              </p>
+              <ul class="demo-features ps-0 mb-4">
+                <!-- <li
+                  class="animate__animated animate__fadeInUp animate__delay-1s"
+                >
+                  <i
+                    class="fas fa-check-circle me-2"
+                    style="color: #ffffff"
+                  ></i>
+                  14 gün ücretsiz deneme
+                </li> -->
+                <li
+                  class="animate__animated animate__fadeInUp animate__delay-1s"
+                >
+                  <i
+                    class="fas fa-check-circle me-2"
+                    style="color: #ffffff"
+                  ></i>
+                  Kurulum ve entegrasyon desteği
+                </li>
+                <li
+                  class="animate__animated animate__fadeInUp animate__delay-1s"
+                >
+                  <i
+                    class="fas fa-check-circle me-2"
+                    style="color: #ffffff"
+                  ></i>
+                  Şubelere özel eğitim ve danışmanlık
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-5">
+              <div
+                class="demo-form-card animate__animated animate__fadeIn animate__delay-1s"
+              >
+                <h4 class="fw-bold mb-3">Bizimle İletişime Geçin</h4>
+                <p class="text-muted mb-4">
+                  Sizinle 24 saat içinde iletişime geçeceğiz
+                </p>
+                <form>
+                  <div class="mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="İşletme Adı"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <input
+                      type="number"
+                      class="form-control"
+                      placeholder="Şube Sayısı"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Adınız Soyadınız"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="E-posta Adresiniz"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <input
+                      type="tel"
+                      class="form-control"
+                      placeholder="Telefon Numaranız"
+                      required
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn btn-primary w-100 rounded-pill py-3 fw-medium"
+                  >
+                    Bizimle İletişime Geçin
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer pt-5">
+      <div class="container">
+        <div class="row pb-4">
+          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <div class="footer-logo mb-4">
+              <img
+                src="assets/eadisyonlogo.png"
+                alt="E-Adisyon Logo"
+                class="footer-brand-logo"
+              />
+            </div>
+            <p>
+              Yeni nesil bulut tabanlı restoran ve cafe yönetim sistemi ile
+              işletmenizi dijitalleştirin.
+            </p>
+            <div class="social-icons mt-4">
+              <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="me-2"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <h5 class="footer-title">Hızlı Linkler</h5>
+            <ul class="footer-links">
+              <li><a href="index.html">Ana Sayfa</a></li>
+              <li><a href="index.html#ozellikler">Özellikler</a></li>
+              <li><a href="index.html#fiyatlandirma">Fiyatlandırma</a></li>
+              <li><a href="hakkimizda.html">Hakkımızda</a></li>
+              <li><a href="index.html#iletisim">İletişim</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <h5 class="footer-title">Ürünlerimiz</h5>
+            <ul class="footer-links">
+              <li><a href="#">Adisyon Sistemi</a></li>
+              <li><a href="dijital-menu.html">Dijital Menü</a></li>
+              <li><a href="stok-ve-maliyet-yonetimi.html">Stok Takibi</a></li>
+              <li><a href="mutfak-yonetimi.html">Mutfak Yönetimi</a></li>
+              <li>
+                <a href="gelismis-entegrasyonlar.html"
+                  >Gelişmiş Entegrasyonlar</a
+                >
+              </li>
+              <li><a href="#">Müşteri Yönetimi</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <h5 class="footer-title">İletişim</h5>
+            <ul class="footer-contact">
+              <li>
+                <i class="fas fa-map-marker-alt"></i> İhsaniye Mahallesi İzmir Yolu Caddesi No 110/A<br />Ali
+                Bostancı İş Merkezi Kat 2 Daire 3<br />Nilüfer,
+                Bursa/Türkiye
+              </li>
+              <li><i class="fas fa-phone"></i> 0850 466 1001</li>
+              <li><i class="fas fa-envelope"></i> info@e-adisyon.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom py-3 border-top">
+          <div class="row">
+            <div class="col-md-6">
+              <p class="mb-0">&copy; 2025 E-Adisyon. Tüm hakları saklıdır.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+              <a href="#" class="me-3">Gizlilik Politikası</a>
+              <a href="#">Kullanım Koşulları</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Mobile Menu Container -->
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu-container">
+      <div class="mobile-menu-header">
+        <div class="mobile-menu-logo">
+          <!-- <img src="assets/eadisyonlogo.png" alt="E-Adisyon Logo"> -->
+        </div>
+        <button class="mobile-menu-close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <ul class="mobile-menu-nav">
+        <li>
+          <a href="index.html" class="mobile-menu-link">Ana Sayfa</a>
+        </li>
+        <li>
+          <div class="mobile-menu-item">
+            <a href="#" class="mobile-menu-link">İşletme Türleri</a>
+            <button class="mobile-menu-toggle"><i class="fas fa-chevron-down"></i></button>
+          </div>
+          <ul class="mobile-submenu">
+            <li><h6 class="submenu-title">İŞLETMELER</h6></li>
+            <li><a href="restaurant-cafe.html">Restaurant & Cafe</a></li>
+            <li><a href="bulut-mutfak.html">Bulut Mutfak</a></li>
+            <li><a href="fast-food.html">Fast Food</a></li>
+            <li><a href="pizza-restaurant.html">Pizza Restaurant</a></li>
+            <li><a href="burger-cafe-restaurant.html">Burger Cafe & Restaurant</a></li>
+            <li><a href="hotel-cafe-restaurant.html">Hotel Cafe & Restaurant</a></li>
+            <li><a href="sezonluk-isletmeler.html">Sezonluk İşletmeler</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="mobile-menu-item">
+            <a href="#" class="mobile-menu-link">Özellikler</a>
+            <button class="mobile-menu-toggle"><i class="fas fa-chevron-down"></i></button>
+          </div>
+          <ul class="mobile-submenu">
+            <li><h6 class="submenu-title">MODÜLLER</h6></li>
+            <li><a href="dijital-menu.html">Dijital Menü</a></li>
+            <li><a href="stok-ve-maliyet-yonetimi.html">Stok ve Maliyet Yönetimi</a></li>
+            <li><a href="mutfak-yonetimi.html">Mutfak Yönetimi</a></li>
+            <li><a href="gelismis-entegrasyonlar.html">Gelişmiş Entegrasyonlar</a></li>
+            <li><a href="e-donusum-entegrasyonu.html">E-Dönüşüm Entegrasyonu</a></li>
+            <!-- <li><a href="zincir-isletme-yonetimi.html">Zincir İşletme Yönetimi</a></li> -->
+            <li><a href="kurtye-takip.html">Kurye Takip</a></li>
+            <li><a href="cari-musteri-yonetimi.html">Cari Müşteri Yönetimi</a></li>
+            <li><a href="raporlama-analiz.html">Raporlama ve Analiz</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="fiyatlar.html" class="mobile-menu-link">Fiyatlar</a>
+        </li>
+        <li>
+          <div class="mobile-menu-item">
+            <a href="#" class="mobile-menu-link">Hakkımızda</a>
+            <button class="mobile-menu-toggle"><i class="fas fa-chevron-down"></i></button>
+          </div>
+          <ul class="mobile-submenu">
+            <li><a href="hakkimizda.html">Şirketimiz</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="mobile-menu-bottom">
+        <a href="#demo" class="btn btn-primary rounded-pill">Bizimle İletişime Geçin</a>
+      </div>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

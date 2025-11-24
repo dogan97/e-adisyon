@@ -1,0 +1,1771 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="E-Adisyon Fiyatları ve Paketleri - İşletmenize uygun en iyi adisyon çözümünü seçin"
+    />
+    <title>Çözüm Paketleri | E-Adisyon</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dropdown.css" />
+    <link rel="stylesheet" href="css/hangi-isletmeler.css" />
+    <link rel="stylesheet" href="css/mobile-menu.css" />
+
+    <!-- Custom Styles for This Page -->
+    <style>
+      .pricing-header {
+        background: #507b41 !important;
+        padding: 80px 0;
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .pricing-header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: url("img/pattern-bg.svg");
+        background-size: cover;
+        opacity: 0.1;
+        z-index: 0;
+      }
+
+      .pricing-header .container {
+        position: relative;
+        z-index: 1;
+      }
+
+      .pricing-card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        overflow: hidden;
+        height: 100%;
+        position: relative;
+      }
+
+      .pricing-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .pricing-card.popular {
+        border: 2px solid #00897b;
+      }
+
+      .pricing-card.popular::before {
+        content: "En Popüler";
+        position: absolute;
+        top: 15px;
+        right: -35px;
+        background: #00897b;
+        color: white;
+        padding: 5px 40px;
+        transform: rotate(45deg);
+        font-size: 12px;
+        font-weight: 600;
+        z-index: 1;
+      }
+
+      .pricing-card-header {
+        padding: 25px;
+        text-align: center;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .pricing-card-title {
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      .pricing-card-price {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: #00897b;
+        margin-bottom: 5px;
+      }
+
+      .pricing-card-price small {
+        font-size: 1rem;
+        color: #888;
+        font-weight: 400;
+      }
+
+      .pricing-card-subtitle {
+        color: #888;
+        font-size: 14px;
+      }
+
+      .pricing-card-body {
+        padding: 25px;
+      }
+
+      .pricing-features {
+        list-style-type: none;
+        padding: 0;
+        margin: 0 0 25px 0;
+      }
+
+      .pricing-features li {
+        padding: 10px 0;
+        border-bottom: 1px dashed #f0f0f0;
+        display: flex;
+        align-items: center;
+      }
+
+      .pricing-features li:last-child {
+        border-bottom: none;
+      }
+
+      .pricing-features i {
+        color: #00897b;
+        margin-right: 10px;
+      }
+
+      .pricing-features .unavailable {
+        color: #aaa;
+        text-decoration: line-through;
+      }
+
+      .pricing-features .unavailable i {
+        color: #ddd;
+      }
+
+      .pricing-card-footer {
+        padding: 0 25px 25px;
+        text-align: center;
+      }
+
+      .plan-selector {
+        background-color: #f8f9fa;
+        padding: 50px 0;
+      }
+
+      .plan-toggle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+      }
+
+      .plan-toggle span {
+        font-size: 18px;
+        padding: 0 15px;
+        color: #666;
+      }
+
+      .toggle-switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+      }
+
+      .toggle-switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .toggle-slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: 0.4s;
+        border-radius: 34px;
+      }
+
+      .toggle-slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50%;
+      }
+
+      input:checked + .toggle-slider {
+        background-color: #00897b;
+      }
+
+      input:focus + .toggle-slider {
+        box-shadow: 0 0 1px #00897b;
+      }
+
+      input:checked + .toggle-slider:before {
+        transform: translateX(26px);
+      }
+
+      .yearly-discount {
+        display: inline-block;
+        padding: 2px 10px;
+        background-color: #00897b;
+        color: white;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 600;
+        margin-left: 10px;
+      }
+
+      .comparison-section {
+        padding: 70px 0;
+      }
+
+      .comparison-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .comparison-table th,
+      .comparison-table td {
+        padding: 15px 20px;
+        text-align: center;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .comparison-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      .comparison-table th {
+        background-color: #00897b;
+        color: #fff;
+        font-weight: 600;
+        padding: 20px;
+      }
+
+      .comparison-table th:first-child {
+        text-align: left;
+      }
+
+      .comparison-table td:first-child {
+        text-align: left;
+        font-weight: 500;
+        color: #444;
+      }
+
+      .comparison-table tbody tr:nth-child(odd) {
+        background-color: #f8f9fa;
+      }
+
+      .faq-section {
+        padding: 70px 0;
+        background-color: #f8f9fa;
+      }
+
+      .faq-item {
+        background-color: #fff;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+        transition: all 0.3s ease;
+        border-left: 4px solid transparent;
+      }
+
+      .faq-item:hover {
+        border-left-color: #00897b;
+      }
+
+      .faq-question {
+        padding: 20px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 500;
+        color: #333;
+      }
+
+      .faq-question i {
+        transition: all 0.3s ease;
+      }
+
+      .faq-question.active i {
+        transform: rotate(180deg);
+      }
+
+      .faq-answer {
+        padding: 0 20px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, padding 0.4s ease;
+      }
+
+      .faq-answer.active {
+        padding: 0 20px 20px;
+        max-height: 500px;
+      }
+
+      .custom-plan-section {
+        padding: 70px 0;
+        background: linear-gradient(135deg, #00897b 0%, #005b4f 100%);
+        color: #fff;
+        position: relative;
+      }
+
+      .custom-plan-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: url("img/pattern-bg.svg");
+        background-size: cover;
+        opacity: 0.1;
+      }
+
+      .custom-plan-card {
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        padding: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar / Header -->
+    <header class="header fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="assets/eadisyonlogo.png"
+              alt="E-Adisyon Logo"
+              class="brand-logo"
+              loading="lazy"
+            />
+          </a>
+          <button class="hamburger-button d-lg-none" type="button" aria-label="Menüyü aç">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="businessDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Hangi İşletmeler
+                  <span class="dropdown-indicator"
+                    ><i class="fas fa-chevron-down"></i
+                  ></span>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-large"
+                  aria-labelledby="businessDropdown"
+                >
+                  <div class="business-grid grid-3-cols">
+                    <a href="restaurant-cafe.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-utensils"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Restaurant & Cafe</h5>
+                      </div>
+                    </a>
+                    <a href="subeli-restaurant-cafe.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-building"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Şubeli Restaurant & Cafe</h5>
+                      </div>
+                    </a>
+                    <a href="bulut-mutfak.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-cloud"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Bulut Mutfak</h5>
+                      </div>
+                    </a>
+                    <a href="fast-food.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-hamburger"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Fast Food</h5>
+                      </div>
+                    </a>
+                    <a href="pizza-restaurant.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-pizza-slice"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Pizza Restaurant</h5>
+                      </div>
+                    </a>
+                    <a href="burger-cafe-restaurant.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-burger"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Burger Cafe & Restaurant</h5>
+                      </div>
+                    </a>
+                    <a href="hotel-cafe-restaurant.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-hotel"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Hotel Cafe & Restaurant</h5>
+                      </div>
+                    </a>
+                    <a href="sezonluk-isletmeler.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-umbrella-beach"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Sezonluk İşletmeler</h5>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="featuresDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Özellikler
+                  <span class="dropdown-indicator"
+                    ><i class="fas fa-chevron-down"></i
+                  ></span>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-large"
+                  aria-labelledby="featuresDropdown"
+                >
+                  <div class="business-grid grid-3-cols">
+                    <a href="dijital-menu.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-qrcode"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Dijital Menü</h5>
+                      </div>
+                    </a>
+                    <a
+                      href="stok-ve-maliyet-yonetimi.html"
+                      class="business-item"
+                    >
+                      <div class="business-icon">
+                        <i class="fas fa-box"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Stok ve Maliyet Yönetimi</h5>
+                      </div>
+                    </a>
+                    <a href="mutfak-yonetimi.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-book"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Mutfak Yönetimi</h5>
+                      </div>
+                    </a>
+                    <a
+                      href="gelismis-entegrasyonlar.html"
+                      class="business-item"
+                    >
+                      <div class="business-icon">
+                        <i class="fas fa-plug"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Gelişmiş Entegrasyonlar</h5>
+                      </div>
+                    </a>
+                    <a href="e-donusum-entegrasyonu.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-file-invoice"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>E-Dönüşüm Entegrasyonu</h5>
+                      </div>
+                    </a>
+                    <!-- <a
+                      href="zincir-isletme-yonetimi.html"
+                      class="business-item"
+                    >
+                      <div class="business-icon">
+                        <i class="fas fa-store"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Zincir İşletme Yönetimi</h5>
+                      </div>
+                    </a> -->
+                    <a href="kurtye-takip.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-motorcycle"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Kurye Takip</h5>
+                      </div>
+                    </a>
+                    <a href="cari-musteri-yonetimi.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-users"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Cari Müşteri Yönetimi</h5>
+                      </div>
+                    </a>
+                    <a href="raporlama-analiz.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-chart-bar"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Raporlama ve Analiz</h5>
+                      </div>
+                    </a>
+                    <!-- <a href="donanım.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-desktop"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Donanım</h5>
+                      </div>
+                    </a> -->
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="aboutDropdown"
+                  role="button"
+                  aria-expanded="false"
+                >
+                  Hakkımızda
+                  <span class="dropdown-indicator"
+                    ><i class="fas fa-chevron-down"></i
+                  ></span>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-large dropdown-menu-narrow"
+                  aria-labelledby="aboutDropdown"
+                >
+                  <div class="business-grid">
+                    <a href="hakkimizda.html" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-building"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Şirketimiz</h5>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="fiyatlar.html#fiyatlar">Fiyatlar</a>
+              </li>
+              <!-- <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="partnershipDropdown"
+                  role="button"
+                  aria-expanded="false"
+                >
+                  İş Ortaklığı
+                  <span class="dropdown-indicator"
+                    ><i class="fas fa-chevron-down"></i
+                  ></span>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-large dropdown-menu-narrow"
+                  aria-labelledby="partnershipDropdown"
+                >
+                  <div class="business-grid">
+                    <a href="#" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-cog"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Bayilik</h5>
+                      </div>
+                    </a>
+                    <a href="#" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-bullhorn"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Kampanyalar</h5>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </li> -->
+              <!-- <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="resourcesDropdown"
+                  role="button"
+                  aria-expanded="false"
+                >
+                  Kaynaklar
+                  <span class="dropdown-indicator"
+                    ><i class="fas fa-chevron-down"></i
+                  ></span>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-large dropdown-menu-narrow"
+                  aria-labelledby="resourcesDropdown"
+                >
+                  <div class="business-grid">
+                    <a href="#" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-book"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Blog</h5>
+                      </div>
+                    </a>
+                    <a href="#" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-comment-dots"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>Bilgi Merkezi</h5>
+                      </div>
+                    </a>
+                    <a href="#" class="business-item">
+                      <div class="business-icon">
+                        <i class="fas fa-cogs"></i>
+                      </div>
+                      <div class="business-info">
+                        <h5>API</h5>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </li> -->
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="#musteri-hikayeleri"
+                  >Müşteri Hikayeleri</a
+                >
+              </li> -->
+              <li class="nav-item ms-lg-2">
+                <a href="#turkuaz_demo" class="btn btn-accent rounded-pill"
+                  >Bizimle İletişime Geçin</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Hero Section -->
+    <section class="pricing-header pt-5 mt-5" style="background-color: #507b41 !important;">
+      <div class="container text-center">
+        <h1 class="display-4 fw-bold mb-3 text-white">İşletmenize Özel Çözüm Paketleri</h1>
+        <p class="lead mb-5">
+          İşletmenizin ihtiyaçlarına ve bütçenize göre özelleştirilmiş çözümler için bizimle iletişime geçin.
+        </p>
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="d-flex flex-wrap justify-content-center">
+              <!-- <div class="badge bg-white text-dark px-3 py-2 rounded-pill shadow-sm m-1">
+                <i class="fas fa-check-circle me-2" style="color: #507b41;"></i> 2 Yıl Ücretsiz Teknik Destek
+              </div> -->
+              <!-- <div class="badge bg-white text-dark px-3 py-2 rounded-pill shadow-sm m-1">
+                <i class="fas fa-check-circle me-2" style="color: #507b41;"></i> Ücretsiz Kurulum
+              </div> -->
+              <div class="badge bg-white text-dark px-3 py-2 rounded-pill shadow-sm m-1">
+                <i class="fas fa-check-circle me-2" style="color: #507b41;"></i> Servis ve Bakım Desteği
+              </div>
+              <div class="badge bg-white text-dark px-3 py-2 rounded-pill shadow-sm m-1">
+                <i class="fas fa-check-circle me-2" style="color: #507b41;"></i> İşletmenize Özel Çözümler
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Plan Selector -->
+    <section class="plan-selector py-5">
+      <div class="container">
+        <!-- Tab navigation -->
+        <div class="pricing-tabs mb-5">
+          <ul class="nav nav-pills nav-fill mb-4" id="pricingTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="software-tab" data-bs-toggle="pill" data-bs-target="#software" type="button" role="tab" aria-controls="software" aria-selected="true">
+                <i class="fas fa-code me-2"></i>YAZILIM PAKETLERİ
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="hardware-tab" data-bs-toggle="pill" data-bs-target="#hardware" type="button" role="tab" aria-controls="hardware" aria-selected="false">
+                <i class="fas fa-tablet-alt me-2"></i>DONANIM ÜRÜNLERİ
+              </button>
+            </li>
+          </ul>
+          
+          <!-- Tab content -->
+          <div class="tab-content" id="pricingTabContent">
+            <!-- SOFTWARE PACKAGES TAB -->
+            <div class="tab-pane show active" id="software" role="tabpanel" aria-labelledby="software-tab">
+              <div class="text-center mb-4">
+                <h5 class="fw-bold" style="color: #507b41;">Yazılım Modüllerimiz</h5>
+                <p class="text-muted">İşletmenizin ihtiyaçlarına göre özelleştirilebilen modüller</p>
+              </div>
+              
+              <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <!-- Kasa Modülü -->
+                <div class="col">
+                  <div class="card h-100 border-0 shadow-sm">
+                    <div class="text-center p-3">
+                      <div class="module-icon mb-3">
+                        <i class="fas fa-cash-register fa-2x" style="color: #507b41;"></i>
+                      </div>
+                      <h5 class="card-title">eA Kasa</h5>
+                    </div>
+                    <div class="card-body pt-0 text-center">
+                      <p class="card-text small text-muted">Gelişmiş kasa yönetim sistemi ile ödemeleri hızlı ve güvenli şekilde alın</p>
+                      <div class="mt-3">
+                        <!-- <span class="badge bg-light text-dark px-3 py-2"><i class="fas fa-tag me-1" style="color: #507b41;"></i> Özel Fiyatlandırma</span> -->
+                      </div>
+                    </div>
+                    <div class="card-footer bg-white border-top-0 text-center pb-3">
+                      <a href="#demo" class="btn btn-sm btn-outline-primary rounded-pill mt-2"><i class="fas fa-comment-dots me-1"></i> Bilgi Alın</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Garson Sipariş Modülü -->
+                <div class="col">
+                  <div class="card h-100 border-0 shadow-sm">
+                    <div class="text-center p-3">
+                      <div class="module-icon mb-3">
+                        <i class="fas fa-desktop fa-2x" style="color: #507b41;"></i>
+                      </div>
+                      <h5 class="card-title">eA Panel</h5>
+                    </div>
+                    <div class="card-body pt-0 text-center">
+                      <p class="card-text small text-muted">Garsonlar için özel tasarlanmış sipariş yönetim paneli</p>
+                      <div class="mt-3">
+                        <!-- <span class="badge bg-light text-dark px-3 py-2"><i class="fas fa-tag me-1" style="color: #507b41;"></i> Özel Fiyatlandırma</span> -->
+                      </div>
+                    </div>
+                    <div class="card-footer bg-white border-top-0 text-center pb-3">
+                      <a href="#demo" class="btn btn-sm btn-outline-primary rounded-pill mt-2"><i class="fas fa-comment-dots me-1"></i> Bilgi Alın</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Android Sipariş Modülü -->
+                <div class="col">
+                  <div class="card h-100 border-0 shadow-sm">
+                    <div class="text-center p-3">
+                      <div class="module-icon mb-3">
+                        <i class="fab fa-android fa-2x" style="color: #507b41;"></i>
+                      </div>
+                      <h5 class="card-title">eA Garson</h5>
+                    </div>
+                    <div class="card-body pt-0 text-center">
+                      <p class="card-text small text-muted">Android cihazlar için mobil sipariş alma uygulaması</p>
+                      <div class="mt-3">
+                        <!-- <span class="badge bg-light text-dark px-3 py-2"><i class="fas fa-tag me-1" style="color: #507b41;"></i> Özel Fiyatlandırma</span> -->
+                      </div>
+                    </div>
+                    <div class="card-footer bg-white border-top-0 text-center pb-3">
+                      <a href="#demo" class="btn btn-sm btn-outline-primary rounded-pill mt-2"><i class="fas fa-comment-dots me-1"></i> Bilgi Alın</a>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Paket Entegrasyon Modülü -->
+                <div class="col">
+                  <div class="card h-100 border-0 shadow-sm">
+                    <div class="text-center p-3">
+                      <div class="module-icon mb-3">
+                        <i class="fas fa-shopping-bag fa-2x" style="color: #507b41;"></i>
+                      </div>
+                      <h5 class="card-title">Paket eA</h5>
+                    </div>
+                    <div class="card-body pt-0 text-center">
+                      <p class="card-text small text-muted">Yemeksepeti, Getir Yemek ve Trendyol Yemek entegrasyonları</p>
+                      <div class="d-flex justify-content-center mt-2 mb-2 flex-wrap">
+                        <span class="badge bg-light text-dark m-1">Yemeksepeti</span>
+                        <span class="badge bg-light text-dark m-1">Getir Yemek</span>
+                        <span class="badge bg-light text-dark m-1">Trendyol Yemek</span>
+                      </div>
+                      <div class="mt-3">
+                        <!-- <span class="badge bg-light text-dark px-3 py-2"><i class="fas fa-tag me-1" style="color: #507b41;"></i> Özel Fiyatlandırma</span> -->
+                      </div>
+                    </div>
+                    <div class="card-footer bg-white border-top-0 text-center pb-3">
+                      <a href="#demo" class="btn btn-sm btn-outline-primary rounded-pill mt-2"><i class="fas fa-comment-dots me-1"></i> Bilgi Alın</a>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Online Takip Modülü -->
+                <div class="col">
+                  <div class="card h-100 border-0 shadow-sm">
+                    <div class="text-center p-3">
+                      <div class="module-icon mb-3">
+                        <i class="fas fa-chart-line fa-2x" style="color: #507b41;"></i>
+                      </div>
+                      <h5 class="card-title">Online Takip Modülü</h5>
+                    </div>
+                    <div class="card-body pt-0 text-center">
+                      <p class="card-text small text-muted">Web ve mobil uygulama üzerinden işletmenizi uzaktan takip edin</p>
+                      <div class="d-flex justify-content-center mt-2 mb-2 flex-wrap">
+                        <span class="badge text-white m-1" style="background-color: #507b41;">eA Portal Web</span>
+                        <span class="badge text-white m-1" style="background-color: #507b41;">eA Patron App</span>
+                      </div>
+                      <div class="mt-3">
+                        <!-- <span class="badge bg-light text-dark px-3 py-2"><i class="fas fa-tag me-1" style="color: #507b41;"></i> Özel Fiyatlandırma</span> -->
+                      </div>
+                    </div>
+                    <div class="card-footer bg-white border-top-0 text-center pb-3">
+                      <a href="#demo" class="btn btn-sm btn-outline-primary rounded-pill mt-2"><i class="fas fa-comment-dots me-1"></i> Bilgi Alın</a>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- QR Menü Entegrasyon Modülü -->
+                <div class="col">
+                  <div class="card h-100 border-0 shadow-sm">
+                    <div class="text-center p-3">
+                      <div class="module-icon mb-3">
+                        <i class="fas fa-qrcode fa-2x" style="color: #507b41;"></i>
+                      </div>
+                      <h5 class="card-title">eA Menücebimde</h5>
+                    </div>
+                    <div class="card-body pt-0 text-center">
+                      <p class="card-text small text-muted">QR kodlu dijital menü sistemi ile müşterilerinize kolay sipariş imkanı</p>
+                      <div class="mt-3">
+                        <!-- <span class="badge bg-light text-dark px-3 py-2"><i class="fas fa-tag me-1" style="color: #507b41;"></i> Özel Fiyatlandırma</span> -->
+                      </div>
+                    </div>
+                    <div class="card-footer bg-white border-top-0 text-center pb-3">
+                      <a href="#demo" class="btn btn-sm btn-outline-primary rounded-pill mt-2"><i class="fas fa-comment-dots me-1"></i> Bilgi Alın</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Info Text -->
+              <div class="text-center mt-4">
+                <div class="alert alert-info py-3" style="background-color: rgba(80, 123, 65, 0.1); border-color: #507b41; color: #333;">
+                  <i class="fas fa-info-circle me-2" style="color: #507b41;"></i> Yazılım modüllerimiz birbirleriyle entegre çalışarak işletmenizin tüm ihtiyaçlarını karşılar. Özelleştirilmiş çözümler ve fiyat teklifleri için bizimle iletişime geçin.
+                </div>
+              </div>
+            </div>
+            
+            <!-- HARDWARE PRODUCTS TAB -->
+            <div class="tab-pane" id="hardware" role="tabpanel" aria-labelledby="hardware-tab">
+              <div class="text-center mb-4">
+                <h5 class="fw-bold" style="color: #507b41;">Donanım Çözümlerimiz</h5>
+                <p class="text-muted">İşletmenizin tüm ihtiyaçları için özel donanım çözümleri</p>
+              </div>
+              
+              <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <!-- Ingenico Yazar Kasa POS -->
+                <div class="col">
+                  <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                      <div class="text-center p-2">
+                        <div class="hardware-icon mb-3">
+                          <i class="fas fa-credit-card fa-2x" style="color: #507b41;"></i>
+                        </div>
+                        <h5 class="card-title">Ingenico Yazar Kasa POS</h5>
+                      </div>
+                      <div class="text-center pt-0">
+                        <img src="img/stock/pos.jpg" class="img-fluid rounded mb-3" alt="Ingenico Yazar Kasa POS">
+                        <ul class="card-text small text-muted text-start ps-4 mb-3">
+                          <li>Tüm kredi kartı ve banka kartları ile entegre çalışan GİB onaylı yazar kasa POS sistemi</li>
+                        </ul>
+                        <div class="d-flex justify-content-center flex-wrap mt-2">
+                          <span class="badge bg-light text-dark m-1">GİB Onaylı</span>
+                          <span class="badge bg-light text-dark m-1">Hızlı İşlem</span>
+                          <span class="badge bg-light text-dark m-1">Tam Entegrasyon</span>
+                        </div>
+                        <div class="mt-3">
+                          <!-- <span class="badge bg-light text-dark px-3 py-2"><i class="fas fa-tag me-1" style="color: #507b41;"></i> Özel Teklif</span> -->
+                        </div>
+                      </div>
+                      <div class="text-center mt-3">
+                        <a href="#demo" class="btn btn-sm btn-outline-primary rounded-pill"><i class="fas fa-comment-dots me-1"></i> Bilgi Alın</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- eA Terazi Modülü -->
+                <div class="col">
+                  <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                      <div class="text-center p-2">
+                        <div class="hardware-icon mb-3">
+                          <i class="fas fa-balance-scale fa-2x" style="color: #507b41;"></i>
+                        </div>
+                        <h5 class="card-title">eA Terazi</h5>
+                      </div>
+                      <div class="text-center pt-0">
+                        <img src="./img/stock/terazi.png" class="img-fluid rounded mb-3" alt="eA Terazi Modülü">
+                        <ul class="card-text small text-muted text-start ps-4 mb-3">
+                          <li>Kilogram hesaplamalı ürünler için dijital terazi çözümü, eA Adisyon ile entegre çalışır</li>
+                        </ul>
+                        <div class="d-flex justify-content-center flex-wrap mt-2">
+                          <span class="badge bg-light text-dark m-1">Hassas Ölçüm</span>
+                          <span class="badge bg-light text-dark m-1">Dijital Gösterge</span>
+                          <span class="badge text-white m-1" style="background-color: #507b41;">Tam Entegrasyon</span>
+                        </div>
+                        <div class="mt-3">
+                          <!-- <span class="badge bg-light text-dark px-3 py-2"><i class="fas fa-tag me-1" style="color: #507b41;"></i> Özel Teklif</span> -->
+                        </div>
+                      </div>
+                      <div class="text-center mt-3">
+                        <a href="#demo" class="btn btn-sm btn-outline-primary rounded-pill"><i class="fas fa-comment-dots me-1"></i> Bilgi Alın</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- POS Terminal -->
+                <div class="col">
+                  <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                      <div class="text-center p-2">
+                        <div class="hardware-icon mb-3">
+                          <i class="fas fa-desktop fa-2x" style="color: #507b41;"></i>
+                        </div>
+                        <h5 class="card-title">Dokunmatik Pos Terminal</h5>
+                      </div>
+                      <div class="text-center pt-0">
+                        <img src="img/stock/pos-terminal.png" class="img-fluid rounded mb-3" alt="POS Terminal">
+                        <ul class="card-text small text-muted text-start ps-4 mb-3">
+                          <li>Intel® Core i5 3120M, 8 Gb Ram, 120 Gb SSD</li>
+                          <li>14" Müşteri Ekranı</li>
+                          <li>17.3' Led Panel 1920x1080 '' FLAT ''</li>
+                          <li>Dahil İntel Hd Grafik Ekran Kartı</li>
+                          <li>6 Usb, 1 Vga, 1 Com, 1 HDMI, 10/100/1000 Ethernet Kartı</li>
+                          <li>Dahili Ses Kartı</li>
+                        </ul>
+                        <div class="d-flex justify-content-center flex-wrap mt-2">
+                          <span class="badge bg-light text-dark m-1">Dokunmatik Ekran</span>
+                          <span class="badge bg-light text-dark m-1">Yüksek Performans</span>
+                        </div>
+                        <div class="mt-3">
+                          <!-- <span class="badge bg-light text-dark px-3 py-2"><i class="fas fa-tag me-1" style="color: #507b41;"></i> Özel Teklif</span> -->
+                        </div>
+                      </div>
+                      <div class="text-center mt-3">
+                        <a href="#demo" class="btn btn-sm btn-outline-primary rounded-pill"><i class="fas fa-comment-dots me-1"></i> Bilgi Alın</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Para Çekmecesi -->
+                <div class="col">
+                  <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                      <div class="text-center p-2">
+                        <div class="hardware-icon mb-3">
+                          <i class="fas fa-desktop fa-2x" style="color: #507b41;"></i>
+                        </div>
+                        <h5 class="card-title">PARA ÇEKMECESİ</h5>
+                      </div>
+                      <div class="text-center pt-0">
+                        <img src="img/stock/para-cekmecesi.png" class="img-fluid rounded mb-3" alt="POS Terminal">
+                        <ul class="card-text small text-muted text-start ps-4 mb-3">
+                          <li>Otomatik progaramdan çekmece açma</li>
+                          
+                          
+                        </ul>
+                        <div class="d-flex justify-content-center flex-wrap mt-2">
+                          <span class="badge bg-light text-dark m-1">Dokunmatik Ekran</span>
+                          <span class="badge bg-light text-dark m-1">Yüksek Performans</span>
+                        </div>
+                        <div class="mt-3">
+                          <!-- <span class="badge bg-light text-dark px-3 py-2"><i class="fas fa-tag me-1" style="color: #507b41;"></i> Özel Teklif</span> -->
+                        </div>
+                      </div>
+                      <div class="text-center mt-3">
+                        <a href="#demo" class="btn btn-sm btn-outline-primary rounded-pill"><i class="fas fa-comment-dots me-1"></i> Bilgi Alın</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--  AFANDA Af-1600 i5 8 RAM 120 SSD Dokunmatik POS PC -->
+                <div class="col">
+                  <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                      <div class="text-center p-2">
+                        <div class="hardware-icon mb-3">
+                          <i class="fas fa-desktop fa-2x" style="color: #507b41;"></i>
+                        </div>
+                        <h5 class="card-title">Dokunmatik POS PC</h5>
+                      </div>
+                      <div class="text-center pt-0">
+                        <img src="img/stock/pos-pc.png" class="img-fluid rounded mb-3" alt="POS Terminal">
+                        <ul class="card-text small text-muted text-start ps-4 mb-3">
+                          <li> İntel Core i5 3.Nesil
+                          </li>
+                          <li> 8 Gb Ram Ddr3, 120 Gb Ssd
+                          </li>
+                          <li> 15,6' Led Panel 1366x768 FLAT
+                          </li>
+                          <li>
+                            6 Usb,1 Vga,10 Nokta Hassas Dokunmatik Panel
+
+                          </li>
+                          <li> 10/100 Ethernet Kartı
+                          </li>
+                          
+                          
+                          
+                        </ul>
+                        <div class="d-flex justify-content-center flex-wrap mt-2">
+                          <span class="badge bg-light text-dark m-1">Dokunmatik Ekran</span>
+                          <span class="badge bg-light text-dark m-1">Yüksek Performans</span>
+                        </div>
+                        <div class="mt-3">
+                          <!-- <span class="badge bg-light text-dark px-3 py-2"><i class="fas fa-tag me-1" style="color: #507b41;"></i> Özel Teklif</span> -->
+                        </div>
+                      </div>
+                      <div class="text-center mt-3">
+                        <a href="#demo" class="btn btn-sm btn-outline-primary rounded-pill"><i class="fas fa-comment-dots me-1"></i> Bilgi Alın</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ORDER GO ANDROID EL TERMİNALİ -->
+
+                <div class="col">
+                  <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                      <div class="text-center p-2">
+                        <div class="hardware-icon mb-3">
+                          <i class="fas fa-desktop fa-2x" style="color: #507b41;"></i>
+                        </div>
+                        <h5 class="card-title"> ORDER GO ANDROID EL TERMİNALİ
+                        </h5>
+                      </div>
+                      <div class="text-center pt-0">
+                        <img src="img/stock/el-terminali.png" class="img-fluid rounded mb-3" alt="POS Terminal">
+                        <ul class="card-text small text-muted text-start ps-4 mb-3">
+                          <li>Düşmeye dayanıklı Android el terminali
+                          </li>
+                         
+                          
+                          
+                          
+                        </ul>
+                        <div class="d-flex justify-content-center flex-wrap mt-2">
+                          <span class="badge bg-light text-dark m-1">Dokunmatik Ekran</span>
+                          <span class="badge bg-light text-dark m-1">Yüksek Performans</span>
+                        </div>
+                        <div class="mt-3">
+                          <!-- <span class="badge bg-light text-dark px-3 py-2"><i class="fas fa-tag me-1" style="color: #507b41;"></i> Özel Teklif</span> -->
+                        </div>
+                      </div>
+                      <div class="text-center mt-3">
+                        <a href="#demo" class="btn btn-sm btn-outline-primary rounded-pill"><i class="fas fa-comment-dots me-1"></i> Bilgi Alın</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--  Afanda 892E 80mm Ethernet/Usb Termal Fiş Yazıcı -->
+                <div class="col">
+                  <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                      <div class="text-center p-2">
+                        <div class="hardware-icon mb-3">
+                          <i class="fas fa-desktop fa-2x" style="color: #507b41;"></i>
+                        </div>
+                        <h5 class="card-title">  Afanda 892E 80mm Ethernet/Usb Termal Fiş Yazıcı
+
+                        </h5>
+                      </div>
+                      <div class="text-center pt-0">
+                        <img src="img/stock/fis-yazici.png" class="img-fluid rounded mb-3" alt="POS Terminal">
+                        <ul class="card-text small text-muted text-start ps-4 mb-3">
+                          <li>Baskı Yöntemi : Termal Baskı
+                          </li>
+                          <li> Baskı Hızı : 250 mm / sn
+                          </li>
+                          <li> Etkili Baskı Genişliği : 72 mm
+                          </li>
+                          <li> Otomatik kesici: 1.500.000 kesim
+                          </li>
+                         
+                          
+                          
+                          
+                        </ul>
+                        <div class="d-flex justify-content-center flex-wrap mt-2">
+                          <span class="badge bg-light text-dark m-1">Dokunmatik Ekran</span>
+                          <span class="badge bg-light text-dark m-1">Yüksek Performans</span>
+                        </div>
+                        <div class="mt-3">
+                          <!-- <span class="badge bg-light text-dark px-3 py-2"><i class="fas fa-tag me-1" style="color: #507b41;"></i> Özel Teklif</span> -->
+                        </div>
+                      </div>
+                      <div class="text-center mt-3">
+                        <a href="#demo" class="btn btn-sm btn-outline-primary rounded-pill"><i class="fas fa-comment-dots me-1"></i> Bilgi Alın</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--   NETWORK KURULUM/EĞİTİM  -->
+                <div class="col">
+                  <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                      <div class="text-center p-2">
+                        <div class="hardware-icon mb-3">
+                          <i class="fas fa-desktop fa-2x" style="color: #507b41;"></i>
+                        </div>
+                        <h5 class="card-title">NETWORK KURULUM/EĞİTİM
+
+                        </h5>
+                      </div>
+                      <div class="text-center pt-0">
+                        <img src="img/stock/network.jpg" class="img-fluid rounded mb-3" alt="POS Terminal">
+                        <ul class="card-text small text-muted text-start ps-4 mb-3">
+                          <li>Switch, Network malzemeleri, kurulum ve eğitim destek hizmetleri
+                          </li>
+                          
+                          
+                          
+                        </ul>
+                        <div class="d-flex justify-content-center flex-wrap mt-2">
+                          <span class="badge bg-light text-dark m-1">Dokunmatik Ekran</span>
+                          <span class="badge bg-light text-dark m-1">Yüksek Performans</span>
+                        </div>
+                        <div class="mt-3">
+                          <!-- <span class="badge bg-light text-dark px-3 py-2"><i class="fas fa-tag me-1" style="color: #507b41;"></i> Özel Teklif</span> -->
+                        </div>
+                      </div>
+                      <div class="text-center mt-3">
+                        <a href="#demo" class="btn btn-sm btn-outline-primary rounded-pill"><i class="fas fa-comment-dots me-1"></i> Bilgi Alın</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              
+              <!-- Info Text -->
+              <div class="text-center mt-4">
+                <div class="alert alert-info py-3" style="background-color: rgba(80, 123, 65, 0.1); border-color: #507b41; color: #333;">
+                  <i class="fas fa-info-circle me-2" style="color: #507b41;"></i> Tüm donanım ürünlerimiz eA Adisyon sistemimiz ile kusursuz entegre çalışacak şekilde tasarlanmıştır. 2 yıl garanti ve ücretsiz kurulum hizmeti sunulmaktadır. Ürünler hakkında detaylı bilgi ve fiyat teklifleri için bizimle iletişime geçin.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- CSS Update for Tab Styling -->
+    <style>
+      /* Demo section override */
+      
+      /* Header Styles */
+      .pricing-header {
+        background: #4db6ac !important;
+        padding: 80px 0;
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      /* Tab Navigation */
+      .nav-pills .nav-link {
+        padding: 15px 20px;
+        border-radius: 8px;
+        font-weight: 600;
+        color: #507b41;
+        transition: all 0.3s ease;
+        margin: 0 5px;
+      }
+      
+      .nav-pills .nav-link.active {
+        background-color: var(--accent);
+        color: white;
+        box-shadow: 0 5px 15px rgba(77, 182, 172, 0.3);
+      }
+      
+      /* Modern Card Design */
+      .price-card {
+        border-radius: 12px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        border: none;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      }
+      
+      .price-card.featured {
+        position: relative;
+        transform: translateY(-10px);
+        box-shadow: 0 10px 30px rgba(77, 182, 172, 0.2);
+        border: 2px solid #4db6ac;
+      }
+      
+      .price-card .card-header {
+        border: none;
+        background: transparent;
+      }
+      
+      .recommended-badge {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #4db6ac;
+        color: white;
+        font-size: 12px;
+        padding: 5px 10px;
+        border-bottom-left-radius: 8px;
+      }
+      
+      .price-tag {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #507b41 !important;
+        margin: 15px 0 5px;
+      }
+      
+      .price-duration {
+        font-size: 0.9rem;
+        color: #6c757d;
+        font-weight: 400;
+      }
+      
+      /* Feature Badges */
+      .features-summary .badge {
+        font-weight: normal;
+        padding: 6px 12px;
+      }
+      
+      /* Buttons */
+      .btn-outline-primary {
+        border-color: #4db6ac;
+        color: #4db6ac;
+      }
+      
+      .btn-outline-primary:hover {
+        background-color: #4db6ac;
+        border-color: #4db6ac;
+        color: white;
+      }
+      
+      .btn-primary {
+        background-color: #4db6ac;
+        border-color: #4db6ac;
+      }
+      
+      .btn-primary:hover {
+        background-color: #3da89e;
+        border-color: #3da89e;
+      }
+      
+      /* Card Images */
+      .card-img-top {
+        height: 180px;
+        object-fit: cover;
+      }
+      
+      /* Demo Section Styles */
+     
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .feature-section {
+        padding: 70px 0;
+      }
+
+      .feature-card {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 25px;
+        height: 100%;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        border-top: 4px solid #507b41;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        border-color: var(--primary-color-light);
+      }
+
+      .feature-icon {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #507b41 !important;
+        color: white !important;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        font-size: 24px;
+      }
+
+      .fast-food-section {
+        background-color: #f9f9f9;
+        padding: 70px 0;
+      }
+
+      .fast-food-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 25px;
+      }
+
+      .fast-food-icon {
+        min-width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--primary-color-light);
+        color: var(--primary-color);
+        border-radius: 50%;
+        margin-right: 15px;
+        font-size: 18px;
+      }
+      
+      /* CTA Bölümü için stiller */
+      .cta-section {
+            position: relative;
+            background: linear-gradient(to bottom, rgba(var(--primary-rgb), 0.03), rgba(var(--accent-rgb), 0.03));
+            padding: 80px 0;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(var(--accent-rgb), 0.1) 0%, rgba(var(--accent-rgb), 0) 70%);
+            z-index: 0;
+        }
+        
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -100px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(var(--primary-rgb), 0.1) 0%, rgba(var(--primary-rgb), 0) 70%);
+            z-index: 0;
+        }
+        
+        .demo-form-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+        
+        .demo-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .demo-features li {
+            color: gray;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .demo-features li i {
+            color: #507b41;
+            margin-right: 10px;
+        }
+        
+        .text-white-75 {
+            color: gray;
+        }
+      
+      .hardware-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        background-color: #f8f9fa;
+      }
+      
+      /* Donanım kartlarının aynı boyutta olması için */
+      #hardware .card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      
+      #hardware .card-body {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding-bottom: 70px; /* Butonun yerleşeceği alan */
+      }
+      
+      #hardware .card-body .text-center:last-child {
+        margin-top: auto;
+      }
+      
+      #hardware .img-fluid {
+        height: 300px;
+        object-fit: contain;
+        width: 100%;
+      }
+      
+      #hardware .card-text {
+        min-height: 70px;
+      }
+      
+      /* Liste öğeleri için alan sabitleme */
+      #hardware ul.card-text {
+        min-height: 180px;
+        max-height: 180px;
+        overflow-y: auto;
+        margin-bottom: 1rem !important;
+      }
+      
+      /* Badge'ler için sabit alan */
+      #hardware .d-flex.justify-content-center.flex-wrap {
+        min-height: 70px;
+        display: flex;
+        align-items: center;
+      }
+      
+      /* Buton alanı için sabit yükseklik */
+      #hardware .text-center.mt-3 {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+      }
+      
+      #hardware .card {
+        min-height: 500px;
+      }
+      
+      /* Kart başlıklarının hizalama sorunu için */
+      #hardware .card-title {
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0;
+      }
+      
+      #hardware .text-center.p-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 120px;
+      }
+    </style>
+
+    <!-- Demo Request Section -->
+    <section class="cta-section" id="demo">
+      <div class="cta-overlay"></div>
+      <div class="container py-5">
+          <div class="row align-items-center">
+              <div class="col-lg-7 text-center text-lg-start mb-4 mb-lg-0">
+                  <h2 class="text-dark fw-bold mb-4 display-5">E-Adisyon'u İşletmenizde Deneyimleyin</h2>
+                  <p class="text-white-75 lead">Hızlı, verimli ve müşteri odaklı bir yönetim sisteminin işletmenize katacağı değeri görmek için ücretsiz demo talebinde bulunun.</p>
+                  <ul class="demo-features ps-0 mb-4">
+                      <!-- <li><i class="fas fa-check-circle me-2"></i> 14 gün ücretsiz deneme</li> -->
+                      <li><i class="fas fa-check-circle me-2"></i> Kurulum desteği</li>
+                      <li><i class="fas fa-check-circle me-2"></i> Canlı ürün tanıtımı</li>
+                  </ul>
+              </div>
+              <div class="col-lg-5">
+                  <div class="demo-form-card">
+                      <h4 class="fw-bold mb-3">Ücretsiz Demo Talep Edin</h4>
+                      <p class="text-muted mb-4">Sizinle 24 saat içinde iletişime geçeceğiz</p>
+                      <form>
+                          <div class="mb-3">
+                              <input type="text" class="form-control" placeholder="İşletme Adı" required>
+                          </div>
+                          <div class="mb-3">
+                              <input type="text" class="form-control" placeholder="Adınız Soyadınız" required>
+                          </div>
+                          <div class="mb-3">
+                              <input type="email" class="form-control" placeholder="E-posta Adresiniz" required>
+                          </div>
+                          <div class="mb-3">
+                              <input type="tel" class="form-control" placeholder="Telefon Numaranız" required>
+                          </div>
+                          <button type="submit" class="btn btn-primary w-100 rounded-pill py-3 fw-medium">Bizimle İletişime Geçin</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+    <footer class="footer pt-5">
+      <div class="container">
+          <div class="row pb-4">
+              <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                  <div class="footer-logo mb-4">
+                      <img src="assets/eadisyonlogo.png" alt="E-Adisyon Logo" class="footer-brand-logo" loading="lazy">
+                  </div>
+                  <p>Yeni nesil bulut tabanlı restoran ve cafe yönetim sistemi ile işletmenizi dijitalleştirin.</p>
+                  <div class="social-icons mt-4">
+                      <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                      <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                      <a href="#" class="me-2"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                  <h5 class="footer-title">Hızlı Linkler</h5>
+                  <ul class="footer-links">
+                      <li><a href="#anasayfa">Ana Sayfa</a></li>
+                      <li><a href="#ozellikler">Özellikler</a></li>
+                      <li><a href="#fiyatlandirma">Fiyatlandırma</a></li>
+                      <li><a href="#hakkimizda">Hakkımızda</a></li>
+                      <li><a href="#iletisim">İletişim</a></li>
+                  </ul>
+              </div>
+              <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                  <h5 class="footer-title">Ürünlerimiz</h5>
+                  <ul class="footer-links">
+                      <li><a href="#">Adisyon Sistemi</a></li>
+                      <li><a href="dijital-menu.html">Dijital Menü</a></li>
+                      <li><a href="stok-ve-maliyet-yonetimi.html">Stok Takibi</a></li>
+                      <li><a href="mutfak-yonetimi.html">Mutfak Yönetimi</a></li>
+                      <li><a href="gelismis-entegrasyonlar.html">Gelişmiş Entegrasyonlar</a></li>
+                      <li><a href="e-donusum-entegrasyonu.html">E-Dönüşüm Entegrasyonu</a></li>
+                      <li><a href="#">Müşteri Yönetimi</a></li>
+                  </ul>
+              </div>
+              <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                  <h5 class="footer-title">İletişim</h5>
+                  <ul class="footer-contact">
+                      <li><i class="fas fa-map-marker-alt"></i> İhsaniye Mahallesi İzmir Yolu Caddesi No 110/A<br />Ali
+                      Bostancı İş Merkezi Kat 2 Daire 3<br />Nilüfer,
+                      Bursa/Türkiye</li>
+                      <li><i class="fas fa-phone"></i> 0850 466 1001</li>
+                      <li><i class="fas fa-envelope"></i> info@e-adisyon.com</li>
+                  </ul>
+              </div>
+          </div>
+          <div class="footer-bottom py-3 border-top">
+              <div class="row">
+                  <div class="col-md-6">
+                      <p class="mb-0">&copy; 2025 E-Adisyon. Tüm hakları saklıdır.</p>
+                  </div>
+                  <div class="col-md-6 text-md-end">
+                      <a href="#" class="me-3">Gizlilik Politikası</a>
+                      <a href="#">Kullanım Koşulları</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+  <!-- Mobile Menu Container -->
+  <div class="mobile-menu-overlay"></div>
+  <div class="mobile-menu-container">
+    <div class="mobile-menu-header">
+      <div class="mobile-menu-logo">
+        <!-- <img src="assets/eadisyonlogo.png" alt="E-Adisyon Logo"> -->
+      </div>
+      <button class="mobile-menu-close">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <ul class="mobile-menu-nav">
+      <li>
+        <a href="index.html" class="mobile-menu-link">Ana Sayfa</a>
+      </li>
+      <li>
+        <div class="mobile-menu-item">
+          <a href="#" class="mobile-menu-link">İşletme Türleri</a>
+          <button class="mobile-menu-toggle"><i class="fas fa-chevron-down"></i></button>
+        </div>
+        <ul class="mobile-submenu">
+          <li><h6 class="submenu-title">İŞLETMELER</h6></li>
+          <li><a href="restaurant-cafe.html">Restaurant & Cafe</a></li>
+          <li><a href="bulut-mutfak.html">Bulut Mutfak</a></li>
+          <li><a href="fast-food.html">Fast Food</a></li>
+          <li><a href="pizza-restaurant.html">Pizza Restaurant</a></li>
+          <li><a href="burger-cafe-restaurant.html">Burger Cafe & Restaurant</a></li>
+          <li><a href="hotel-cafe-restaurant.html">Hotel Cafe & Restaurant</a></li>
+          <li><a href="sezonluk-isletmeler.html">Sezonluk İşletmeler</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="mobile-menu-item">
+          <a href="#" class="mobile-menu-link">Özellikler</a>
+          <button class="mobile-menu-toggle"><i class="fas fa-chevron-down"></i></button>
+        </div>
+        <ul class="mobile-submenu">
+          <li><h6 class="submenu-title">MODÜLLER</h6></li>
+          <li><a href="dijital-menu.html">Dijital Menü</a></li>
+          <li><a href="stok-ve-maliyet-yonetimi.html">Stok ve Maliyet Yönetimi</a></li>
+          <li><a href="mutfak-yonetimi.html">Mutfak Yönetimi</a></li>
+          <li><a href="gelismis-entegrasyonlar.html">Gelişmiş Entegrasyonlar</a></li>
+          <li><a href="e-donusum-entegrasyonu.html">E-Dönüşüm Entegrasyonu</a></li>
+          <!-- <li><a href="zincir-isletme-yonetimi.html">Zincir İşletme Yönetimi</a></li> -->
+          <li><a href="kurtye-takip.html">Kurye Takip</a></li>
+          <li><a href="cari-musteri-yonetimi.html">Cari Müşteri Yönetimi</a></li>
+          <li><a href="raporlama-analiz.html">Raporlama ve Analiz</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="fiyatlar.html" class="mobile-menu-link">Fiyatlar</a>
+      </li>
+      <li>
+        <div class="mobile-menu-item">
+          <a href="#" class="mobile-menu-link">Hakkımızda</a>
+          <button class="mobile-menu-toggle"><i class="fas fa-chevron-down"></i></button>
+        </div>
+        <ul class="mobile-submenu">
+          <li><a href="hakkimizda.html">Şirketimiz</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="mobile-menu-bottom">
+      <a href="#turkuaz_demo" class="btn btn-primary rounded-pill">Bizimle İletişime Geçin</a>
+    </div>
+  </div>
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Mobile Menu Script -->
+  <script src="js/mobile-menu.js"></script>
+  <!-- Custom JavaScript -->
+  <script src="js/main.js"></script>
+    <!-- Simple Tab functionality script -->  
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Demo bölümünün arka planını turquaz (#4db6ac) yap - sayfa yüklenir yüklenmez
+        const demoSection = document.getElementById('turkuaz_demo');
+        // if (demoSection) {
+        //   demoSection.style.backgroundColor = '#4db6ac';
+        //   // DOM güncellemesi için küçük bir gecikme
+        //   setTimeout(() => {
+        //     demoSection.style.backgroundColor = '#4db6ac';
+        //   }, 500);
+        // }
+        
+        // Get reference to tab elements and content panes
+        const softwareTab = document.getElementById('software-tab');
+        const hardwareTab = document.getElementById('hardware-tab');
+        const softwarePane = document.getElementById('software');
+        const hardwarePane = document.getElementById('hardware');
+        
+        // Software tab click handler
+        softwareTab.addEventListener('click', function() {
+          // Update tab buttons
+          softwareTab.classList.add('active');
+          hardwareTab.classList.remove('active');
+          softwareTab.setAttribute('aria-selected', 'true');
+          hardwareTab.setAttribute('aria-selected', 'false');
+          
+          // Show/hide content
+          softwarePane.classList.add('show', 'active');
+          hardwarePane.classList.remove('show', 'active');
+          
+          // Force display style
+          softwarePane.style.display = 'block';
+          hardwarePane.style.display = 'none';
+        });
+        
+        // Hardware tab click handler
+        hardwareTab.addEventListener('click', function() {
+          // Update tab buttons
+          hardwareTab.classList.add('active');
+          softwareTab.classList.remove('active');
+          hardwareTab.setAttribute('aria-selected', 'true');
+          softwareTab.setAttribute('aria-selected', 'false');
+          
+          // Demo bölümü arka planını turquaz yap
+          const demoSection = document.getElementById('demo');
+          // if (demoSection) {
+          //   demoSection.style.backgroundColor = '#4db6ac';
+          // }
+
+          // Show/hide content
+          hardwarePane.classList.add('show', 'active');
+          softwarePane.classList.remove('show', 'active');
+          
+          // Force display style
+          hardwarePane.style.display = 'block';
+          softwarePane.style.display = 'none';
+        });
+        
+        // Initialize correct display on page load
+        softwarePane.style.display = 'block';
+        hardwarePane.style.display = 'none';
+      });
+    </script>
+  </body>
+</html>

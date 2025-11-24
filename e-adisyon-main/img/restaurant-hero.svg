@@ -1,0 +1,71 @@
+<svg width="500" height="400" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Arka plan gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#507b41" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#507b41" stop-opacity="0.3"/>
+    </linearGradient>
+    
+    <!-- Tablet ekran içeriği için gradient -->
+    <linearGradient id="screenGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f0f0f0"/>
+    </linearGradient>
+    
+    <!-- Gölge efekti -->
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Transparent arka plan -->
+  
+  <!-- Dekoratif daire elemanları -->
+  <circle cx="50" cy="50" r="80" fill="#507b41" opacity="0.1"/>
+  <circle cx="450" cy="350" r="100" fill="#507b41" opacity="0.1"/>
+  
+  <!-- Restaurant masası -->
+  <circle cx="150" cy="250" r="50" fill="#8d5b4c" opacity="0.7" filter="url(#shadow)"/>
+  <circle cx="150" cy="250" r="45" fill="#a06c5b" opacity="0.9"/>
+  <circle cx="150" cy="250" r="40" fill="#b27b69"/>
+  
+  <!-- Tabak ve yemek -->
+  <circle cx="150" cy="250" r="25" fill="#f5f5f5" filter="url(#shadow)"/>
+  <circle cx="150" cy="250" r="15" fill="#e0c089"/>
+  
+  <!-- Tablet/Pos cihazı -->
+  <rect x="260" y="160" width="120" height="180" rx="10" ry="10" fill="#333" filter="url(#shadow)"/>
+  <rect x="270" y="180" width="100" height="140" rx="5" ry="5" fill="url(#screenGradient)"/>
+  
+  <!-- Ekran içeriği - sipariş listesi -->
+  <rect x="280" y="190" width="80" height="15" rx="2" ry="2" fill="#507b41" opacity="0.8"/>
+  <rect x="280" y="215" width="80" height="10" rx="2" ry="2" fill="#ddd"/>
+  <rect x="280" y="235" width="80" height="10" rx="2" ry="2" fill="#ddd"/>
+  <rect x="280" y="255" width="80" height="10" rx="2" ry="2" fill="#ddd"/>
+  <rect x="280" y="275" width="45" height="15" rx="7" ry="7" fill="#507b41" opacity="0.9"/>
+  
+  <!-- Efekt çizgiler -->
+  <path d="M 200,250 Q 230,230 260,240" stroke="#507b41" stroke-width="2" fill="transparent" stroke-dasharray="4"/>
+  
+  <!-- QR Kod -->
+  <rect x="80" y="120" width="60" height="60" fill="#fff" filter="url(#shadow)"/>
+  <g transform="translate(90, 130)">
+    <rect x="0" y="0" width="40" height="40" fill="#333"/>
+    <rect x="5" y="5" width="10" height="10" fill="#fff"/>
+    <rect x="25" y="5" width="10" height="10" fill="#fff"/>
+    <rect x="5" y="25" width="10" height="10" fill="#fff"/>
+    <rect x="15" y="15" width="10" height="10" fill="#fff"/>
+  </g>
+  
+  <!-- Yazılar kaldırıldı -->
+  
+  <!-- Ödeme Simgesi -->
+  <rect x="360" y="90" width="70" height="45" rx="5" ry="5" fill="#fff" filter="url(#shadow)"/>
+  <rect x="360" y="105" width="70" height="10" fill="#333"/>
+  <circle cx="420" cy="125" r="8" fill="#507b41"/>
+  
+  <!-- Küçük Simgeler -->
+  <circle cx="70" cy="350" r="15" fill="#507b41" opacity="0.6"/>
+  <circle cx="430" cy="270" r="10" fill="#507b41" opacity="0.6"/>
+  <circle cx="390" cy="350" r="20" fill="#507b41" opacity="0.6"/>
+</svg>

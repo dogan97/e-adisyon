@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Filtreler ve Gradientler -->
+  <defs>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-opacity="0.25" flood-color="#333"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"/>
+      <feComposite in="blur" in2="SourceGraphic" operator="over"/>
+    </filter>
+    <linearGradient id="cloudGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f0f0f0"/>
+    </linearGradient>
+    <linearGradient id="deviceGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#507b41"/>
+      <stop offset="100%" stop-color="#3c5d31"/>
+    </linearGradient>
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f9f9f9"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8ed4cd"/>
+      <stop offset="100%" stop-color="#5bc0b5"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Arka Plan Elemanları -->
+  <g id="backgroundElements" opacity="0.05">
+    <circle cx="100" cy="100" r="50" fill="#507b41"/>
+    <circle cx="500" cy="320" r="80" fill="#8ed4cd"/>
+    <rect x="450" y="50" width="100" height="100" rx="25" fill="#507b41"/>
+    <rect x="50" y="280" width="120" height="60" rx="15" fill="#8ed4cd"/>
+  </g>
+  
+  <!-- Modern Bulut Platformu -->
+  <g id="cloudPlatform" transform="translate(290, 140)">
+    <!-- Ana Bulut Sunucu -->
+    <g transform="scale(1.1)" filter="url(#softShadow)">
+      <path d="M-90,-60 
+               C-120,-60 -140,-40 -130,-10 
+               C-150,0 -140,30 -120,35
+               C-110,70 -70,70 -50,50
+               C-30,80 10,70 20,40
+               C50,45 70,15 60,-10
+               C65,-40 30,-55 10,-40
+               C0,-60 -40,-70 -60,-50
+               C-70,-70 -90,-60 -90,-60 Z" 
+            fill="url(#cloudGrad)" stroke="#e0e0e0" stroke-width="2"/>
+    </g>
+    
+    <!-- Bulut İçi Veri Merkezi Gösterimi -->
+    <g transform="translate(0, -10)">
+      <!-- Sunucu Rafları -->
+      <rect x="-50" y="-20" width="100" height="50" rx="5" ry="5" fill="#f8f8f8" stroke="#ddd" stroke-width="1"/>
+      <rect x="-45" y="-15" width="90" height="40" rx="3" ry="3" fill="#f0f0f0" stroke="#ddd" stroke-width="1"/>
+      
+      <!-- Sunucu Blokları -->
+      <g id="serverBlocks">
+        <rect x="-40" y="-10" width="25" height="8" rx="1" fill="#e0e0e0"/>
+        <rect x="-40" y="2" width="25" height="8" rx="1" fill="#d5d5d5"/>
+        <rect x="-40" y="14" width="25" height="8" rx="1" fill="#e0e0e0"/>
+        
+        <rect x="-10" y="-10" width="25" height="8" rx="1" fill="#d5d5d5"/>
+        <rect x="-10" y="2" width="25" height="8" rx="1" fill="#e0e0e0"/>
+        <rect x="-10" y="14" width="25" height="8" rx="1" fill="#d5d5d5"/>
+        
+        <rect x="20" y="-10" width="25" height="8" rx="1" fill="#e0e0e0"/>
+        <rect x="20" y="2" width="25" height="8" rx="1" fill="#d5d5d5"/>
+        <rect x="20" y="14" width="25" height="8" rx="1" fill="#e0e0e0"/>
+      </g>
+      
+      <!-- İşlem Göstergeleri -->
+      <circle cx="-32" cy="-6" r="2" fill="#507b41">
+        <animate attributeName="opacity" values="1;0.4;1" dur="1.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-2" cy="6" r="2" fill="#8ed4cd">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="28" cy="18" r="2" fill="#507b41">
+        <animate attributeName="opacity" values="0.6;1;0.6" dur="2.5s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+  
+  <!-- Veri Akışı ve Bağlantılar -->
+  <g id="dataConnections">
+    <!-- Ana Veri Yolları -->
+    <path d="M290,180 C240,210 190,240 170,280" stroke="#8ed4cd" stroke-width="2" stroke-linecap="round" fill="none" stroke-dasharray="3,2">
+      <animate attributeName="stroke-dashoffset" from="5" to="0" dur="3s" repeatCount="indefinite"/>
+    </path>
+    
+    <path d="M290,180 C290,210 290,240 290,280" stroke="#8ed4cd" stroke-width="2" stroke-linecap="round" fill="none" stroke-dasharray="3,2">
+      <animate attributeName="stroke-dashoffset" from="5" to="0" dur="2s" repeatCount="indefinite"/>
+    </path>
+    
+    <path d="M290,180 C330,210 370,240 400,280" stroke="#8ed4cd" stroke-width="2" stroke-linecap="round" fill="none" stroke-dasharray="3,2">
+      <animate attributeName="stroke-dashoffset" from="5" to="0" dur="2.5s" repeatCount="indefinite"/>
+    </path>
+    
+    <path d="M290,180 C350,190 410,200 470,230" stroke="#8ed4cd" stroke-width="2" stroke-linecap="round" fill="none" stroke-dasharray="3,2">
+      <animate attributeName="stroke-dashoffset" from="5" to="0" dur="4s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Bağlantı Noktaları (Canlı Animasyon) -->
+  <g id="connectionPoints">
+    <circle cx="170" cy="280" r="6" fill="url(#accentGrad)" filter="url(#glow)">
+      <animate attributeName="r" values="4;6;4" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    
+    <circle cx="290" cy="280" r="6" fill="url(#accentGrad)" filter="url(#glow)">
+      <animate attributeName="r" values="4;7;4" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    
+    <circle cx="400" cy="280" r="6" fill="url(#accentGrad)" filter="url(#glow)">
+      <animate attributeName="r" values="4;6;4" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    
+    <circle cx="470" cy="230" r="6" fill="url(#accentGrad)" filter="url(#glow)">
+      <animate attributeName="r" values="4;7;4" dur="3.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Cihaz Sistemleri -->
+  <!-- Tablet POS Sistemi -->
+  <g transform="translate(170, 320)" filter="url(#softShadow)">
+    <g transform="scale(0.9)">
+      <!-- POS Cihazı -->
+      <rect x="-35" y="-50" width="70" height="90" rx="8" ry="8" fill="#333333"/>
+      <rect x="-30" y="-45" width="60" height="80" rx="5" ry="5" fill="url(#screenGrad)"/>
+      
+      <!-- Ekran İçeriği -->
+      <rect x="-25" y="-40" width="50" height="12" rx="2" ry="2" fill="url(#accentGrad)"/>
+      <rect x="-25" y="-24" width="20" height="8" rx="1" ry="1" fill="#e0e0e0"/>
+      <rect x="0" y="-24" width="25" height="8" rx="1" ry="1" fill="#e0e0e0"/>
+      
+      <rect x="-25" y="-12" width="50" height="1" fill="#ddd"/>
+      
+      <rect x="-25" y="-8" width="20" height="20" rx="3" ry="3" fill="#507b41"/>
+      <rect x="0" y="-8" width="25" height="6" rx="1" ry="1" fill="#e0e0e0"/>
+      <rect x="0" y="2" width="25" height="6" rx="1" ry="1" fill="#e0e0e0"/>
+      <rect x="0" y="12" width="25" height="6" rx="1" ry="1" fill="#e0e0e0"/>
+      
+      <rect x="-25" y="18" width="20" height="12" rx="2" ry="2" fill="#e0e0e0"/>
+      <rect x="0" y="18" width="25" height="12" rx="2" ry="2" fill="#8ed4cd"/>
+      
+      <!-- POS Düğmesi -->
+      <circle cx="0" cy="35" r="4" fill="#444"/>
+      <circle cx="0" cy="35" r="3" fill="#333"/>
+    </g>
+  </g>
+  
+  <!-- Profesyonel Mutfak Ekranı -->
+  <g transform="translate(290, 320)" filter="url(#softShadow)">
+    <g transform="scale(0.9)">
+      <!-- Ekran -->
+      <rect x="-50" y="-40" width="100" height="70" rx="5" ry="5" fill="#444"/>
+      <rect x="-45" y="-35" width="90" height="60" rx="3" ry="3" fill="url(#screenGrad)"/>
+      
+      <!-- Ekran İçeriği - Sipariş Takip Paneli -->
+      <rect x="-40" y="-30" width="80" height="10" rx="2" ry="2" fill="url(#deviceGrad)" opacity="0.9"/>
+      <rect x="-38" y="-28" width="30" height="6" rx="1" ry="1" fill="#fff" opacity="0.9"/>
+      
+      <line x1="-40" y1="-16" x2="40" y2="-16" stroke="#ddd" stroke-width="1"/>
+      
+      <!-- Siparişler -->
+      <g id="orders">
+        <rect x="-40" y="-12" width="35" height="8" rx="1" ry="1" fill="#8ed4cd" opacity="0.8"/>
+        <rect x="0" y="-12" width="40" height="8" rx="1" ry="1" fill="#e0e0e0"/>
+        
+        <rect x="-40" y="0" width="35" height="8" rx="1" ry="1" fill="#8ed4cd" opacity="0.6"/>
+        <rect x="0" y="0" width="40" height="8" rx="1" ry="1" fill="#e0e0e0"/>
+        
+        <rect x="-40" y="12" width="35" height="8" rx="1" ry="1" fill="#e0e0e0"/>
+        <rect x="0" y="12" width="40" height="8" rx="1" ry="1" fill="#e0e0e0"/>
+      </g>
+      
+      <!-- Ekran Altlığı -->
+      <path d="M-30,30 L30,30 L25,40 L-25,40 Z" fill="#555"/>
+      <rect x="-25" y="40" width="50" height="5" rx="2" ry="2" fill="#444"/>
+    </g>
+  </g>
+  
+  <!-- Şef Tablet Sistemi -->
+  <g transform="translate(400, 320)" filter="url(#softShadow)">
+    <g transform="scale(0.9)">
+      <!-- Tablet -->
+      <rect x="-30" y="-45" width="60" height="90" rx="7" ry="7" fill="#333"/>
+      <rect x="-25" y="-40" width="50" height="80" rx="4" ry="4" fill="url(#screenGrad)"/>
+      
+      <!-- Tablet Ekranı -->
+      <rect x="-20" y="-35" width="40" height="10" rx="2" ry="2" fill="url(#deviceGrad)"/>
+      <rect x="-20" y="-22" width="40" height="1" fill="#ddd"/>
+      
+      <!-- Menü Öğeleri -->
+      <rect x="-20" y="-18" width="15" height="15" rx="2" ry="2" fill="#8ed4cd"/>
+      <rect x="0" y="-18" width="20" height="3" rx="1" ry="1" fill="#e0e0e0"/>
+      <rect x="0" y="-13" width="15" height="3" rx="1" ry="1" fill="#e0e0e0"/>
+      <rect x="0" y="-8" width="20" height="3" rx="1" ry="1" fill="#e0e0e0"/>
+      
+      <rect x="-20" y="0" width="15" height="15" rx="2" ry="2" fill="#507b41"/>
+      <rect x="0" y="0" width="20" height="3" rx="1" ry="1" fill="#e0e0e0"/>
+      <rect x="0" y="5" width="15" height="3" rx="1" ry="1" fill="#e0e0e0"/>
+      <rect x="0" y="10" width="20" height="3" rx="1" ry="1" fill="#e0e0e0"/>
+      
+      <rect x="-20" y="18" width="40" height="12" rx="2" ry="2" fill="url(#accentGrad)"/>
+      <rect x="-20" y="33" width="40" height="5" rx="1" ry="1" fill="#e0e0e0"/>
+      
+      <!-- Tablet Düğmesi -->
+      <circle cx="0" cy="-45" r="2" fill="#222"/>
+    </g>
+    
+    <!-- Mutfak Aleti İkonları -->
+    <g transform="translate(-40, -50) scale(0.6)" opacity="0.7">
+      <!-- Şef Şapkası -->
+      <path d="M0,-5 C10,-5 15,-15 0,-15 C-15,-15 -10,-5 0,-5 Z" fill="#f0f0f0" stroke="#ddd"/>
+      <ellipse cx="0" cy="-5" rx="8" ry="2" fill="#f0f0f0" stroke="#ddd"/>
+    </g>
+  </g>
+  
+  <!-- Sipariş Uygulaması ve Entegrasyonları -->
+  <g transform="translate(470, 230)" filter="url(#softShadow)">
+    <g transform="scale(0.85)">
+      <!-- Sipariş Merkezi -->
+      <circle cx="0" cy="0" r="35" fill="url(#deviceGrad)" opacity="0.9"/>
+      <circle cx="0" cy="0" r="30" fill="url(#screenGrad)"/>
+      
+      <!-- Sipariş Logosu -->
+      <g transform="translate(0, -5)">
+        <path d="M-15,0 L15,0 M-10,-10 L10,-10 M-5,10 L15,10" stroke="#507b41" stroke-width="4" stroke-linecap="round"/>
+      </g>
+      
+      <!-- Entegrasyon Noktaları -->
+      <g id="integrationPoints">
+        <circle cx="-20" cy="0" r="5" fill="url(#accentGrad)"/>
+        <circle cx="0" cy="-20" r="5" fill="url(#accentGrad)"/>
+        <circle cx="20" cy="0" r="5" fill="url(#accentGrad)"/>
+        <circle cx="0" cy="20" r="5" fill="url(#accentGrad)">
+          <animate attributeName="opacity" values="1;0.5;1" dur="1.5s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Mutfak Öğeleri (Dekoratif) -->
+  <g transform="translate(480, 300) scale(0.5)" opacity="0.5">
+    <!-- Yemek Tabağı -->
+    <circle cx="0" cy="0" r="20" fill="#f0f0f0" stroke="#ddd"/>
+    <circle cx="0" cy="0" r="15" fill="none" stroke="#ddd"/>
+    
+    <!-- Çatal ve Bıçak -->
+    <path d="M-25,-5 L-5,15" stroke="#ccc" stroke-width="2"/>
+    <path d="M-20,0 L-10,10" stroke="#ccc" stroke-width="2"/>
+    <path d="M25,-5 L5,15" stroke="#ccc" stroke-width="2"/>
+  </g>
+  
+  <!-- Animasyonlu Veri Akış Parçacıkları -->
+  <g id="flowParticles">
+    <!-- Akış 1 -->
+    <circle cx="0" cy="0" r="2" fill="#507b41">
+      <animateMotion path="M290,180 C240,210 190,240 170,280" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="2" fill="#8ed4cd">
+      <animateMotion path="M290,180 C240,210 190,240 170,280" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Akış 2 -->
+    <circle cx="0" cy="0" r="2" fill="#507b41">
+      <animateMotion path="M290,180 C290,210 290,240 290,280" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="2" fill="#8ed4cd">
+      <animateMotion path="M290,180 C290,210 290,240 290,280" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Akış 3 -->
+    <circle cx="0" cy="0" r="2" fill="#507b41">
+      <animateMotion path="M290,180 C330,210 370,240 400,280" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="2" fill="#8ed4cd">
+      <animateMotion path="M290,180 C330,210 370,240 400,280" dur="2.5s" begin="1.25s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Akış 4 -->
+    <circle cx="0" cy="0" r="2" fill="#507b41">
+      <animateMotion path="M290,180 C350,190 410,200 470,230" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="2" fill="#8ed4cd">
+      <animateMotion path="M290,180 C350,190 410,200 470,230" dur="4s" begin="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <!-- Background with subtle pattern -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8f9fa" />
+      <stop offset="100%" stop-color="#e9ecef" />
+    </linearGradient>
+    <linearGradient id="roadGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ced4da" />
+      <stop offset="100%" stop-color="#adb5bd" />
+    </linearGradient>
+    <linearGradient id="buildingGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#dee2e6" />
+      <stop offset="100%" stop-color="#adb5bd" />
+    </linearGradient>
+    <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#507b41" />
+      <stop offset="100%" stop-color="#3e5f32" />
+    </linearGradient>
+    <linearGradient id="turquoiseGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8ed4cd" />
+      <stop offset="100%" stop-color="#6baea8" />
+    </linearGradient>
+    <linearGradient id="screenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e9ecef" />
+      <stop offset="100%" stop-color="#ced4da" />
+    </linearGradient>
+    
+    <!-- Pulse animation for location markers -->
+    <radialGradient id="pulseGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#507b41" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#507b41" stop-opacity="0" />
+    </radialGradient>
+    
+    <!-- Pattern for city map background -->
+    <pattern id="mapPattern" width="100" height="100" patternUnits="userSpaceOnUse">
+      <rect width="100" height="100" fill="url(#bgGradient)" />
+      <path d="M0,0 L100,0 L100,100 L0,100 Z" fill="none" stroke="#e9ecef" stroke-width="0.5" />
+      <path d="M50,0 L50,100 M0,50 L100,50" fill="none" stroke="#e9ecef" stroke-width="0.5" />
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#mapPattern)" />
+  
+  <!-- City Map with streets -->
+  <g id="cityMap">
+    <!-- Main roads -->
+    <path d="M100,100 L700,100 M100,300 L700,300 M100,500 L700,500 M100,100 L100,500 M300,100 L300,500 M500,100 L500,500 M700,100 L700,500" 
+          stroke="#ced4da" stroke-width="15" stroke-linecap="round" />
+    
+    <!-- Secondary roads -->
+    <path d="M100,200 L700,200 M100,400 L700,400 M200,100 L200,500 M400,100 L400,500 M600,100 L600,500" 
+          stroke="#dee2e6" stroke-width="8" stroke-linecap="round" />
+  </g>
+  
+  <!-- Buildings (Restaurants) -->
+  <g id="buildings">
+    <rect x="130" y="130" width="50" height="50" fill="url(#buildingGradient)" rx="5" ry="5" />
+    <rect x="330" y="230" width="40" height="40" fill="url(#buildingGradient)" rx="5" ry="5" />
+    <rect x="530" y="130" width="60" height="45" fill="url(#buildingGradient)" rx="5" ry="5" />
+    <rect x="230" y="430" width="45" height="50" fill="url(#buildingGradient)" rx="5" ry="5" />
+    <rect x="630" y="330" width="50" height="50" fill="url(#buildingGradient)" rx="5" ry="5" />
+  </g>
+  
+  <!-- Central Restaurant (Main E-Adisyon user) -->
+  <g id="mainRestaurant">
+    <rect x="415" y="415" width="70" height="70" fill="url(#greenGradient)" rx="10" ry="10" stroke="#ffffff" stroke-width="2" />
+    <rect x="435" y="430" width="30" height="20" fill="#ffffff" rx="2" ry="2" />
+    <rect x="435" y="460" width="30" height="10" fill="#ffffff" rx="2" ry="2" />
+  </g>
+  
+  <!-- Control Center -->
+  <g id="controlCenter" transform="translate(400, 250)">
+    <!-- Dashboard screen -->
+    <rect x="-70" y="-40" width="140" height="80" fill="url(#turquoiseGradient)" rx="10" ry="10" stroke="#ffffff" stroke-width="2" />
+    <rect x="-60" y="-30" width="120" height="60" fill="url(#screenGradient)" rx="5" ry="5" />
+    
+    <!-- Screen elements -->
+    <rect x="-55" y="-25" width="50" height="20" fill="#8ed4cd" rx="2" ry="2" opacity="0.8" />
+    <rect x="5" y="-25" width="50" height="20" fill="#507b41" rx="2" ry="2" opacity="0.8" />
+    <rect x="-55" y="0" width="110" height="25" fill="#dee2e6" rx="2" ry="2" opacity="0.8" />
+    
+    <!-- Map indicators -->
+    <circle cx="-40" cy="12" r="3" fill="#507b41" />
+    <circle cx="-10" cy="12" r="3" fill="#507b41" />
+    <circle cx="20" cy="12" r="3" fill="#507b41" />
+    <circle cx="50" cy="12" r="3" fill="#507b41" />
+  </g>
+  
+  <!-- Delivery Couriers -->
+  <g id="couriers">
+    <!-- Courier 1 with route -->
+    <g id="courier1">
+      <path d="M450,450 C480,400 450,350 430,320" stroke="#507b41" stroke-width="2" stroke-dasharray="5,5" stroke-linecap="round" fill="none" />
+      <circle cx="430" cy="320" r="8" fill="#507b41" />
+      <circle cx="430" cy="320" r="16" fill="url(#pulseGradient)">
+        <animate attributeName="r" values="8;20;8" dur="2s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.8;0;0.8" dur="2s" repeatCount="indefinite" />
+      </circle>
+    </g>
+    
+    <!-- Courier 2 with route -->
+    <g id="courier2">
+      <path d="M450,450 C380,430 340,400 330,350" stroke="#507b41" stroke-width="2" stroke-dasharray="5,5" stroke-linecap="round" fill="none" />
+      <circle cx="330" cy="350" r="8" fill="#507b41" />
+      <circle cx="330" cy="350" r="16" fill="url(#pulseGradient)">
+        <animate attributeName="r" values="8;20;8" dur="2s" repeatCount="indefinite" begin="0.5s" />
+        <animate attributeName="opacity" values="0.8;0;0.8" dur="2s" repeatCount="indefinite" begin="0.5s" />
+      </circle>
+    </g>
+    
+    <!-- Courier 3 with route -->
+    <g id="courier3">
+      <path d="M450,450 C500,400 550,420 570,380" stroke="#507b41" stroke-width="2" stroke-dasharray="5,5" stroke-linecap="round" fill="none" />
+      <circle cx="570" cy="380" r="8" fill="#507b41" />
+      <circle cx="570" cy="380" r="16" fill="url(#pulseGradient)">
+        <animate attributeName="r" values="8;20;8" dur="2s" repeatCount="indefinite" begin="1s" />
+        <animate attributeName="opacity" values="0.8;0;0.8" dur="2s" repeatCount="indefinite" begin="1s" />
+      </circle>
+    </g>
+    
+    <!-- Courier 4 with route (in-progress delivery) -->
+    <g id="courier4">
+      <path d="M450,450 C430,520 350,530 250,520" stroke="#8ed4cd" stroke-width="2" stroke-dasharray="5,5" stroke-linecap="round" fill="none" />
+      <circle cx="250" cy="520" r="8" fill="#8ed4cd" />
+      <circle cx="250" cy="520" r="16" fill="url(#pulseGradient)">
+        <animate attributeName="r" values="8;20;8" dur="2s" repeatCount="indefinite" begin="1.5s" />
+        <animate attributeName="opacity" values="0.8;0;0.8" dur="2s" repeatCount="indefinite" begin="1.5s" />
+      </circle>
+      
+      <!-- Moving dot along the path (delivery in progress) -->
+      <circle cx="0" cy="0" r="6" fill="#8ed4cd">
+        <animateMotion dur="6s" repeatCount="indefinite" path="M450,450 C430,520 350,530 250,520" />
+      </circle>
+    </g>
+  </g>
+  
+  <!-- Mobile Device -->
+  <g id="mobileDevice" transform="translate(120, 350)">
+    <rect x="-25" y="-40" width="50" height="80" fill="#343a40" rx="5" ry="5" />
+    <rect x="-20" y="-35" width="40" height="70" fill="url(#screenGradient)" rx="2" ry="2" />
+    <circle cx="0" cy="40" r="3" fill="#dee2e6" stroke="#343a40" stroke-width="1" />
+    
+    <!-- Screen map elements -->
+    <rect x="-15" y="-30" width="30" height="10" fill="#8ed4cd" rx="1" ry="1" opacity="0.8" />
+    <circle cx="-5" cy="0" r="2" fill="#507b41" />
+    <circle cx="5" cy="-10" r="2" fill="#507b41" />
+    <circle cx="10" cy="15" r="2" fill="#507b41" />
+    <circle cx="-10" cy="25" r="2" fill="#8ed4cd" />
+    
+    <!-- Mobile-Restaurant connection -->
+    <path d="M0,-40 C-10,-100 250,-100 400,0" stroke="#507b41" stroke-width="1" stroke-dasharray="3,3" stroke-linecap="round" fill="none" />
+    
+    <!-- Data flow animation -->
+    <circle cx="0" cy="0" r="3" fill="#507b41" opacity="0.8">
+      <animateMotion dur="3s" repeatCount="indefinite" path="M0,-40 C-10,-100 250,-100 400,0" />
+      <animate attributeName="opacity" values="0.8;0;0.8" dur="3s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  
+  <!-- Notification Elements -->
+  <g id="notifications">
+    <g transform="translate(280, 150)">
+      <rect x="-20" y="-10" width="40" height="20" fill="#507b41" rx="10" ry="10" />
+      <text x="0" y="5" font-family="Arial" font-size="12" fill="white" text-anchor="middle">✓</text>
+    </g>
+    
+    <g transform="translate(520, 420)">
+      <rect x="-20" y="-10" width="40" height="20" fill="#507b41" rx="10" ry="10" />
+      <text x="0" y="5" font-family="Arial" font-size="12" fill="white" text-anchor="middle">✓</text>
+    </g>
+  </g>
+</svg>

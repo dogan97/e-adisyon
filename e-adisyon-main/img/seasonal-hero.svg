@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definitions for gradients and filters -->
+  <defs>
+    <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#507b41;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3a5b30;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="turquoiseGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8ed4cd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6ab8af;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="summerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd54f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffb300;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="winterGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#90caf9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#42a5f5;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="3" dy="3" stdDeviation="5" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Background with subtle seasonal pattern -->
+  <rect x="0" y="0" width="800" height="500" fill="transparent" />
+
+  <!-- Seasonal Restaurant Building Base -->
+  <rect x="300" y="180" width="200" height="170" rx="5" ry="5" fill="url(#greenGradient)" filter="url(#shadow)" />
+  
+  <!-- Door -->
+  <rect x="380" y="280" width="40" height="70" rx="2" ry="2" fill="#6d4c41" />
+  <circle cx="410" cy="315" r="3" fill="#ffeb3b" />
+  
+  <!-- Windows -->
+  <rect x="330" y="210" width="30" height="40" rx="2" ry="2" fill="#e3f2fd" stroke="#507b41" stroke-width="3" />
+  <rect x="380" y="210" width="30" height="40" rx="2" ry="2" fill="#e3f2fd" stroke="#507b41" stroke-width="3" />
+  <rect x="440" y="210" width="30" height="40" rx="2" ry="2" fill="#e3f2fd" stroke="#507b41" stroke-width="3" />
+
+  <!-- Roof with Seasonal Elements -->
+  <polygon points="300,180 400,120 500,180" fill="url(#turquoiseGradient)" filter="url(#shadow)" />
+  
+  <!-- Summer Outdoor Seating Area -->
+  <g transform="translate(520, 260)">
+    <circle cx="0" cy="0" r="25" fill="url(#summerGradient)" stroke="#507b41" stroke-width="2" />
+    <rect x="-15" y="25" width="30" height="5" fill="#8d6e63" />
+    <rect x="-2" y="30" width="4" height="20" fill="#8d6e63" />
+    <!-- Table -->
+    <circle cx="0" cy="-5" r="10" fill="#fff" stroke="#507b41" stroke-width="1" />
+    <!-- Chair -->
+    <rect x="-15" y="-5" width="8" height="8" rx="2" ry="2" fill="#507b41" />
+    <rect x="7" y="-5" width="8" height="8" rx="2" ry="2" fill="#507b41" />
+  </g>
+  
+  <!-- Winter Indoor Display -->
+  <g transform="translate(200, 260)">
+    <circle cx="0" cy="0" r="25" fill="url(#winterGradient)" stroke="#507b41" stroke-width="2" />
+    <!-- Indoor fireplace symbol -->
+    <path d="M-10,5 Q-5,-10 0,5 Q5,-10 10,5 L10,15 Q5,20 0,15 Q-5,20 -10,15 Z" fill="#ff5722" />
+    <!-- Indoor table -->
+    <circle cx="0" cy="-5" r="8" fill="#fff" stroke="#507b41" stroke-width="1" />
+  </g>
+
+  <!-- Connection Lines Only - Central Hub Removed -->
+  
+  <!-- Season Change Animation with Calendar Symbol -->
+  <g transform="translate(400, 70)">
+    <rect x="-35" y="-35" width="70" height="70" rx="5" ry="5" fill="#fff" stroke="#507b41" stroke-width="3" filter="url(#shadow)" />
+    <!-- Calendar top bar -->
+    <rect x="-35" y="-35" width="70" height="15" rx="5" ry="5" fill="#507b41" />
+    
+    <!-- Calendar grid lines -->
+    <line x1="-35" y1="-10" x2="35" y2="-10" stroke="#507b41" stroke-width="1" />
+    <line x1="-18" y1="-10" x2="-18" y2="35" stroke="#507b41" stroke-width="1" />
+    <line x1="0" y1="-10" x2="0" y2="35" stroke="#507b41" stroke-width="1" />
+    <line x1="18" y1="-10" x2="18" y2="35" stroke="#507b41" stroke-width="1" />
+    
+    <line x1="-35" y1="5" x2="35" y2="5" stroke="#507b41" stroke-width="1" />
+    <line x1="-35" y1="20" x2="35" y2="20" stroke="#507b41" stroke-width="1" />
+    
+    <!-- Season indicators -->
+    <circle cx="-25" cy="-1" r="5" fill="url(#summerGradient)" />
+    <circle cx="25" cy="25" r="5" fill="url(#winterGradient)" />
+  </g>
+  
+  <!-- Connection lines between seasonal elements and system -->
+  <line x1="200" y1="260" x2="380" y2="380" stroke="#8ed4cd" stroke-width="2" stroke-dasharray="5,3" />
+  <line x1="520" y1="260" x2="420" y2="380" stroke="#8ed4cd" stroke-width="2" stroke-dasharray="5,3" />
+  <line x1="400" y1="120" x2="400" y2="370" stroke="#8ed4cd" stroke-width="2" stroke-dasharray="5,3" />
+
+</svg>

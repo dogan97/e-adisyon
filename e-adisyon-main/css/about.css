@@ -1,0 +1,433 @@
+/* About Us Page CSS - Minimal Design */
+
+/* Hero Section */
+.about-hero-section {
+    background-color: #f8f9fa;
+    padding: 140px 0 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-hero-section:before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(var(--primary-rgb), 0.05) 0%, rgba(var(--primary-rgb), 0.01) 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.about-hero-section:after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(var(--accent-rgb), 0.05) 0%, rgba(var(--accent-rgb), 0.01) 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.separator {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    margin: 0 auto 30px;
+    border-radius: 2px;
+}
+
+/* Story Section */
+.about-story-section {
+    padding: 80px 0;
+}
+
+.about-image {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    position: relative;
+}
+
+.about-image:before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 100px;
+    height: 100px;
+    border-top: 4px solid var(--primary);
+    border-left: 4px solid var(--primary);
+    z-index: -1;
+}
+
+.about-subtitle {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary);
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.about-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.about-content p {
+    color: #606060;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* Highlights */
+.about-highlights {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.highlight-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.highlight-number {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1;
+}
+
+.highlight-text {
+    font-size: 14px;
+    font-weight: 500;
+    color: #606060;
+}
+
+/* Values Section */
+.value-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+    height: 100%;
+    text-align: center;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.value-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: white;
+    font-size: 24px;
+}
+
+.value-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.value-text {
+    color: #606060;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Mission & Vision Cards */
+.mission-vision-section {
+    padding: 80px 0;
+}
+
+.mission-vision-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+    height: 100%;
+    border-top: 4px solid var(--primary);
+}
+
+.mission-vision-card .card-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #252525;
+}
+
+.mission-vision-card p {
+    color: #606060;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* Team Section */
+.team-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.team-image {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-image img {
+    transform: scale(1.05);
+}
+
+.team-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.team-info h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.team-role {
+    color: var(--primary);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.team-social a {
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #f1f3f5;
+    color: var(--primary);
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.team-social a:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Contact CTA */
+.contact-cta-section {
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    color: white;
+    border-radius: 10px;
+    margin: 40px 0;
+    padding: 60px 0 !important;
+}
+
+.contact-cta-section h2 {
+    font-weight: 600;
+}
+
+.contact-cta-section .btn-primary {
+    background-color: white;
+    color: var(--primary);
+    border: none;
+    font-weight: 500;
+    padding: 12px 30px;
+}
+
+.contact-cta-section .btn-primary:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* İletişim Bölümü Stilleri */
+.contact-section {
+    position: relative;
+    z-index: 1;
+}
+
+.contact-info-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+    height: 100%;
+    border-left: 4px solid var(--primary);
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(var(--primary-rgb), 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    color: var(--primary);
+    flex-shrink: 0;
+}
+
+.contact-text h5 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.contact-text p {
+    margin-bottom: 0;
+    color: var(--text-light);
+}
+
+.contact-social a {
+    width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(var(--primary-rgb), 0.1);
+    color: var(--primary);
+    transition: all 0.3s ease;
+}
+
+.contact-social a:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+.contact-form-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+    height: 100%;
+}
+
+.contact-form-card label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.contact-form-card .form-control,
+.contact-form-card .form-select {
+    padding: 12px 15px;
+    border-color: #e9ecef;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.contact-form-card .form-control:focus,
+.contact-form-card .form-select:focus {
+    box-shadow: none;
+    border-color: var(--primary);
+    background-color: white;
+}
+
+.contact-form-card .btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.contact-form-card .btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.contact-map {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+    position: relative;
+}
+
+.contact-map iframe {
+    display: block;
+}
+
+/* İletişim Responsif Düzenlemeler */
+@media (max-width: 991px) {
+    .contact-info-card {
+        margin-bottom: 30px;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .about-hero-section {
+        padding: 120px 0 60px;
+    }
+    
+    .about-image:before {
+        display: none;
+    }
+    
+    .about-highlights {
+        flex-wrap: wrap;
+    }
+    
+    .mission-vision-card {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .about-hero-section {
+        padding: 100px 0 50px;
+    }
+    
+    .about-title {
+        font-size: 28px;
+    }
+    
+    .highlight-number {
+        font-size: 30px;
+    }
+    
+    .contact-cta-section {
+        padding: 40px 0 !important;
+    }
+}

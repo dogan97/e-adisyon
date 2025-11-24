@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definitions for gradients and filters -->
+  <defs>
+    <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#507b41;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3a5b30;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="turquoiseGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8ed4cd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6ab8af;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#64b5f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2196f3;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="redGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ef5350;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e53935;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffa726;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff9800;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="3" dy="3" stdDeviation="5" flood-opacity="0.3" />
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="600" fill="transparent" />
+
+  <!-- POS System with E-Documents -->
+  <g transform="translate(200, 300)">
+    <!-- POS Base -->
+    <rect x="-80" y="-120" width="160" height="180" rx="10" ry="10" fill="#424242" filter="url(#shadow)" />
+    <!-- POS Screen -->
+    <rect x="-70" y="-110" width="140" height="100" rx="5" ry="5" fill="#f5f5f5" />
+    
+    <!-- E-Document on Screen -->
+    <g transform="translate(0, -60)">
+      <!-- Invoice outline -->
+      <rect x="-50" y="-25" width="100" height="140" rx="5" ry="5" fill="#fff" stroke="#ddd" stroke-width="1" />
+      <!-- Invoice header -->
+      <rect x="-50" y="-25" width="100" height="20" rx="5" ry="5" fill="url(#greenGradient)" opacity="0.8" />
+      <!-- Invoice QR code -->
+      <rect x="30" y="-15" width="12" height="12" rx="2" ry="2" fill="#fff" />
+      <rect x="33" y="-12" width="6" height="6" rx="1" ry="1" fill="#507b41" />
+      
+      <!-- Invoice body lines -->
+      <line x1="-40" y1="5" x2="40" y2="5" stroke="#ddd" stroke-width="1" />
+      <line x1="-40" y1="15" x2="40" y2="15" stroke="#ddd" stroke-width="1" />
+      <line x1="-40" y1="25" x2="40" y2="25" stroke="#ddd" stroke-width="1" />
+      <line x1="-40" y1="35" x2="40" y2="35" stroke="#ddd" stroke-width="1" />
+      <line x1="-40" y1="45" x2="40" y2="45" stroke="#ddd" stroke-width="1" />
+      <line x1="-40" y1="55" x2="20" y2="55" stroke="#ddd" stroke-width="1" />
+      
+      <!-- Invoice total -->
+      <rect x="-50" y="75" width="100" height="20" fill="#f5f5f5" stroke="#ddd" stroke-width="0.5" />
+      <rect x="-50" y="95" width="100" height="20" rx="0" ry="0" fill="url(#turquoiseGradient)" opacity="0.2" stroke="#ddd" stroke-width="0.5" />
+    </g>
+    
+    <!-- POS Keyboard/Buttons -->
+    <rect x="-65" y="-5" width="130" height="55" rx="3" ry="3" fill="#616161" />
+    <g fill="#f5f5f5">
+      <rect x="-60" y="0" width="15" height="10" rx="2" ry="2" />
+      <rect x="-40" y="0" width="15" height="10" rx="2" ry="2" />
+      <rect x="-20" y="0" width="15" height="10" rx="2" ry="2" />
+      <rect x="0" y="0" width="15" height="10" rx="2" ry="2" />
+      <rect x="20" y="0" width="15" height="10" rx="2" ry="2" />
+      <rect x="40" y="0" width="15" height="10" rx="2" ry="2" />
+      
+      <rect x="-60" y="15" width="15" height="10" rx="2" ry="2" />
+      <rect x="-40" y="15" width="15" height="10" rx="2" ry="2" />
+      <rect x="-20" y="15" width="15" height="10" rx="2" ry="2" />
+      <rect x="0" y="15" width="15" height="10" rx="2" ry="2" />
+      <rect x="20" y="15" width="15" height="10" rx="2" ry="2" />
+      <rect x="40" y="15" width="15" height="10" rx="2" ry="2" fill="url(#greenGradient)" />
+      
+      <rect x="-60" y="30" width="15" height="10" rx="2" ry="2" />
+      <rect x="-40" y="30" width="15" height="10" rx="2" ry="2" />
+      <rect x="-20" y="30" width="15" height="10" rx="2" ry="2" />
+      <rect x="0" y="30" width="15" height="10" rx="2" ry="2" />
+      <rect x="20" y="30" width="15" height="10" rx="2" ry="2" />
+      <rect x="40" y="30" width="15" height="10" rx="2" ry="2" fill="url(#turquoiseGradient)" />
+    </g>
+  </g>
+  
+  <!-- E-Documents flying/transitioning -->
+  <g transform="translate(350, 220)">
+    <!-- E-Invoice Document -->
+    <g transform="rotate(-15)">
+      <rect x="-30" y="-40" width="60" height="80" rx="3" ry="3" fill="#fff" stroke="#ddd" stroke-width="1" filter="url(#shadow)" />
+      <rect x="-25" y="-35" width="50" height="10" rx="2" ry="2" fill="url(#greenGradient)" opacity="0.8" />
+      <line x1="-25" y1="-20" x2="25" y2="-20" stroke="#ddd" stroke-width="1" />
+      <line x1="-25" y1="-10" x2="25" y2="-10" stroke="#ddd" stroke-width="1" />
+      <line x1="-25" y1="0" x2="25" y2="0" stroke="#ddd" stroke-width="1" />
+      <line x1="-25" y1="10" x2="15" y2="10" stroke="#ddd" stroke-width="1" />
+      <rect x="-25" y="25" width="50" height="10" rx="0" ry="0" fill="url(#turquoiseGradient)" opacity="0.2" />
+    </g>
+    
+    <!-- E-Archive Document -->
+    <g transform="translate(50, -20) rotate(10)">
+      <rect x="-30" y="-40" width="60" height="80" rx="3" ry="3" fill="#fff" stroke="#ddd" stroke-width="1" filter="url(#shadow)" />
+      <rect x="-25" y="-35" width="50" height="10" rx="2" ry="2" fill="url(#blueGradient)" opacity="0.8" />
+      <line x1="-25" y1="-20" x2="25" y2="-20" stroke="#ddd" stroke-width="1" />
+      <line x1="-25" y1="-10" x2="25" y2="-10" stroke="#ddd" stroke-width="1" />
+      <line x1="-25" y1="0" x2="25" y2="0" stroke="#ddd" stroke-width="1" />
+      <line x1="-25" y1="10" x2="15" y2="10" stroke="#ddd" stroke-width="1" />
+      <rect x="-25" y="25" width="50" height="10" rx="0" ry="0" fill="url(#blueGradient)" opacity="0.2" />
+    </g>
+    
+    <!-- E-Ledger Document -->
+    <g transform="translate(-50, -20) rotate(-5)">
+      <rect x="-30" y="-40" width="60" height="80" rx="3" ry="3" fill="#fff" stroke="#ddd" stroke-width="1" filter="url(#shadow)" />
+      <rect x="-25" y="-35" width="50" height="10" rx="2" ry="2" fill="url(#orangeGradient)" opacity="0.8" />
+      <line x1="-25" y1="-20" x2="25" y2="-20" stroke="#ddd" stroke-width="1" />
+      <line x1="-25" y1="-10" x2="25" y2="-10" stroke="#ddd" stroke-width="1" />
+      <line x1="-25" y1="0" x2="25" y2="0" stroke="#ddd" stroke-width="1" />
+      <line x1="-25" y1="10" x2="15" y2="10" stroke="#ddd" stroke-width="1" />
+      <rect x="-25" y="25" width="50" height="10" rx="0" ry="0" fill="url(#orangeGradient)" opacity="0.2" />
+    </g>
+  </g>
+  
+  <!-- Government System (GIB - Revenue Administration) -->
+  <g transform="translate(600, 300)">
+    <!-- Server Rack -->
+    <rect x="-70" y="-100" width="140" height="180" rx="5" ry="5" fill="#424242" filter="url(#shadow)" />
+    
+    <!-- Server Units -->
+    <rect x="-60" y="-90" width="120" height="20" rx="2" ry="2" fill="#616161" stroke="#333" stroke-width="1" />
+    <rect x="-55" y="-85" width="5" height="5" rx="1" ry="1" fill="url(#greenGradient)" />
+    <rect x="-45" y="-85" width="5" height="5" rx="1" ry="1" fill="url(#turquoiseGradient)" />
+    
+    <rect x="-60" y="-65" width="120" height="20" rx="2" ry="2" fill="#616161" stroke="#333" stroke-width="1" />
+    <rect x="-55" y="-60" width="5" height="5" rx="1" ry="1" fill="url(#blueGradient)" />
+    <rect x="-45" y="-60" width="5" height="5" rx="1" ry="1" fill="url(#turquoiseGradient)" />
+    
+    <rect x="-60" y="-40" width="120" height="20" rx="2" ry="2" fill="#616161" stroke="#333" stroke-width="1" />
+    <rect x="-55" y="-35" width="5" height="5" rx="1" ry="1" fill="url(#redGradient)" />
+    <rect x="-45" y="-35" width="5" height="5" rx="1" ry="1" fill="url(#turquoiseGradient)" />
+    
+    <rect x="-60" y="-15" width="120" height="20" rx="2" ry="2" fill="#616161" stroke="#333" stroke-width="1" />
+    <rect x="-55" y="-10" width="5" height="5" rx="1" ry="1" fill="url(#orangeGradient)" />
+    <rect x="-45" y="-10" width="5" height="5" rx="1" ry="1" fill="url(#turquoiseGradient)" />
+    
+    <rect x="-60" y="10" width="120" height="20" rx="2" ry="2" fill="#616161" stroke="#333" stroke-width="1" />
+    <rect x="-55" y="15" width="5" height="5" rx="1" ry="1" fill="url(#greenGradient)" />
+    <rect x="-45" y="15" width="5" height="5" rx="1" ry="1" fill="url(#turquoiseGradient)" />
+    
+    <rect x="-60" y="35" width="120" height="20" rx="2" ry="2" fill="#616161" stroke="#333" stroke-width="1" />
+    <rect x="-55" y="40" width="5" height="5" rx="1" ry="1" fill="url(#blueGradient)" />
+    <rect x="-45" y="40" width="5" height="5" rx="1" ry="1" fill="url(#turquoiseGradient)" />
+    
+    <!-- Server Cabinet Base -->
+    <rect x="-70" y="60" width="140" height="20" rx="2" ry="2" fill="#333" />
+  </g>
+  
+  <!-- Digital Certificate/Security Elements -->
+  <g transform="translate(400, 450)">
+    <rect x="-60" y="-30" width="120" height="60" rx="10" ry="10" fill="#424242" filter="url(#shadow)" />
+    <!-- Lock Symbol -->
+    <rect x="-10" y="-15" width="20" height="15" rx="3" ry="3" fill="url(#turquoiseGradient)" />
+    <rect x="-15" y="-15" width="30" height="15" rx="5" ry="5" fill="none" stroke="url(#turquoiseGradient)" stroke-width="3" />
+    <!-- Certificate Pattern -->
+    <path d="M-45,-15 C-35,-25 -25,-5 -15,-15" stroke="#507b41" stroke-width="1" fill="none" />
+    <path d="M-45,-5 C-35,-15 -25,5 -15,-5" stroke="#507b41" stroke-width="1" fill="none" />
+    <path d="M-45,5 C-35,-5 -25,15 -15,5" stroke="#507b41" stroke-width="1" fill="none" />
+    <path d="M15,-15 C25,-25 35,-5 45,-15" stroke="#507b41" stroke-width="1" fill="none" />
+    <path d="M15,-5 C25,-15 35,5 45,-5" stroke="#507b41" stroke-width="1" fill="none" />
+    <path d="M15,5 C25,-5 35,15 45,5" stroke="#507b41" stroke-width="1" fill="none" />
+  </g>
+  
+  <!-- Digital Signature -->
+  <g transform="translate(400, 100)">
+    <path d="M-100,-20 C-80,-50 -40,30 -20,0 C0,-30 20,20 40,-10 C60,-40 80,10 100,-20" 
+          stroke="url(#greenGradient)" stroke-width="3" fill="none" stroke-linecap="round" />
+    <circle cx="-100" cy="-20" r="5" fill="url(#greenGradient)" />
+    <circle cx="100" cy="-20" r="5" fill="url(#turquoiseGradient)" />
+  </g>
+  
+  <!-- Connection Lines -->
+  <path d="M250,300 C300,250 350,200 350,220" stroke="url(#turquoiseGradient)" stroke-width="2" stroke-dasharray="5,3" fill="none" />
+  <path d="M350,220 C350,250 500,250 530,300" stroke="url(#turquoiseGradient)" stroke-width="2" stroke-dasharray="5,3" fill="none" />
+  <path d="M350,220 C350,300 380,400 400,420" stroke="url(#turquoiseGradient)" stroke-width="2" stroke-dasharray="5,3" fill="none" />
+  <path d="M600,300 C550,350 450,400 400,420" stroke="url(#turquoiseGradient)" stroke-width="2" stroke-dasharray="5,3" fill="none" />
+  <path d="M400,100 C350,150 300,200 250,300" stroke="url(#turquoiseGradient)" stroke-width="2" stroke-dasharray="5,3" fill="none" />
+  <path d="M400,100 C450,150 550,200 600,300" stroke="url(#turquoiseGradient)" stroke-width="2" stroke-dasharray="5,3" fill="none" />
+
+  <!-- Data Flow Indicators -->
+  <g>
+    <circle cx="300" cy="250" r="5" fill="#fff">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="450" cy="270" r="5" fill="#fff">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="380" cy="350" r="5" fill="#fff">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.8s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="520" cy="350" r="5" fill="#fff">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2.2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="375" cy="150" r="5" fill="#fff">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2.3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="450" cy="150" r="5" fill="#fff">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.9s" repeatCount="indefinite" />
+    </circle>
+  </g>
+</svg>
