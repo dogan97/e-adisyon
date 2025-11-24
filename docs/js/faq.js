@@ -4,30 +4,6 @@
  */
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Tab değiştirme fonksiyonu
-    const faqTabs = document.querySelectorAll('.faq-tab-btn');
-    const faqCategories = document.querySelectorAll('.faq-category');
-    
-    // Tab'lar arası geçiş için event listener
-    faqTabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            const category = tab.getAttribute('data-category');
-            
-            // Aktif tab'ı değiştir
-            faqTabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
-            
-            // Aktif kategoriyi değiştir
-            faqCategories.forEach(cat => {
-                if (cat.getAttribute('data-category') === category) {
-                    cat.classList.add('active');
-                } else {
-                    cat.classList.remove('active');
-                }
-            });
-        });
-    });
-    
     // Soru/Cevap toggle fonksiyonu
     const faqQuestions = document.querySelectorAll('.faq-question');
     
@@ -57,29 +33,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Sayfa yüklendiğinde ilk soruyu otomatik aç
-    const firstFaqCard = document.querySelector('.faq-category.active .faq-card:first-child');
-    if (firstFaqCard) {
-        firstFaqCard.classList.add('active');
-        const firstAnswer = firstFaqCard.querySelector('.faq-answer');
-        firstAnswer.style.maxHeight = firstAnswer.scrollHeight + 'px';
-    }
-    
-    // URL'de hash değeri varsa, o tab'a git
-    const hash = window.location.hash.substring(1);
-    if (hash && hash.startsWith('faq-')) {
-        const category = hash.replace('faq-', '');
-        const targetTab = document.querySelector(`.faq-tab-btn[data-category="${category}"]`);
-        if (targetTab) {
-            targetTab.click();
-            
-            // Smooth scroll to FAQ section
-            const faqSection = document.getElementById('sss');
-            if (faqSection) {
-                setTimeout(() => {
-                    faqSection.scrollIntoView({ behavior: 'smooth' });
-                }, 100);
-            }
-        }
-    }
+    // Sayfa yüklendiğinde ilk soruyu otomatik aç (gerekirse)
+    // const firstFaqCard = document.querySelector('.faq-card:first-child');
+    // if (firstFaqCard) {
+    //     firstFaqCard.classList.add('active');
+    //     const firstAnswer = firstFaqCard.querySelector('.faq-answer');
+    //     firstAnswer.style.maxHeight = firstAnswer.scrollHeight + 'px';
+    // }
 });
