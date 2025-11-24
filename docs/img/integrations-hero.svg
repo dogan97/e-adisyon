@@ -3,7 +3,7 @@
   <!-- Definitions for gradients and filters -->
   <defs>
     <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#507b41;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#177038;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#3a5b30;stop-opacity:1" />
     </linearGradient>
     <linearGradient id="turquoiseGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -64,7 +64,7 @@
     <!-- Charts -->
     <rect x="-30" y="-30" width="60" height="60" rx="3" ry="3" fill="#fff" />
     <polyline points="-25,-10 -15,0 -5,-20 5,-5 15,-15 25,5" stroke="#2196f3" stroke-width="3" fill="none" />
-    <polyline points="-25,15 -15,25 -5,5 5,20 15,10 25,30" stroke="#507b41" stroke-width="3" fill="none" />
+    <polyline points="-25,15 -15,25 -5,5 5,20 15,10 25,30" stroke="#177038" stroke-width="3" fill="none" />
   </g>
   
   <!-- Right Integration Platforms -->

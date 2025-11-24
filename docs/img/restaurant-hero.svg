@@ -2,8 +2,8 @@
   <!-- Arka plan gradient -->
   <defs>
     <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#507b41" stop-opacity="0.1"/>
-      <stop offset="100%" stop-color="#507b41" stop-opacity="0.3"/>
+      <stop offset="0%" stop-color="#177038" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#177038" stop-opacity="0.3"/>
     </linearGradient>
     
     <!-- Tablet ekran içeriği için gradient -->
@@ -21,8 +21,8 @@
   <!-- Transparent arka plan -->
   
   <!-- Dekoratif daire elemanları -->
-  <circle cx="50" cy="50" r="80" fill="#507b41" opacity="0.1"/>
-  <circle cx="450" cy="350" r="100" fill="#507b41" opacity="0.1"/>
+  <circle cx="50" cy="50" r="80" fill="#177038" opacity="0.1"/>
+  <circle cx="450" cy="350" r="100" fill="#177038" opacity="0.1"/>
   
   <!-- Restaurant masası -->
   <circle cx="150" cy="250" r="50" fill="#8d5b4c" opacity="0.7" filter="url(#shadow)"/>
@@ -38,14 +38,14 @@
   <rect x="270" y="180" width="100" height="140" rx="5" ry="5" fill="url(#screenGradient)"/>
   
   <!-- Ekran içeriği - sipariş listesi -->
-  <rect x="280" y="190" width="80" height="15" rx="2" ry="2" fill="#507b41" opacity="0.8"/>
+  <rect x="280" y="190" width="80" height="15" rx="2" ry="2" fill="#177038" opacity="0.8"/>
   <rect x="280" y="215" width="80" height="10" rx="2" ry="2" fill="#ddd"/>
   <rect x="280" y="235" width="80" height="10" rx="2" ry="2" fill="#ddd"/>
   <rect x="280" y="255" width="80" height="10" rx="2" ry="2" fill="#ddd"/>
-  <rect x="280" y="275" width="45" height="15" rx="7" ry="7" fill="#507b41" opacity="0.9"/>
+  <rect x="280" y="275" width="45" height="15" rx="7" ry="7" fill="#177038" opacity="0.9"/>
   
   <!-- Efekt çizgiler -->
-  <path d="M 200,250 Q 230,230 260,240" stroke="#507b41" stroke-width="2" fill="transparent" stroke-dasharray="4"/>
+  <path d="M 200,250 Q 230,230 260,240" stroke="#177038" stroke-width="2" fill="transparent" stroke-dasharray="4"/>
   
   <!-- QR Kod -->
   <rect x="80" y="120" width="60" height="60" fill="#fff" filter="url(#shadow)"/>
@@ -62,10 +62,10 @@
   <!-- Ödeme Simgesi -->
   <rect x="360" y="90" width="70" height="45" rx="5" ry="5" fill="#fff" filter="url(#shadow)"/>
   <rect x="360" y="105" width="70" height="10" fill="#333"/>
-  <circle cx="420" cy="125" r="8" fill="#507b41"/>
+  <circle cx="420" cy="125" r="8" fill="#177038"/>
   
   <!-- Küçük Simgeler -->
-  <circle cx="70" cy="350" r="15" fill="#507b41" opacity="0.6"/>
-  <circle cx="430" cy="270" r="10" fill="#507b41" opacity="0.6"/>
-  <circle cx="390" cy="350" r="20" fill="#507b41" opacity="0.6"/>
+  <circle cx="70" cy="350" r="15" fill="#177038" opacity="0.6"/>
+  <circle cx="430" cy="270" r="10" fill="#177038" opacity="0.6"/>
+  <circle cx="390" cy="350" r="20" fill="#177038" opacity="0.6"/>
 </svg>

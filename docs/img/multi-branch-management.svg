@@ -8,7 +8,7 @@
     
     <!-- Connection lines gradient -->
     <linearGradient id="connectionGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#507b41" stop-opacity="0.8"/>
+      <stop offset="0%" stop-color="#177038" stop-opacity="0.8"/>
       <stop offset="100%" stop-color="#8ed4cd" stop-opacity="0.8"/>
     </linearGradient>
     
@@ -22,12 +22,12 @@
       <rect x="8" y="42" width="15" height="15" fill="#8ed4cd" opacity="0.8"/>
       <rect x="28" y="42" width="15" height="15" fill="#8ed4cd" opacity="0.8"/>
       <rect x="48" y="42" width="15" height="15" fill="#8ed4cd" opacity="0.8"/>
-      <rect x="10" y="0" width="50" height="15" fill="#507b41" rx="5" ry="5"/>
+      <rect x="10" y="0" width="50" height="15" fill="#177038" rx="5" ry="5"/>
     </g>
   </defs>
   
   <!-- Central hub -->
-  <circle cx="300" cy="200" r="70" fill="#507b41" filter="url(#shadow)"/>
+  <circle cx="300" cy="200" r="70" fill="#177038" filter="url(#shadow)"/>
   <circle cx="300" cy="200" r="60" fill="#5d8c4a"/>
   <circle cx="300" cy="200" r="50" fill="#6a9e53"/>
   
@@ -71,7 +71,7 @@
   </g>
   
   <!-- Flowing data symbols -->
-  <g fill="#507b41" opacity="0.8">
+  <g fill="#177038" opacity="0.8">
     <!-- Arrow data flowing to center -->
     <circle cx="300" cy="90" r="5">
       <animate attributeName="cy" values="90;190" dur="3s" repeatCount="indefinite"/>
@@ -134,7 +134,7 @@
   </g>
   
   <!-- Small decoration elements -->
-  <g fill="#507b41" opacity="0.2">
+  <g fill="#177038" opacity="0.2">
     <circle cx="500" cy="50" r="30"/>
     <circle cx="100" cy="350" r="40"/>
     <circle cx="500" cy="350" r="25"/>

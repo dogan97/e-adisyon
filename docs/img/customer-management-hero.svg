@@ -9,7 +9,7 @@
     
     <!-- Corporate colors -->
     <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#507b41" />
+      <stop offset="0%" stop-color="#177038" />
       <stop offset="100%" stop-color="#3e5f32" />
     </linearGradient>
     <linearGradient id="turquoiseGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -23,8 +23,8 @@
       <stop offset="100%" stop-color="#e9ecef" />
     </linearGradient>
     <linearGradient id="chartGradient" x1="0%" y1="100%" x2="0%" y2="0%">
-      <stop offset="0%" stop-color="#507b41" stop-opacity="0.2" />
-      <stop offset="100%" stop-color="#507b41" stop-opacity="0.8" />
+      <stop offset="0%" stop-color="#177038" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#177038" stop-opacity="0.8" />
     </linearGradient>
     
     <!-- Connection animation -->

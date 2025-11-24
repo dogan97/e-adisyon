@@ -41,7 +41,7 @@
   <g>
     <rect x="70" y="130" width="140" height="50" rx="5" ry="5" fill="url(#greenGrad)" opacity="0.9"/>
     <circle cx="100" cy="155" r="15" fill="#ffffff" opacity="0.9"/>
-    <path d="M92,155 L98,161 L108,151" stroke="#507b41" stroke-width="3" fill="none"/>
+    <path d="M92,155 L98,161 L108,151" stroke="#177038" stroke-width="3" fill="none"/>
   </g>
   
   <g>
@@ -162,7 +162,7 @@
     <g transform="translate(380, 180)">
       <!-- Durum göstergesi -->
       <circle cx="0" cy="0" r="30" fill="#f0f0f0" stroke="#dddddd" stroke-width="1"/>
-      <path d="M-20,0 L-7,13 L20,-14" stroke="#507b41" stroke-width="4" fill="none"/>
+      <path d="M-20,0 L-7,13 L20,-14" stroke="#177038" stroke-width="4" fill="none"/>
     </g>
   </g>
   

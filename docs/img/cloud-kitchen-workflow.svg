@@ -57,7 +57,7 @@
     
     <!-- Adım Numarası -->
     <g transform="translate(55, 85)">
-      <circle cx="0" cy="0" r="15" fill="#507b41"/>
+      <circle cx="0" cy="0" r="15" fill="#177038"/>
       <text x="0" y="5" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">1</text>
     </g>
   </g>
@@ -119,7 +119,7 @@
     
     <!-- Adım Numarası -->
     <g transform="translate(55, 85)">
-      <circle cx="0" cy="0" r="15" fill="#507b41"/>
+      <circle cx="0" cy="0" r="15" fill="#177038"/>
       <text x="0" y="5" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">3</text>
     </g>
   </g>

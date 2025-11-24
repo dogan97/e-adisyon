@@ -323,7 +323,7 @@ function addMobileMenuStyles() {
             /* Dropdown toggle durumu için özel sınıf */
             .dropdown-active > a {
                 background-color: rgba(80, 123, 65, 0.1);
-                color: #507b41 !important;
+                color: #177038 !important;
             }
             
             .business-grid {

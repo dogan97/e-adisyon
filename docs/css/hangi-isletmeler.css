@@ -2,7 +2,7 @@
 
 /* Renk Değişkenleri */
 :root {
-    --isletme-primary: #507b41;
+    --isletme-primary: #177038;
     --isletme-primary-dark: var(--accent);
     --isletme-primary-light: #4db6ac;
     --isletme-gradient: linear-gradient(135deg, #00897b 0%, #005b4f 100%);
@@ -19,7 +19,7 @@
 
 /* Hero Bölümü */
 .hero-section {
-    background: #507b41;
+    background: #177038;
     padding: 80px 0;
     position: relative;
     overflow: hidden;
@@ -50,7 +50,7 @@
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     height: 100%;
     transition: all 0.3s ease;
-    border-top: 4px solid #507b41;
+    border-top: 4px solid #177038;
 }
 
 .feature-card:hover, .seasonal-feature-card:hover {
@@ -63,7 +63,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #507b41;
+    background: #177038;
     border-radius: 50%;
     color: #fff;
     margin-bottom: 20px;

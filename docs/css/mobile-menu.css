@@ -100,7 +100,7 @@
 
 .mobile-menu-link:hover, .mobile-menu-link:focus {
     background-color: #f9f9f9;
-    color: #507b41;
+    color: #177038;
     text-decoration: none;
 }
 
@@ -152,13 +152,13 @@
 
 .mobile-submenu > li > a:hover {
     background-color: #f0f0f0;
-    color: #507b41;
+    color: #177038;
 }
 
 .submenu-title {
     padding: 10px 20px;
     font-weight: 600;
-    color: #507b41;
+    color: #177038;
     font-size: 14px;
     background-color: #f0f0f0;
     margin: 0;
@@ -193,7 +193,7 @@
     position: absolute;
     height: 3px;
     width: 100%;
-    background: #507b41;
+    background: #177038;
     border-radius: 3px;
     opacity: 1;
     left: 0;

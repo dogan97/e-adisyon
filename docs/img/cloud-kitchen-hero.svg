@@ -14,7 +14,7 @@
       <stop offset="100%" stop-color="#f0f0f0"/>
     </linearGradient>
     <linearGradient id="deviceGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#507b41"/>
+      <stop offset="0%" stop-color="#177038"/>
       <stop offset="100%" stop-color="#3c5d31"/>
     </linearGradient>
     <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -29,9 +29,9 @@
   
   <!-- Arka Plan Elemanları -->
   <g id="backgroundElements" opacity="0.05">
-    <circle cx="100" cy="100" r="50" fill="#507b41"/>
+    <circle cx="100" cy="100" r="50" fill="#177038"/>
     <circle cx="500" cy="320" r="80" fill="#8ed4cd"/>
-    <rect x="450" y="50" width="100" height="100" rx="25" fill="#507b41"/>
+    <rect x="450" y="50" width="100" height="100" rx="25" fill="#177038"/>
     <rect x="50" y="280" width="120" height="60" rx="15" fill="#8ed4cd"/>
   </g>
   
@@ -73,13 +73,13 @@
       </g>
       
       <!-- İşlem Göstergeleri -->
-      <circle cx="-32" cy="-6" r="2" fill="#507b41">
+      <circle cx="-32" cy="-6" r="2" fill="#177038">
         <animate attributeName="opacity" values="1;0.4;1" dur="1.5s" repeatCount="indefinite"/>
       </circle>
       <circle cx="-2" cy="6" r="2" fill="#8ed4cd">
         <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
       </circle>
-      <circle cx="28" cy="18" r="2" fill="#507b41">
+      <circle cx="28" cy="18" r="2" fill="#177038">
         <animate attributeName="opacity" values="0.6;1;0.6" dur="2.5s" repeatCount="indefinite"/>
       </circle>
     </g>
@@ -143,7 +143,7 @@
       
       <rect x="-25" y="-12" width="50" height="1" fill="#ddd"/>
       
-      <rect x="-25" y="-8" width="20" height="20" rx="3" ry="3" fill="#507b41"/>
+      <rect x="-25" y="-8" width="20" height="20" rx="3" ry="3" fill="#177038"/>
       <rect x="0" y="-8" width="25" height="6" rx="1" ry="1" fill="#e0e0e0"/>
       <rect x="0" y="2" width="25" height="6" rx="1" ry="1" fill="#e0e0e0"/>
       <rect x="0" y="12" width="25" height="6" rx="1" ry="1" fill="#e0e0e0"/>
@@ -205,7 +205,7 @@
       <rect x="0" y="-13" width="15" height="3" rx="1" ry="1" fill="#e0e0e0"/>
       <rect x="0" y="-8" width="20" height="3" rx="1" ry="1" fill="#e0e0e0"/>
       
-      <rect x="-20" y="0" width="15" height="15" rx="2" ry="2" fill="#507b41"/>
+      <rect x="-20" y="0" width="15" height="15" rx="2" ry="2" fill="#177038"/>
       <rect x="0" y="0" width="20" height="3" rx="1" ry="1" fill="#e0e0e0"/>
       <rect x="0" y="5" width="15" height="3" rx="1" ry="1" fill="#e0e0e0"/>
       <rect x="0" y="10" width="20" height="3" rx="1" ry="1" fill="#e0e0e0"/>
@@ -234,7 +234,7 @@
       
       <!-- Sipariş Logosu -->
       <g transform="translate(0, -5)">
-        <path d="M-15,0 L15,0 M-10,-10 L10,-10 M-5,10 L15,10" stroke="#507b41" stroke-width="4" stroke-linecap="round"/>
+        <path d="M-15,0 L15,0 M-10,-10 L10,-10 M-5,10 L15,10" stroke="#177038" stroke-width="4" stroke-linecap="round"/>
       </g>
       
       <!-- Entegrasyon Noktaları -->
@@ -264,7 +264,7 @@
   <!-- Animasyonlu Veri Akış Parçacıkları -->
   <g id="flowParticles">
     <!-- Akış 1 -->
-    <circle cx="0" cy="0" r="2" fill="#507b41">
+    <circle cx="0" cy="0" r="2" fill="#177038">
       <animateMotion path="M290,180 C240,210 190,240 170,280" dur="3s" repeatCount="indefinite"/>
     </circle>
     <circle cx="0" cy="0" r="2" fill="#8ed4cd">
@@ -272,7 +272,7 @@
     </circle>
     
     <!-- Akış 2 -->
-    <circle cx="0" cy="0" r="2" fill="#507b41">
+    <circle cx="0" cy="0" r="2" fill="#177038">
       <animateMotion path="M290,180 C290,210 290,240 290,280" dur="2s" repeatCount="indefinite"/>
     </circle>
     <circle cx="0" cy="0" r="2" fill="#8ed4cd">
@@ -280,7 +280,7 @@
     </circle>
     
     <!-- Akış 3 -->
-    <circle cx="0" cy="0" r="2" fill="#507b41">
+    <circle cx="0" cy="0" r="2" fill="#177038">
       <animateMotion path="M290,180 C330,210 370,240 400,280" dur="2.5s" repeatCount="indefinite"/>
     </circle>
     <circle cx="0" cy="0" r="2" fill="#8ed4cd">
@@ -288,7 +288,7 @@
     </circle>
     
     <!-- Akış 4 -->
-    <circle cx="0" cy="0" r="2" fill="#507b41">
+    <circle cx="0" cy="0" r="2" fill="#177038">
       <animateMotion path="M290,180 C350,190 410,200 470,230" dur="4s" repeatCount="indefinite"/>
     </circle>
     <circle cx="0" cy="0" r="2" fill="#8ed4cd">

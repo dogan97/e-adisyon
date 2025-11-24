@@ -3,7 +3,7 @@
   <!-- Definitions for gradients and filters -->
   <defs>
     <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#507b41;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#177038;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#3a5b30;stop-opacity:1" />
     </linearGradient>
     <linearGradient id="turquoiseGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -45,7 +45,7 @@
       <rect x="-50" y="-25" width="100" height="20" rx="5" ry="5" fill="url(#greenGradient)" opacity="0.8" />
       <!-- Invoice QR code -->
       <rect x="30" y="-15" width="12" height="12" rx="2" ry="2" fill="#fff" />
-      <rect x="33" y="-12" width="6" height="6" rx="1" ry="1" fill="#507b41" />
+      <rect x="33" y="-12" width="6" height="6" rx="1" ry="1" fill="#177038" />
       
       <!-- Invoice body lines -->
       <line x1="-40" y1="5" x2="40" y2="5" stroke="#ddd" stroke-width="1" />
@@ -163,12 +163,12 @@
     <rect x="-10" y="-15" width="20" height="15" rx="3" ry="3" fill="url(#turquoiseGradient)" />
     <rect x="-15" y="-15" width="30" height="15" rx="5" ry="5" fill="none" stroke="url(#turquoiseGradient)" stroke-width="3" />
     <!-- Certificate Pattern -->
-    <path d="M-45,-15 C-35,-25 -25,-5 -15,-15" stroke="#507b41" stroke-width="1" fill="none" />
-    <path d="M-45,-5 C-35,-15 -25,5 -15,-5" stroke="#507b41" stroke-width="1" fill="none" />
-    <path d="M-45,5 C-35,-5 -25,15 -15,5" stroke="#507b41" stroke-width="1" fill="none" />
-    <path d="M15,-15 C25,-25 35,-5 45,-15" stroke="#507b41" stroke-width="1" fill="none" />
-    <path d="M15,-5 C25,-15 35,5 45,-5" stroke="#507b41" stroke-width="1" fill="none" />
-    <path d="M15,5 C25,-5 35,15 45,5" stroke="#507b41" stroke-width="1" fill="none" />
+    <path d="M-45,-15 C-35,-25 -25,-5 -15,-15" stroke="#177038" stroke-width="1" fill="none" />
+    <path d="M-45,-5 C-35,-15 -25,5 -15,-5" stroke="#177038" stroke-width="1" fill="none" />
+    <path d="M-45,5 C-35,-5 -25,15 -15,5" stroke="#177038" stroke-width="1" fill="none" />
+    <path d="M15,-15 C25,-25 35,-5 45,-15" stroke="#177038" stroke-width="1" fill="none" />
+    <path d="M15,-5 C25,-15 35,5 45,-5" stroke="#177038" stroke-width="1" fill="none" />
+    <path d="M15,5 C25,-5 35,15 45,5" stroke="#177038" stroke-width="1" fill="none" />
   </g>
   
   <!-- Digital Signature -->

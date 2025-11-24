@@ -45,7 +45,7 @@
       <rect x="-60" y="-95" width="120" height="90" rx="5" ry="5" fill="url(#screenGrad)"/>
       
       <!-- Ekran İçeriği -->
-      <rect x="-50" y="-85" width="100" height="15" rx="2" ry="2" fill="#507b41" opacity="0.9"/>
+      <rect x="-50" y="-85" width="100" height="15" rx="2" ry="2" fill="#177038" opacity="0.9"/>
       
       <!-- Menü Öğeleri -->
       <g transform="translate(-35, -60)">
@@ -94,7 +94,7 @@
           <path d="M-25,10 L25,10 C30,10 30,15 25,20 L-25,20 C-30,15 -30,10 -25,10 Z" fill="#f9a825"/>
         </g>
         
-        <rect x="-15" y="15" width="30" height="5" rx="2" ry="2" fill="#507b41"/>
+        <rect x="-15" y="15" width="30" height="5" rx="2" ry="2" fill="#177038"/>
         <rect x="-15" y="25" width="20" height="5" rx="2" ry="2" fill="#555"/>
       </g>
       
@@ -131,7 +131,7 @@
         <rect x="-70" y="-35" width="140" height="70" rx="3" ry="3" fill="url(#screenGrad)"/>
         
         <!-- Sipariş Öğeleri -->
-        <rect x="-60" y="-25" width="120" height="15" rx="2" ry="2" fill="#507b41" opacity="0.8"/>
+        <rect x="-60" y="-25" width="120" height="15" rx="2" ry="2" fill="#177038" opacity="0.8"/>
         <text x="-55" y="-15" font-family="Arial" font-size="9" fill="white">SİPARİŞ HAZIR</text>
         <circle cx="50" cy="-17" r="4" fill="url(#greenGrad)"/>
         
@@ -191,7 +191,7 @@
       <!-- Para Bölmeleri -->
       <g transform="translate(-45, 0)">
         <rect x="-15" y="-15" width="30" height="30" rx="2" ry="2" fill="#555"/>
-        <rect x="-10" y="-10" width="20" height="20" rx="2" ry="2" fill="#507b41" opacity="0.5"/>
+        <rect x="-10" y="-10" width="20" height="20" rx="2" ry="2" fill="#177038" opacity="0.5"/>
       </g>
       
       <g transform="translate(-5, 0)">

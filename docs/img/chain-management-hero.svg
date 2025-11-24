@@ -3,7 +3,7 @@
   <!-- Definitions for gradients and filters -->
   <defs>
     <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#507b41;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#177038;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#3a5b30;stop-opacity:1" />
     </linearGradient>
     <linearGradient id="turquoiseGradient" x1="0%" y1="0%" x2="100%" y2="100%">

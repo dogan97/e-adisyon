@@ -43,8 +43,8 @@
 
 /* Açık dropdown için alt çizgi ve renk */
 .dropdown-toggle.dropdown-open {
-    border-bottom: 2px solid #507b41;
-    color: #507b41 !important;
+    border-bottom: 2px solid #177038;
+    color: #177038 !important;
 }
 
 /* Kapalı dropdown için stil */
@@ -161,7 +161,7 @@
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
-    color: #507b41;
+    color: #177038;
     margin-right: 10px;
 }
 
