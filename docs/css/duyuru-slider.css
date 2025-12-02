@@ -1,0 +1,241 @@
+/* Gelişmiş Modern Duyuru Slider Stilleri */
+.duyuru-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 3rem;
+}
+
+#announcementCarousel {
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+#announcementCarousel .carousel-item {
+    position: relative;
+    transition: transform 1.6s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Daha smooth ve elastik geçiş */
+}
+
+/* Gelişmiş Overlay - Gradient ve Pattern */
+#announcementCarousel .carousel-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at top right, rgba(23, 112, 56, 0.2), transparent 50%),
+        radial-gradient(circle at bottom left, rgba(0, 0, 0, 0.8), transparent 50%),
+        linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.9) 100%);
+    pointer-events: none;
+}
+
+/* Görsel Efektleri */
+#announcementCarousel .carousel-item img {
+    filter: brightness(0.9) contrast(1.1);
+    transition: transform 8s ease; /* Yavaş zoom efekti */
+}
+
+#announcementCarousel .carousel-item.active img {
+    transform: scale(1.1); /* Aktifken hafifçe yakınlaşsın */
+}
+
+/* Caption Container - Glassmorphism Geliştirilmiş */
+.carousel-caption {
+    bottom: 10%;
+    left: 10%;
+    right: auto; /* Solda hizala */
+    text-align: left; /* Metni sola yasla */
+    padding-bottom: 3rem;
+    z-index: 10;
+    max-width: 650px; /* Genişliği sınırla */
+}
+
+.caption-content {
+    /* iOS Glassmorphism Efekti */
+    background: rgba(255, 255, 255, 0.15); /* Hafif şeffaf beyaz zemin */
+    padding: 3rem;
+    border-radius: 24px; /* iOS stili yumuşak köşeler */
+    
+    /* Gelişmiş Blur ve Canlılık */
+    backdrop-filter: blur(25px) saturate(180%); 
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    
+    /* Parlak ve İnce Kenarlık */
+    border: 1px solid rgba(255, 255, 255, 0.4); 
+    
+    /* Derinlik ve İç Parlama */
+    box-shadow: 
+        0 8px 32px 0 rgba(0, 0, 0, 0.25),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.1); 
+        
+    /* Animasyon Başlangıç Değerleri */
+    transform: translateY(30px);
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+    
+    max-width: 800px;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+/* Aktif Slayt Animasyonları */
+.carousel-item.active .caption-content {
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 0.3s; /* Slayt geldikten sonra çıksın */
+}
+
+/* Tipografi */
+.carousel-caption h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-weight: 800;
+    font-size: 3.5rem;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 1.2rem;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    background: linear-gradient(to right, #fff, #e0e0e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.carousel-caption p {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+    font-weight: 400;
+    line-height: 1.6;
+    border-left: 4px solid #177038; /* Tema rengi çizgi */
+    padding-left: 1rem;
+}
+
+/* Buton Özelleştirme */
+.btn-slider {
+    background: #177038;
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(23, 112, 56, 0.4);
+}
+
+.btn-slider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #12572b; /* Daha koyu yeşil */
+    transition: width 0.4s ease;
+    z-index: -1;
+}
+
+.btn-slider:hover::before {
+    width: 100%;
+}
+
+.btn-slider:hover {
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(23, 112, 56, 0.5);
+}
+
+/* Kontrol Okları */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.carousel-control-prev { left: 30px; }
+.carousel-control-next { right: 30px; }
+
+#announcementCarousel:hover .carousel-control-prev,
+#announcementCarousel:hover .carousel-control-next {
+    opacity: 1;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background: #177038;
+    border-color: #177038;
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* İndikatörler (Alt Çizgiler) */
+.carousel-indicators {
+    bottom: 40px;
+    justify-content: flex-start; /* Sola yasla */
+    left: 10%;
+    right: auto;
+    margin-left: 0;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 40px;
+    height: 4px;
+    border-radius: 4px;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicators .active {
+    width: 60px; /* Aktif olan daha uzun */
+    background-color: #177038;
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 991.98px) {
+    #announcementCarousel .carousel-item img {
+        height: 100vh !important;
+    }
+    
+    .carousel-caption {
+        bottom: 5%;
+        left: 5%;
+        right: 5%;
+        max-width: 100%;
+        padding-bottom: 2rem;
+    }
+    
+    .caption-content {
+        padding: 1.5rem;
+    }
+    
+    .carousel-caption h2 {
+        font-size: 2rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+    
+    .carousel-indicators {
+        left: 50%;
+        transform: translateX(-50%);
+        justify-content: center;
+        bottom: 20px;
+    }
+}

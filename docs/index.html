@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/faq.css">
     <link rel="stylesheet" href="css/mobile-menu.css" />
     <link rel="stylesheet" href="css/is-ortaklarimiz.css" />
+    <link rel="stylesheet" href="css/duyuru-slider.css" />
     <style>
         /* Özellikler Bölümü Stilleri */
         .feature-card {
@@ -231,7 +232,7 @@
 <body>
     <!-- Navbar / Header -->
     <header class="header fixed-top">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+        <nav class="navbar navbar-expand-lg navbar-light py-3">
             <div class="container">
                 <a class="navbar-brand" href="index.html">
                     <img src="assets/eadisyonlogo.png" alt="E-Adisyon Logo" class="brand-logo" loading="lazy">
@@ -500,6 +501,57 @@
     
     <!-- Ana İçerik -->
     <main>
+        <!-- Duyuru Slider Section -->
+        <section id="duyuru-slider" class="duyuru-section">
+            <div id="announcementCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false" data-bs-interval="8000">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#announcementCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#announcementCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#announcementCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <!-- Slayt 1 -->
+                    <div class="carousel-item active">
+                        <img src="img/hero-image.jpg" class="d-block w-100" alt="Duyuru 1" style="height: 100vh; object-fit: cover;">
+                        <div class="carousel-caption d-none d-md-block">
+                            <div class="caption-content">
+                                <h2 class="display-5 fw-bold">Yazarkasa POS Entegrasyonu</h2>
+                                <p class="lead">Ingenico ve Pavo ile tam entegrasyonumuz başladı! Ödeme süreçlerinizi hızlandırın.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slayt 2 -->
+                    <div class="carousel-item">
+                        <img src="img/stock/restaurant-cafe.jpg" class="d-block w-100" alt="Duyuru 2" style="height: 100vh; object-fit: cover;">
+                        <div class="carousel-caption d-none d-md-block">
+                            <div class="caption-content">
+                                <h2 class="display-5 fw-bold">Yeni Mobil Uygulama</h2>
+                                <p class="lead">eApatron ile işletmenizi cebinizden yönetin. Anlık raporlar ve analizler artık her an yanınızda.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slayt 3 -->
+                    <div class="carousel-item">
+                        <img src="img/stock/pos.jpg" class="d-block w-100" alt="Duyuru 3" style="height: 100vh; object-fit: cover;">
+                        <div class="carousel-caption d-none d-md-block">
+                            <div class="caption-content">
+                                <h2 class="display-5 fw-bold">Paket Servis Entegrasyonları</h2>
+                                <p class="lead">Yemeksepeti, Getir ve Trendyol Yemek siparişlerinizi tek ekrandan yönetin.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#announcementCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Önceki</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#announcementCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Sonraki</span>
+                </button>
+            </div>
+        </section>
+
         <!-- Hero Section -->
         <section id="anasayfa" class="hero-section d-flex align-items-center">
             <div class="container">
